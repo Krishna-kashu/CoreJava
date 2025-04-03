@@ -1,5 +1,4 @@
 
-
 public class AirlineRunner {
     public static void main(String[] args) {
         Airline airline0 = new Airline();
