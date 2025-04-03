@@ -1,5 +1,6 @@
 public class SolarSystemRunner {
     public static void main(String[] args) {
+
         SolarSystem system0 = new SolarSystem();
         system0.displayInfo();
         SolarSystem system1 = new SolarSystem("Sun");
@@ -22,5 +23,6 @@ public class SolarSystemRunner {
         system9.displayInfo();
         SolarSystem system10 = new SolarSystem("Sun", 8, "Jupiter", "Mercury", 0.0, true, 200, "Mercury", 27000, true);
         system10.displayInfo();
+
     }
 }

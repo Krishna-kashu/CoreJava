@@ -56,7 +56,6 @@ public class Airline {
             this.airlineCode = airlineCode;
         }
 
-
         public void displayInfo() {
             System.out.println("Airline Name: " + airlineName);
             System.out.println("Flight Number: " + flightNumber);

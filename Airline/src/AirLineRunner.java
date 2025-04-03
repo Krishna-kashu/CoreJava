@@ -22,5 +22,7 @@ public class AirLineRunner {
         airline9.displayInfo();
         Airline airline10 = new Airline("Air India", 101, "New York", "London", 300, 50, 500.00, "Economy", true, "AI101");
         airline10.displayInfo();
+
+
     }
 }

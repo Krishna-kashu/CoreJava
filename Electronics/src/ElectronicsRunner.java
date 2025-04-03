@@ -1,5 +1,7 @@
 public class ElectronicsRunner {
+
     public static void main(String[] args) {
+
         Electronics device = new Electronics();
         device.displayInfo();
         Electronics device1 = new Electronics("Samsung");

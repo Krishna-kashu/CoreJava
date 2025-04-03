@@ -63,7 +63,6 @@ public class SolarSystem {
         this(starName, numOfPlanets, largestPlanet, smallestPlanet, distanceFromEarth, hasAsteroidBelt, numOfMoons, closestPlanet, galaxyDistance);
         this.hasLife = hasLife;
     }
-
     public void displayInfo() {
         System.out.println("Star Name: " + starName);
         System.out.println("Number of Planets: " + numOfPlanets);

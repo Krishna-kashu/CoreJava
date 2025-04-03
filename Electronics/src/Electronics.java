@@ -56,7 +56,6 @@ public class Electronics {
         this(brand, model, price, warranty, category, isSmartDevice, batteryCapacity, screenSize,processor);
         this.connectivity = connectivity;
     }
-
     public void displayInfo() {
         System.out.println("Brand: " + brand);
         System.out.println("Model: " + model);
