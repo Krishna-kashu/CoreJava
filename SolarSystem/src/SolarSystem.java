@@ -69,14 +69,13 @@ public class SolarSystem {
         System.out.println("Number of Planets: " + numOfPlanets);
         System.out.println("Largest Planet: " + largestPlanet);
         System.out.println("Smallest Planet: " + smallestPlanet);
-        System.out.println("Distance from Earth: " + distanceFromEarth + " AU");
+        System.out.println("Distance from Earth: " + distanceFromEarth);
         System.out.println("Has Asteroid Belt: " + hasAsteroidBelt);
         System.out.println("Number of Moons: " + numOfMoons);
         System.out.println("Closest Planet: " + closestPlanet);
-        System.out.println("Galaxy Distance: " + galaxyDistance + " light-years");
+        System.out.println("Galaxy Distance: " + galaxyDistance + " light years");
         System.out.println("Has Life: " + hasLife);
     }
-
     public static void main(String[] args) {
         SolarSystem system0 = new SolarSystem();
         system0.displayInfo();
