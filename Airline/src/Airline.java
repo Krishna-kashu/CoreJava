@@ -14,7 +14,7 @@ public class Airline {
         System.out.println("Air Line Details");
     }
     public Airline(String airlineName) {
-        System.out.println("*********");
+        System.out.println("------------------------------------");
         this.airlineName = airlineName;
     }
     public Airline(String airlineName, int flightNumber) {
