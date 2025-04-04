@@ -2,9 +2,11 @@ package store;
 
 import materials.Kidney;
 
+import java.util.Objects;
+
 public class Doctor {
     public void checkKidneyFunction(Kidney kidney) {
-        if(kidney != null){
+        if(Objects.nonNull(kidney)){
             System.out.println("Doctor checking kidney function.");
             kidney.filter();
         }else{
