@@ -2,7 +2,8 @@ import materials.Cigarette;
 import store.Smoker;
 
 public class SmokerRunner {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         Smoker smoker = new Smoker();
         smoker.lightCigarette(null);
 
