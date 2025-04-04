@@ -1,7 +1,5 @@
 package store;
-
 import materials.Weather;
-
 import java.util.Objects;
 
 public class User {
@@ -12,6 +10,5 @@ public class User {
         }else{
             System.out.println("weather object is null can not forecast");
         }
-
     }
 }
