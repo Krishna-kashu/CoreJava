@@ -1,5 +1,4 @@
 package store;
-
 import materials.BlackAndWhite;
 
 public class Photographer {
