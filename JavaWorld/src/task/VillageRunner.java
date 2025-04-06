@@ -1,7 +1,6 @@
 package task;
 
-public class VillageRunner
-{
+public class VillageRunner {
         public static void main(String[] args) {
 
             People people = new People(true, "2A");

@@ -1,6 +1,7 @@
 package task;
 
-public class Village {
+public class Village
+    {
     private String villageName;
     private int population;
     private String district;

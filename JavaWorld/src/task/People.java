@@ -12,5 +12,4 @@ public class People {
         System.out.println("are people immigrants: " + immigrants);
         System.out.println("their houseNo: " + houseNo);
     }
-
 }
