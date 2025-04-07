@@ -1,13 +1,14 @@
-package com.xworkz.god;
+
+package Runner;
 
 import com.xworkz.god.external.NGO;
 import com.xworkz.god.internal.Trust;
 
-public class Runner {
+public class CoinRunner {
     public static void main(String[] args) {
         Trust trust = new Trust();
         trust.fund();
-        NGO ngo = new NGO();
-        ngo.development();
+        NGO ng = new NGO();
+        ng.development();
     }
 }
