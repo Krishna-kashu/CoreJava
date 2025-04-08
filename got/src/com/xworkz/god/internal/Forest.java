@@ -1,6 +1,9 @@
 package com.xworkz.god.internal;
 
 public class Forest {
+    public Forest(){
+        System.out.println("no arg constructor of Forest");
+    }
     public void explore(){
         System.out.println("running explore in Forest");
     }

@@ -1,6 +1,9 @@
 package com.xworkz.god.internal;
 
 public class Coin {
+    public Coin(){
+        System.out.println("no arg constructor");
+    }
     public void toss(){
         System.out.println("toss running in Coin class");
     }

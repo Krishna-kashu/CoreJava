@@ -1,6 +1,9 @@
 package com.xworkz.god.internal;
 
 public class Beach {
+    public Beach(){
+        System.out.println("no arg const of Beach");
+    }
     public void open() {
         System.out.println("Beach is open to public.");
     }

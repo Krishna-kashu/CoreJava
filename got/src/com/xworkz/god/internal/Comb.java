@@ -1,6 +1,9 @@
 package com.xworkz.god.internal;
 
 public class Comb {
+    public Comb(){
+        System.out.println("no arg constructor of Comb");
+    }
 public void untangleHair(){
     System.out.println("running on in Comb");
 }

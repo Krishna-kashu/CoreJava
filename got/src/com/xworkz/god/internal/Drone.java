@@ -1,6 +1,9 @@
 package com.xworkz.god.internal;
 
 public class Drone {
+    public Drone(){
+        System.out.println("no arg constructor of Drone");
+    }
     public void on(){
 
     }

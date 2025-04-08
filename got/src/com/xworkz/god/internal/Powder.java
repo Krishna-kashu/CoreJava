@@ -1,6 +1,9 @@
 package com.xworkz.god.internal;
 
 public class Powder{
+    public Powder(){
+        System.out.println("no argument constructor of Powder");
+    }
     public void apply(){
         System.out.println("running apply in powder");
     }

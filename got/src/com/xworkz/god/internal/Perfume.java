@@ -1,6 +1,11 @@
 package com.xworkz.god.internal;
 
+import sun.misc.Perf;
+
 public class Perfume {
+    public Perfume(){
+        System.out.println("no arg const of Perfume");
+    }
     public void spray(){
         System.out.println("running spray in Perfume");
     }
