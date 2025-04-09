@@ -12,6 +12,5 @@ public class MutantRunner {
 
         Observer observer=new Observer();
         observer.view();
-
     }
 }

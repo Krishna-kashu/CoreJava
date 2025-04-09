@@ -3,7 +3,7 @@ package mutant.internal;
 public class Trainer {
 
     public Trainer() {
-        System.out.println("no-arg constructor for Trainer");
+        System.out.println("no-arg constructor of Trainer");
     }
 
     public void train() {
@@ -15,7 +15,7 @@ public class Trainer {
         System.out.println("Skill: " + mutant.getSkill());
         System.out.println("Strength: " + mutant.getStrength());
         System.out.println("Speed: " + mutant.getSpeed());
-        System.out.println("Active: " + mutant.isActive());
+        System.out.println("Active: " + mutant.getisActive());
 
         mutant.setType("Beta");
         mutant.setSkill("Teleportation");
@@ -27,6 +27,6 @@ public class Trainer {
         System.out.println("Updated Skill: " + mutant.getSkill());
         System.out.println("Updated Strength: " + mutant.getStrength());
         System.out.println("Updated Speed: " + mutant.getSpeed());
-        System.out.println("Updated Active: " + mutant.isActive());
+        System.out.println("Updated Active: " + mutant.getisActive());
     }
 }

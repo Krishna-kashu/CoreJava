@@ -1,7 +1,6 @@
 package mutant.external;
 
 import mutant.internal.Mutant;
-import mutant.internal.Trainer;
 
 public class Observer {
     public Observer() {
@@ -17,6 +16,6 @@ public class Observer {
         System.out.println("Skill: " + mutant.getSkill());
         System.out.println("Strength: " + mutant.getStrength());
         System.out.println("Speed: " + mutant.getSpeed());
-        System.out.println("Active: " + mutant.isActive());
+        System.out.println("Active: " + mutant.getisActive());
     }
 }

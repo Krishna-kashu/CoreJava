@@ -47,7 +47,7 @@ public class Mutant {
         return speed;
     }
 
-    public boolean isActive() {
+    public boolean getisActive() {
         return active;
     }
 }
