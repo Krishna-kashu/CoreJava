@@ -8,10 +8,7 @@ public class Visitor {
 
     public void viewBadge() {
         System.out.println("Running viewBadge in Visitor");
-
-
         Badge badge = new Badge();
-
         System.out.println("Name: " + badge.getName());
         System.out.println("Color: " + badge.getColor());
         System.out.println("Level: " + badge.getLevel());

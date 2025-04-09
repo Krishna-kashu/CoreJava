@@ -4,7 +4,7 @@ public class Apartment {
     private String apartmentName = "Green Heights";
     private int numberOfFloors = 10;
     private boolean hasLift = true;
-    private String location = "Lake View Road";
+    private String location = "Bangalore";
     private double monthlyRent = 15000.0;
 
     public Apartment() {

@@ -19,7 +19,7 @@ public class Builder {
         apartment.setApartmentName("Skyline Residency");
         apartment.setNumberOfFloors(15);
         apartment.setHasLift(false);
-        apartment.setLocation("Palm Street");
+        apartment.setLocation("Church Street");
         apartment.setMonthlyRent(18500.0);
 
         System.out.println("Updated Name: " + apartment.getApartmentName());

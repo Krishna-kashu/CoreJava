@@ -16,7 +16,7 @@ public class Engineer {
         System.out.println("Stealth Mode: " + jet.isStealth());
         System.out.println("Capacity: " + jet.getCapacity());
 
-        jet.setModel("Sukhoi Su-57");
+        jet.setModel("Su-57");
         jet.setManufacturer("Sukhoi");
         jet.setMaxSpeed(2600.0);
         jet.setStealth(false);
