@@ -1,4 +1,4 @@
-package Actor;
+package com.actor;
 
 public class ActorRunner{
         public static void main(String[] args) {

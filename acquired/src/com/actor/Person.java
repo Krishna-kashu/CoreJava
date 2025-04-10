@@ -1,4 +1,4 @@
-package Actor;
+package com.actor;
 
 public class Person extends Human {
     public Person() {
