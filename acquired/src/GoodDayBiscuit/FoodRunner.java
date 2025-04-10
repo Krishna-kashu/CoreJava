@@ -19,10 +19,10 @@ public class FoodRunner {
         biscuit.crunch();
 
         System.out.println("-------- GoodDayBiscuit --------");
-        GoodDayBiscuit gdb = new GoodDayBiscuit();
-        gdb.buy();
-        gdb.eat();
-        gdb.crunch();
-        gdb.sweetTaste();
+        GoodDayBiscuit goodDayBiscuit = new GoodDayBiscuit();
+        goodDayBiscuit.buy();
+        goodDayBiscuit.eat();
+        goodDayBiscuit.crunch();
+        goodDayBiscuit.sweetTaste();
     }
 }

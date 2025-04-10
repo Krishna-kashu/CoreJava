@@ -1,7 +1,7 @@
 package GoodDayBiscuit;
 
 public class Snack extends Food{
-    public Snack(){
+    protected Snack(){
         //super();
         System.out.println("no-arg constructor of Snack");
     }
@@ -11,7 +11,6 @@ public class Snack extends Food{
 
         Food food=new Food();
         Food food1=new Snack();
-        Snack snack1 = new Snack();
+        //Snack snack1 = new Snack();
     }
-
 }
