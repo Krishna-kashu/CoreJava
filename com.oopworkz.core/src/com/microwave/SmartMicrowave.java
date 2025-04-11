@@ -10,7 +10,7 @@ public class SmartMicrowave extends Microwave {
         System.out.println("Running overridden heat() in SmartMicrowave");
     }
 
-    void connectWiFi() {
+    public void connectWiFi() {
         System.out.println("Running connectWiFi() in SmartMicrowave");
     }
 }

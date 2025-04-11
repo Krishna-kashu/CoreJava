@@ -8,7 +8,7 @@ public class EBook extends Book{
     public void read(){
         System.out.println("running overridden read in EBook");
     }
-    void download(){
+    public void download(){
         System.out.println("running download in EBook");
     }
 }

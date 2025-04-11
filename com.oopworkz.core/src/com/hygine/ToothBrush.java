@@ -10,7 +10,7 @@ public class ToothBrush extends Brush {
         System.out.println("Running overridden clean() in ToothBrush");
     }
 
-    void vibrate() {
+    public void vibrate() {
         System.out.println("Running vibrate() in ToothBrush");
     }
 }

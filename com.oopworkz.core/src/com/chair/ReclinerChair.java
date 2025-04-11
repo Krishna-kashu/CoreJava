@@ -10,7 +10,7 @@ public class ReclinerChair  extends Chair {
         System.out.println("Running overridden sit() in ReclinerChair");
     }
 
-    void recline() {
+    public void recline() {
         System.out.println("Running recline() in ReclinerChair");
     }
 }

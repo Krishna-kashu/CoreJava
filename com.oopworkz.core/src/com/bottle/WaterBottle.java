@@ -10,7 +10,7 @@ public class WaterBottle extends Bottle {
         System.out.println("Running overridden open() in WaterBottle");
     }
 
-    void refill() {
+    public void refill() {
         System.out.println("Running refill() in WaterBottle");
     }
 }

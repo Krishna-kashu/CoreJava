@@ -10,7 +10,7 @@ public class AdjustableBed extends Bed {
         System.out.println("Running overridden sleep() in AdjustableBed");
     }
 
-    void raiseHead() {
+    public void raiseHead() {
         System.out.println("Running raiseHead() in AdjustableBed");
     }
 }
