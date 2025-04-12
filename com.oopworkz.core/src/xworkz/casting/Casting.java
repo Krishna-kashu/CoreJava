@@ -77,7 +77,72 @@ import com.kitchen.DesignerMug;
 import com.kitchen.Mug;
 import com.kitchenware.Cup;
 import com.kitchenware.TravelCup;
-
+import com.lamp.Lamp;
+import com.lamp.DeskLamp;
+import com.lesson.Lesson;
+import com.lesson.MathLesson;
+import com.library.AudioBook;
+import com.light.Light;
+import com.light.SmartLight;
+import com.locker.Locker;
+import com.locker.DigitalLocker;
+import com.mediaFile.MediaFile;
+import com.mediaFile.AudioFile;
+import com.message.Message;
+import com.message.TextMessage;
+import com.mirror.DigitalMirror;
+import com.navigator.Map;
+import com.navigator.GPSMap;
+import com.notebook.Notebook;
+import com.notebook.SpiralNotebook;
+import com.notes.DigitalNotebook;
+import com.camera.DSLR;
+import com.notification.Notification;
+import com.notification.EmailNotification;
+import com.office.Printer;
+import com.office.LaserPrinter;
+import com.organizer.Calendar;
+import com.organizer.DigitalCalendar;
+import com.paymentMethod.PaymentMethod;
+import com.paymentMethod.CreditCard;
+import com.plant.Plant;
+import com.plant.Flower;
+import com.pot.Pot;
+import com.pot.Utensil;
+import com.product.Product;
+import com.product.Shampoo;
+import com.quiz.Quiz;
+import com.quiz.OnlineQuiz;
+import com.recipe.DessertRecipe;
+import com.remainder.Reminder;
+import com.remainder.MeetingReminder;
+import com.report.Report;
+import com.report.SalesReport;
+import com.retail.ShelfLabel;
+import com.retail.DigitalShelfLabel;
+import com.school.Board;
+import com.school.SmartBoard;
+import com.sensor.Sensor;
+import com.sensor.TemperatureSensor;
+import com.service.Service;
+import com.service.CleaningService;
+import com.settings.AccountSettings;
+import com.settings.PrivacySettings;
+import com.shape.Shape;
+import com.shape.Circle;
+import com.sound.Speaker;
+import com.sound.BluetoothSpeaker;
+import com.stationery.SketchBook;
+import com.storage.Bookshelf;
+import com.storage.Shelf;
+import com.stream.Stream;
+import com.stream.AudioStream;
+import com.subscription.Subscription;
+import com.subscription.PremiumSubscription;
+import com.thermocup.ThermoCup;
+import com.ticket.Ticket;
+import com.ticket.MovieTicket;
+import com.ticketbooking.OnlineTicket;
 
 
 public class Casting {
@@ -684,4 +749,593 @@ public class Casting {
             System.out.println("Cup is null");
         }
     }
+    public void switchOn(Lamp lamp) {
+        if (lamp != null) {
+            lamp.turnOn();
+            if (lamp instanceof DeskLamp) {
+                DeskLamp deskLamp = (DeskLamp) lamp;
+                deskLamp.turnOn();
+            } else {
+                System.out.println("Not a DeskLamp");
+            }
+        } else {
+            System.out.println("Lamp is null");
+        }
+    }
+
+    public void teach(Lesson lesson) {
+        if (lesson != null) {
+            lesson.teach();
+            if (lesson instanceof MathLesson) {
+                MathLesson math = (MathLesson) lesson;
+                math.teach();
+            } else {
+                System.out.println("Not a MathLesson");
+            }
+        } else {
+            System.out.println("Lesson is null");
+        }
+    }
+
+    public void read(com.library.Book book) {
+        if (book != null) {
+            book.read();
+            if (book instanceof AudioBook) {
+                AudioBook audio = (AudioBook) book;
+                audio.playAudio();
+                audio.read();
+            } else {
+                System.out.println("Not an AudioBook");
+            }
+        } else {
+            System.out.println("Book is null");
+        }
+    }
+
+    public void illuminate(Light light) {
+        if (light != null) {
+            light.switchOn();
+            if (light instanceof SmartLight) {
+                SmartLight smart = (SmartLight) light;
+                smart.switchOn();
+            } else {
+                System.out.println("Not a SmartLight");
+            }
+        } else {
+            System.out.println("Light is null");
+        }
+    }
+
+    public void secure(Locker locker) {
+        if (locker != null) {
+            locker.lock();
+            if (locker instanceof DigitalLocker) {
+                DigitalLocker digital = (DigitalLocker) locker;
+                digital.encrypt();
+            } else {
+                System.out.println("Not a DigitalLocker");
+            }
+        } else {
+            System.out.println("Locker is null");
+        }
+    }
+
+    public void playMedia(MediaFile mediaFile) {
+        if (mediaFile != null) {
+            mediaFile.play();
+            if (mediaFile instanceof AudioFile) {
+                AudioFile audioFile = (AudioFile) mediaFile;
+                //audioFile.adjustVolume();  this method is package default
+                audioFile.play();
+            } else {
+                System.out.println("Not an AudioFile");
+            }
+        } else {
+            System.out.println("MediaFile is null");
+        }
+    }
+
+    public void send(Message message) {
+        if (message != null) {
+            message.sendMessage();
+            if (message instanceof TextMessage) {
+                TextMessage text = (TextMessage) message;
+                text.sendMessage();
+            } else {
+                System.out.println("Not a TextMessage");
+            }
+        } else {
+            System.out.println("Message is null");
+        }
+    }
+    public void reflect(com.mirror.Mirror mirror) {
+        if (mirror != null) {
+            mirror.reflect();
+            if (mirror instanceof DigitalMirror) {
+                DigitalMirror digital = (DigitalMirror) mirror;
+                digital.reflect();
+            } else {
+                System.out.println("Not a DigitalMirror");
+            }
+        } else {
+            System.out.println("Mirror is null");
+        }
+    }
+
+    public void playInstrument(Instrument instrument) {
+        if (instrument != null) {
+            instrument.play();
+            if (instrument instanceof Guitar) {
+                Guitar guitar = (Guitar) instrument;
+                guitar.play();
+            } else {
+                System.out.println("Not a Guitar");
+            }
+        } else {
+            System.out.println("Instrument is null");
+        }
+    }
+
+    public void navigate(Map map) {
+        if (map != null) {
+            map.showRoute();
+            if (map instanceof GPSMap) {
+                GPSMap gps = (GPSMap) map;
+                gps.giveDirections();
+                gps.showRoute();
+            } else {
+                System.out.println("Not a GPSMap");
+            }
+        } else {
+            System.out.println("Map is null");
+        }
+    }
+
+    public void writeNotes(Notebook notebook) {
+        if (notebook != null) {
+            notebook.write();
+            if (notebook instanceof SpiralNotebook) {
+                SpiralNotebook spiral = (SpiralNotebook) notebook;
+                spiral.write();
+            } else {
+                System.out.println("Not a SpiralNotebook");
+            }
+        } else {
+            System.out.println("Notebook is null");
+        }
+    }
+
+    public void saveNotes(com.notes.Notebook notebook) {
+        if (notebook != null) {
+            notebook.writeNotes();
+            if (notebook instanceof DigitalNotebook) {
+                DigitalNotebook digital = (DigitalNotebook) notebook;
+                digital.writeNotes();
+            } else {
+                System.out.println("Not a DigitalNotebook");
+            }
+        } else {
+            System.out.println("Notebook is null");
+        }
+    }
+
+    public void shoot(com.camera.Camera camera) {
+        if (camera != null) {
+            camera.takePhoto();
+            if (camera instanceof DSLR) {
+                DSLR dslr = (DSLR) camera;
+                dslr.takePhoto();
+            } else {
+                System.out.println("Not a DSLR");
+            }
+        } else {
+            System.out.println("Camera is null");
+        }
+    }
+
+    public void notifyUser(Notification notification) {
+        if (notification != null) {
+            notification.send();
+            if (notification instanceof EmailNotification) {
+                EmailNotification email = (EmailNotification) notification;
+                email.send();
+            } else {
+                System.out.println("Not an EmailNotification");
+            }
+        } else {
+            System.out.println("Notification is null");
+        }
+    }
+
+    public void printDocument(Printer printer) {
+        if (printer != null) {
+            printer.print();
+            if (printer instanceof LaserPrinter) {
+                LaserPrinter laser = (LaserPrinter) printer;
+                laser.print();
+                laser.tonerLevel();
+            } else {
+                System.out.println("Not a LaserPrinter");
+            }
+        } else {
+            System.out.println("Printer is null");
+        }
+    }
+
+    public void sit(com.officechair.Chair chair) {
+        if (chair != null) {
+            chair.sit();
+            if (chair instanceof OfficeChair) {
+                OfficeChair office = (OfficeChair) chair;
+                office.adjustHeight();
+            } else {
+                System.out.println("Not an OfficeChair");
+            }
+        } else {
+            System.out.println("Chair is null");
+        }
+    }
+
+    public void organize(Calendar calendar) {
+        if (calendar != null) {
+            calendar.displayDate();
+            if (calendar instanceof DigitalCalendar) {
+                DigitalCalendar digital = (DigitalCalendar) calendar;
+                digital.displayDate();
+                digital.addEvent();
+            } else {
+                System.out.println("Not a DigitalCalendar");
+            }
+        } else {
+            System.out.println("Calendar is null");
+        }
+    }
+
+    public void makePayment(PaymentMethod method) {
+        if (method != null) {
+            method.processPayment();
+            if (method instanceof CreditCard) {
+                CreditCard credit = (CreditCard) method;
+                credit.processPayment();
+            } else {
+                System.out.println("Not a CreditCard");
+            }
+        } else {
+            System.out.println("PaymentMethod is null");
+        }
+    }
+    public void plan(Calendar calendar) {
+        if (calendar != null) {
+            calendar.displayDate();
+            if (calendar instanceof DigitalCalendar) {
+                DigitalCalendar digital = (DigitalCalendar) calendar;
+                digital.addEvent();
+                digital.displayDate();
+            } else {
+                System.out.println("Not a DigitalCalendar");
+            }
+        } else {
+            System.out.println("Calendar is null");
+        }
+    }
+
+    public void grow(Plant plant) {
+        if (plant != null) {
+            plant.grow();
+            if (plant instanceof Flower) {
+                Flower flower = (Flower) plant;
+                flower.grow();
+            } else {
+                System.out.println("Not a Flower");
+            }
+        } else {
+            System.out.println("Plant is null");
+        }
+    }
+
+    public void cook(Utensil utensil) {
+        if (utensil != null) {
+            utensil.use();
+            if (utensil instanceof Pot) {
+                Pot pot = (Pot) utensil;
+                pot.use();
+            } else {
+                System.out.println("Not a Pot");
+            }
+        } else {
+            System.out.println("Utensil is null");
+        }
+    }
+
+    public void output(Printer printer) {
+        if (printer != null) {
+            printer.print();
+            if (printer instanceof LaserPrinter) {
+                LaserPrinter laser = (LaserPrinter) printer;
+                laser.tonerLevel();
+                laser.tonerLevel();
+            } else {
+                System.out.println("Not a LaserPrinter");
+            }
+        } else {
+            System.out.println("Printer is null");
+        }
+    }
+    public void checkProduct(Product product) {
+        if (product != null) {
+            product.apply();
+            if (product instanceof Shampoo) {
+                Shampoo shampoo = (Shampoo) product;
+                shampoo.apply();
+            } else {
+                System.out.println("Not a Shampoo");
+            }
+        } else {
+            System.out.println("Product is null");
+        }
+    }
+
+    public void conductQuiz(Quiz quiz) {
+        if (quiz != null) {
+            quiz.start();
+            if (quiz instanceof OnlineQuiz) {
+                OnlineQuiz online = (OnlineQuiz) quiz;
+                online.start();
+            } else {
+                System.out.println("Not an OnlineQuiz");
+            }
+        } else {
+            System.out.println("Quiz is null");
+        }
+    }
+
+    public void cookRecipe(com.recipe.Recipe recipe) {
+        if (recipe != null) {
+            recipe.prepare();
+            if (recipe instanceof DessertRecipe) {
+                DessertRecipe dessert = (DessertRecipe) recipe;
+                dessert.prepare();
+            } else {
+                System.out.println("Not a DessertRecipe");
+            }
+        } else {
+            System.out.println("Recipe is null");
+        }
+    }
+
+    public void remind(Reminder reminder) {
+        if (reminder != null) {
+            reminder.alert();
+            if (reminder instanceof MeetingReminder) {
+                MeetingReminder meet = (MeetingReminder) reminder;
+                meet.alert();
+            } else {
+                System.out.println("Not a MeetingReminder");
+            }
+        } else {
+            System.out.println("Reminder is null");
+        }
+    }
+    public void viewReport(Report report) {
+        if (report != null) {
+            report.generate();
+            if (report instanceof SalesReport) {
+                SalesReport sales = (SalesReport) report;
+                sales.generate();
+            } else {
+                System.out.println("Not a SalesReport");
+            }
+        } else {
+            System.out.println("Report is null");
+        }
+    }
+
+    public void labelShelf(ShelfLabel label) {
+        if (label != null) {
+            label.displayPrice();
+            if (label instanceof DigitalShelfLabel) {
+                DigitalShelfLabel digital = (DigitalShelfLabel) label;
+                digital.displayPrice();
+            } else {
+                System.out.println("Not a DigitalShelfLabel");
+            }
+        } else {
+            System.out.println("ShelfLabel is null");
+        }
+    }
+
+    public void useBoard(Board board) {
+        if (board != null) {
+            board.write();
+            if (board instanceof SmartBoard) {
+                SmartBoard smart = (SmartBoard) board;
+                smart.write();
+                smart.connectToWifi();
+            } else {
+                System.out.println("Not a SmartBoard");
+            }
+        } else {
+            System.out.println("Board is null");
+        }
+    }
+
+    public void monitorSecurity(Camera camera) {
+        if (camera != null) {
+            camera.capture();
+            if (camera instanceof SecurityCamera) {
+                SecurityCamera security = (SecurityCamera) camera;
+                security.detectMotion();
+            } else {
+                System.out.println("Not a SecurityCamera");
+            }
+        } else {
+            System.out.println("Camera is null");
+        }
+    }
+
+    public void checkSensor(Sensor sensor) {
+        if (sensor != null) {
+            sensor.readValue();
+            if (sensor instanceof TemperatureSensor) {
+                TemperatureSensor temperatureSensor = (TemperatureSensor) sensor;
+                temperatureSensor.readValue();
+            } else {
+                System.out.println("Not a TemperatureSensor");
+            }
+        } else {
+            System.out.println("Sensor is null");
+        }
+    }
+    public void checkService(Service service) {
+        if (service != null) {
+            service.provide();
+            if (service instanceof CleaningService) {
+                CleaningService cleaning = (CleaningService) service;
+                cleaning.provide();
+            } else {
+                System.out.println("Not a CleaningService");
+            }
+        } else {
+            System.out.println("Service is null");
+        }
+    }
+
+    public void updateSettings(AccountSettings settings) {
+        if (settings != null) {
+            settings.open();
+            if (settings instanceof PrivacySettings) {
+                PrivacySettings privacy = (PrivacySettings) settings;
+                privacy.open();
+            } else {
+                System.out.println("Not a PrivacySettings");
+            }
+        } else {
+            System.out.println("Settings is null");
+        }
+    }
+
+    public void drawShape(Shape shape) {
+        if (shape != null) {
+            shape.draw();
+            if (shape instanceof Circle) {
+                Circle circle = (Circle) shape;
+                circle.draw();
+            } else {
+                System.out.println("Not a Circle");
+            }
+        } else {
+            System.out.println("Shape is null");
+        }
+    }
+
+    public void playSpeaker(Speaker speaker) {
+        if (speaker != null) {
+            speaker.playSound();
+            if (speaker instanceof BluetoothSpeaker) {
+                BluetoothSpeaker bt = (BluetoothSpeaker) speaker;
+                bt.connectBluetooth();
+            } else {
+                System.out.println("Not a BluetoothSpeaker");
+            }
+        } else {
+            System.out.println("Speaker is null");
+        }
+    }
+
+    public void writeNotebook(com.stationery.Notebook notebook) {
+        if (notebook != null) {
+            notebook.open();
+            if (notebook instanceof SketchBook) {
+                SketchBook sketch = (SketchBook) notebook;
+                sketch.open();
+            } else {
+                System.out.println("Not a SketchBook");
+            }
+        } else {
+            System.out.println("Notebook is null");
+        }
+    }
+    public void checkShelf(Shelf shelf) {
+        if (shelf != null) {
+            shelf.placeItem();
+            if (shelf instanceof Bookshelf) {
+                Bookshelf book = (Bookshelf) shelf;
+                book.placeItem();
+            } else {
+                System.out.println("Not a Bookshelf");
+            }
+        } else {
+            System.out.println("Shelf is null");
+        }
+    }
+
+    public void streamAudio(Stream stream) {
+        if (stream != null) {
+            stream.start();
+            if (stream instanceof AudioStream) {
+                AudioStream audio = (AudioStream) stream;
+                audio.start();
+            } else {
+                System.out.println("Not an AudioStream");
+            }
+        } else {
+            System.out.println("Stream is null");
+        }
+    }
+
+    public void handleSubscription(Subscription subscription) {
+        if (subscription != null) {
+            subscription.activate();
+            if (subscription instanceof PremiumSubscription) {
+                PremiumSubscription premium = (PremiumSubscription) subscription;
+                premium.activate();
+            } else {
+                System.out.println("Not a PremiumSubscription");
+            }
+        } else {
+            System.out.println("Subscription is null");
+        }
+    }
+
+    public void useCup(com.thermocup.Cup cup) {
+        if (cup != null) {
+            cup.fill();
+            if (cup instanceof ThermoCup) {
+                ThermoCup thermo = (ThermoCup) cup;
+                thermo.maintainTemperature();
+            } else {
+                System.out.println("Not a ThermoCup");
+            }
+        } else {
+            System.out.println("Cup is null");
+        }
+    }
+    public void bookMovieTicket(Ticket ticket) {
+        if (ticket != null) {
+            ticket.book();
+            if (ticket instanceof MovieTicket) {
+                MovieTicket movie = (MovieTicket) ticket;
+                movie.book();
+            } else {
+                System.out.println("Not a MovieTicket");
+            }
+        } else {
+            System.out.println("Ticket (movie) is null");
+        }
+    }
+
+    public void bookOnlineTicket(com.ticketbooking.Ticket ticket) {
+        if (ticket != null) {
+            ticket.book();
+            if (ticket instanceof OnlineTicket) {
+                OnlineTicket online = (OnlineTicket) ticket;
+                online.book();
+            } else {
+                System.out.println("Not an OnlineTicket");
+            }
+        } else {
+            System.out.println("Ticket (online) is null");
+        }
+    }
+
 }

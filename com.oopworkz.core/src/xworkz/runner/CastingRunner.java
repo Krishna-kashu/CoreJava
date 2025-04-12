@@ -76,6 +76,35 @@ import com.kitchen.DesignerMug;
 import com.kitchen.Mug;
 import com.kitchenware.Cup;
 import com.kitchenware.TravelCup;
+import com.lamp.Lamp;
+import com.lamp.DeskLamp;
+import com.lesson.Lesson;
+import com.lesson.MathLesson;
+import com.library.AudioBook;
+import com.light.Light;
+import com.light.SmartLight;
+import com.locker.Locker;
+import com.locker.DigitalLocker;
+import com.mediaFile.MediaFile;
+import com.mediaFile.AudioFile;
+import com.message.Message;
+import com.message.TextMessage;
+import com.mirror.DigitalMirror;
+import com.navigator.Map;
+import com.navigator.GPSMap;
+import com.notebook.Notebook;
+import com.notebook.SpiralNotebook;
+import com.notes.DigitalNotebook;
+import com.camera.DSLR;
+import com.notification.Notification;
+import com.notification.EmailNotification;
+import com.office.Printer;
+import com.office.LaserPrinter;
+import com.organizer.Calendar;
+import com.organizer.DigitalCalendar;
+import com.paymentMethod.PaymentMethod;
+import com.paymentMethod.CreditCard;
+
 
 public class CastingRunner {
     public static void main(String[] args) {
@@ -452,5 +481,382 @@ public class CastingRunner {
         casting.pour(cup);
         casting.pour(travel);
         casting.pour(cupRef);
+
+        System.out.println("\n--- Lamp ---");
+        Lamp lamp = new Lamp();
+        DeskLamp deskLamp = new DeskLamp();
+        Lamp lampRef = new DeskLamp();
+
+        casting.switchOn(lamp);
+        casting.switchOn(deskLamp);
+        casting.switchOn(lampRef);
+
+        System.out.println("\n--- Lesson ---");
+        Lesson lesson = new Lesson();
+        MathLesson math = new MathLesson();
+        Lesson lessonRef = new MathLesson();
+
+        casting.teach(lesson);
+        casting.teach(math);
+        casting.teach(lessonRef);
+
+        System.out.println("\n--- Library ---");
+        com.library.Book book1 = new com.library.Book();
+        AudioBook audioBook = new AudioBook();
+        com.library.Book bookRef = new AudioBook();
+
+        casting.read(book1);
+        casting.read(audioBook);
+        casting.read(bookRef);
+
+        System.out.println("\n--- Light ---");
+        Light light = new Light();
+        SmartLight smartLight = new SmartLight();
+        Light lightRef = new SmartLight();
+
+        casting.illuminate(light);
+        casting.illuminate(smartLight);
+        casting.illuminate(lightRef);
+
+        System.out.println("\n--- Locker ---");
+        Locker locker = new Locker();
+        DigitalLocker digitalLocker = new DigitalLocker();
+        Locker lockerRef = new DigitalLocker();
+
+        casting.secure(locker);
+        casting.secure(digitalLocker);
+        casting.secure(lockerRef);
+
+        System.out.println("\n--- MediaFile ---");
+        MediaFile media = new MediaFile();
+        AudioFile audio = new AudioFile();
+        MediaFile mediaRef = new AudioFile();
+
+        casting.playMedia(media);
+        casting.playMedia(audio);
+        casting.playMedia(mediaRef);
+
+        System.out.println("\n--- Message ---");
+        Message message = new Message();
+        TextMessage text = new TextMessage();
+        Message messageRef = new TextMessage();
+
+        casting.send(message);
+        casting.send(text);
+        casting.send(messageRef);
+
+        System.out.println("\n--- Mirror ---");
+        com.mirror.Mirror mirror3 = new com.mirror.Mirror();
+        DigitalMirror digitalMirror = new DigitalMirror();
+        com.mirror.Mirror mirrorRef = new DigitalMirror();
+
+        casting.reflect(mirror3);
+        casting.reflect(digitalMirror);
+        casting.reflect(mirrorRef);
+
+        System.out.println("\n--- Music Instrument ---");
+        Instrument instrument2 = new Instrument();
+        Guitar guitar2 = new Guitar();
+        Instrument instrumentRef2 = new Guitar();
+
+        casting.playInstrument(instrument2);
+        casting.playInstrument(guitar2);
+        casting.playInstrument(instrumentRef2);
+
+        System.out.println("\n--- Navigator ---");
+        Map map = new Map();
+        GPSMap gpsMap = new GPSMap();
+        Map mapRef = new GPSMap();
+
+        casting.navigate(map);
+        casting.navigate(gpsMap);
+        casting.navigate(mapRef);
+
+        System.out.println("\n--- Notebook ---");
+        Notebook notebook = new Notebook();
+        SpiralNotebook spiralNotebook = new SpiralNotebook();
+        Notebook notebookRef = new SpiralNotebook();
+
+        casting.writeNotes(notebook);
+        casting.writeNotes(spiralNotebook);
+        casting.writeNotes(notebookRef);
+
+        System.out.println("\n--- Notes (DigitalNotebook) ---");
+        com.notes.Notebook digitalNote = new DigitalNotebook();
+        DigitalNotebook actualDigitalNote = new DigitalNotebook();
+
+        casting.saveNotes(digitalNote);
+        casting.saveNotes(actualDigitalNote);
+
+        System.out.println("\n--- Camera ---");
+        com.camera.Camera camera3 = new com.camera.Camera();
+        DSLR dslr = new DSLR();
+        com.camera.Camera camRef = new DSLR();
+
+        casting.shoot(camera3);
+        casting.shoot(dslr);
+        casting.shoot(camRef);
+
+        System.out.println("\n--- Notification ---");
+        Notification notification = new Notification();
+        EmailNotification email = new EmailNotification();
+        Notification notifRef = new EmailNotification();
+
+        casting.notifyUser(notification);
+        casting.notifyUser(email);
+        casting.notifyUser(notifRef);
+
+        System.out.println("\n--- Office Printer ---");
+        Printer printer = new Printer();
+        LaserPrinter laser = new LaserPrinter();
+        Printer printerRef = new LaserPrinter();
+
+        casting.printDocument(printer);
+        casting.printDocument(laser);
+        casting.printDocument(printerRef);
+
+        System.out.println("\n--- Office Chair ---");
+        com.officechair.Chair chair3 = new com.officechair.Chair();
+        OfficeChair officeChair1 = new OfficeChair();
+        com.officechair.Chair chairRef = new OfficeChair();
+
+        casting.sit(chair3);
+        casting.sit(officeChair1);
+        casting.sit(chairRef);
+
+        System.out.println("\n--- Organizer ---");
+        Calendar calendar = new Calendar();
+        DigitalCalendar digital = new DigitalCalendar();
+        Calendar calendarRef = new DigitalCalendar();
+
+        casting.organize(calendar);
+        casting.organize(digital);
+        casting.organize(calendarRef);
+
+        System.out.println("\n--- Payment Method ---");
+        PaymentMethod method = new PaymentMethod();
+        CreditCard creditCard = new CreditCard();
+        PaymentMethod methodRef = new CreditCard();
+
+        casting.makePayment(method);
+        casting.makePayment(creditCard);
+        casting.makePayment(methodRef);
+
+        System.out.println("\n--- Planner ---");
+        Calendar calendar1 = new Calendar();
+        DigitalCalendar digitalCalendar = new DigitalCalendar();
+        Calendar calendarRef1 = new DigitalCalendar();
+
+        casting.plan(calendar1);
+        casting.plan(digitalCalendar);
+        casting.plan(calendarRef1);
+
+        System.out.println("\n--- Plant ---");
+        com.plant.Plant plant = new com.plant.Plant();
+        com.plant.Flower flower = new com.plant.Flower();
+        com.plant.Plant plantRef = new com.plant.Flower();
+
+        casting.grow(plant);
+        casting.grow(flower);
+        casting.grow(plantRef);
+
+        System.out.println("\n--- Pot ---");
+        com.pot.Utensil utensil = new com.pot.Utensil();
+        com.pot.Pot pot = new com.pot.Pot();
+        com.pot.Utensil utensilRef = new com.pot.Pot();
+
+        casting.cook(utensil);
+        casting.cook(pot);
+        casting.cook(utensilRef);
+
+        System.out.println("\n--- Printing ---");
+        com.printing.Printer printer1 = new com.printing.Printer();
+        LaserPrinter laserPrinter = new LaserPrinter();
+        com.printing.Printer printerRef1 = new com.printing.LaserPrinter();
+
+        casting.output(printer);
+        casting.output(laserPrinter);
+        casting.output(printerRef);
+
+        System.out.println("\n--- Product ---");
+        com.product.Product product = new com.product.Product();
+        com.product.Shampoo shampoo = new com.product.Shampoo();
+        com.product.Product productRef = new com.product.Shampoo();
+
+        casting.checkProduct(product);
+        casting.checkProduct(shampoo);
+        casting.checkProduct(productRef);
+
+        System.out.println("\n--- Quiz ---");
+        com.quiz.Quiz quiz = new com.quiz.Quiz();
+        com.quiz.OnlineQuiz onlineQuiz = new com.quiz.OnlineQuiz();
+        com.quiz.Quiz quizRef = new com.quiz.OnlineQuiz();
+
+        casting.conductQuiz(quiz);
+        casting.conductQuiz(onlineQuiz);
+        casting.conductQuiz(quizRef);
+
+        System.out.println("\n--- Recipe ---");
+        com.recipe.Recipe recipe2 = new com.recipe.Recipe();
+        com.recipe.DessertRecipe dessert = new com.recipe.DessertRecipe();
+        com.recipe.Recipe recipeRef = new com.recipe.DessertRecipe();
+
+        casting.cookRecipe(recipe2);
+        casting.cookRecipe(dessert);
+        casting.cookRecipe(recipeRef);
+
+        System.out.println("\n--- Remainder ---");
+        com.remainder.Reminder reminder = new com.remainder.Reminder();
+        com.remainder.MeetingReminder meeting = new com.remainder.MeetingReminder();
+        com.remainder.Reminder reminderRef = new com.remainder.MeetingReminder();
+
+        casting.remind(reminder);
+        casting.remind(meeting);
+        casting.remind(reminderRef);
+
+        System.out.println("\n--- Report ---");
+        com.report.Report report = new com.report.Report();
+        com.report.SalesReport sales = new com.report.SalesReport();
+        com.report.Report reportRef = new com.report.SalesReport();
+
+        casting.viewReport(report);
+        casting.viewReport(sales);
+        casting.viewReport(reportRef);
+
+        System.out.println("\n--- Retail (ShelfLabel) ---");
+        com.retail.ShelfLabel label = new com.retail.ShelfLabel();
+        com.retail.DigitalShelfLabel digital1 = new com.retail.DigitalShelfLabel();
+        com.retail.ShelfLabel labelRef = new com.retail.DigitalShelfLabel();
+
+        casting.labelShelf(label);
+        casting.labelShelf(digital1);
+        casting.labelShelf(labelRef);
+
+        System.out.println("\n--- School (Board) ---");
+        com.school.Board board = new com.school.Board();
+        com.school.SmartBoard smart1 = new com.school.SmartBoard();
+        com.school.Board boardRef = new com.school.SmartBoard();
+
+        casting.useBoard(board);
+        casting.useBoard(smart1);
+        casting.useBoard(boardRef);
+
+        System.out.println("\n--- Security (Camera) ---");
+        com.security.Camera cam = new com.security.Camera();
+        com.security.SecurityCamera secCam = new com.security.SecurityCamera();
+        com.security.Camera camRef1 = new com.security.SecurityCamera();
+
+        casting.monitorSecurity(cam);
+        casting.monitorSecurity(secCam);
+        casting.monitorSecurity(camRef1);
+
+        System.out.println("\n--- Sensor ---");
+        com.sensor.Sensor sensor = new com.sensor.Sensor();
+        com.sensor.TemperatureSensor tempSensor = new com.sensor.TemperatureSensor();
+        com.sensor.Sensor sensorRef = new com.sensor.TemperatureSensor();
+
+        casting.checkSensor(sensor);
+        casting.checkSensor(tempSensor);
+        casting.checkSensor(sensorRef);
+
+        System.out.println("\n--- Service ---");
+        com.service.Service service = new com.service.Service();
+        com.service.CleaningService cleaning = new com.service.CleaningService();
+        com.service.Service serviceRef = new com.service.CleaningService();
+
+        casting.checkService(service);
+        casting.checkService(cleaning);
+        casting.checkService(serviceRef);
+
+        System.out.println("\n--- Settings ---");
+        com.settings.AccountSettings settings = new com.settings.AccountSettings();
+        com.settings.PrivacySettings privacy = new com.settings.PrivacySettings();
+        com.settings.AccountSettings settingsRef = new com.settings.PrivacySettings();
+
+        casting.updateSettings(settings);
+        casting.updateSettings(privacy);
+        casting.updateSettings(settingsRef);
+
+        System.out.println("\n--- Shape ---");
+        com.shape.Shape shape = new com.shape.Shape();
+        com.shape.Circle circle = new com.shape.Circle();
+        com.shape.Shape shapeRef = new com.shape.Circle();
+
+        casting.drawShape(shape);
+        casting.drawShape(circle);
+        casting.drawShape(shapeRef);
+
+        System.out.println("\n--- Sound (Speaker) ---");
+        com.sound.Speaker speaker = new com.sound.Speaker();
+        com.sound.BluetoothSpeaker bluetooth = new com.sound.BluetoothSpeaker();
+        com.sound.Speaker speakerRef = new com.sound.BluetoothSpeaker();
+
+        casting.playSpeaker(speaker);
+        casting.playSpeaker(bluetooth);
+        casting.playSpeaker(speakerRef);
+
+        System.out.println("\n--- Stationery ---");
+        com.stationery.Notebook notebook1 = new com.stationery.Notebook();
+        com.stationery.SketchBook sketch = new com.stationery.SketchBook();
+        com.stationery.Notebook noteRef = new com.stationery.SketchBook();
+
+        casting.writeNotebook(notebook1);
+        casting.writeNotebook(sketch);
+        casting.writeNotebook(noteRef);
+
+        System.out.println("\n--- Storage (Shelf) ---");
+        com.storage.Shelf shelf = new com.storage.Shelf();
+        com.storage.Bookshelf bookshelf = new com.storage.Bookshelf();
+        com.storage.Shelf shelfRef = new com.storage.Bookshelf();
+
+        casting.checkShelf(shelf);
+        casting.checkShelf(bookshelf);
+        casting.checkShelf(shelfRef);
+
+        System.out.println("\n--- Stream ---");
+        com.stream.Stream stream = new com.stream.Stream();
+        com.stream.AudioStream audioStream = new com.stream.AudioStream();
+        com.stream.Stream streamRef = new com.stream.AudioStream();
+
+        casting.streamAudio(stream);
+        casting.streamAudio(audioStream);
+        casting.streamAudio(streamRef);
+
+        System.out.println("\n--- Subscription ---");
+        com.subscription.Subscription sub = new com.subscription.Subscription();
+        com.subscription.PremiumSubscription premium = new com.subscription.PremiumSubscription();
+        com.subscription.Subscription subRef = new com.subscription.PremiumSubscription();
+
+        casting.handleSubscription(sub);
+        casting.handleSubscription(premium);
+        casting.handleSubscription(subRef);
+
+        System.out.println("\n--- ThermoCup ---");
+        com.thermocup.Cup cup1 = new com.thermocup.Cup();
+        com.thermocup.ThermoCup thermo = new com.thermocup.ThermoCup();
+        com.thermocup.Cup cupRef1 = new com.thermocup.ThermoCup();
+
+        casting.useCup(cup1);
+        casting.useCup(thermo);
+        casting.useCup(cupRef1);
+
+        System.out.println("\n--- Ticket (Movie) ---");
+        com.ticket.Ticket movieTicket = new com.ticket.Ticket();
+        com.ticket.MovieTicket movie = new com.ticket.MovieTicket();
+        com.ticket.Ticket refMovie = new com.ticket.MovieTicket();
+
+        casting.bookMovieTicket(movieTicket);
+        casting.bookMovieTicket(movie);
+        casting.bookMovieTicket(refMovie);
+
+        System.out.println("\n--- TicketBooking (Online) ---");
+        com.ticketbooking.Ticket onlineTicket = new com.ticketbooking.Ticket();
+        com.ticketbooking.OnlineTicket online = new com.ticketbooking.OnlineTicket();
+        com.ticketbooking.Ticket refOnline = new com.ticketbooking.OnlineTicket();
+
+        casting.bookOnlineTicket(onlineTicket);
+        casting.bookOnlineTicket(online);
+        casting.bookOnlineTicket(refOnline);
+
     }
     }
