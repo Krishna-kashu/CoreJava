@@ -10,7 +10,7 @@ public class VeganRecipe extends Recipe {
         System.out.println("Running overridden cook() in VeganRecipe");
     }
 
-    void listIngredients() {
+    public void listIngredients() {
         System.out.println("Running listIngredients() in VeganRecipe");
     }
 }

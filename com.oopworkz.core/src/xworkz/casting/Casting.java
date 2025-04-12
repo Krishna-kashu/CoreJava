@@ -24,12 +24,26 @@ import com.climate.CeilingFan;
 import com.climate.Fan;
 import com.computing.GamingLaptop;
 import com.computing.NotebookComputer;
+import com.container.ThermoBottle;
 import com.content.Content;
 import com.content.VideoContent;
+import com.contract.Contract;
+import com.contract.FreelanceContract;
+import com.control.Remote;
+import com.control.SmartRemote;
+import com.cooking.Recipe;
+import com.cooking.VeganRecipe;
+import com.course.Course;
+import com.course.JavaCourse;
 import com.dashboard.Dashboard;
 import com.dashboard.UserDashboard;
 import com.document.Document;
 import com.document.PDFDocument;
+import com.door.SlidingDoor;
+import com.editor.Editor;
+import com.editor.PhotoEditor;
+import com.electronics.Device;
+import com.electronics.Smartphone;
 import com.gamelevel.BonusLevel;
 import com.gamelevel.GameLevel;
 import com.hygine.ToothBrush;
@@ -359,6 +373,126 @@ public class Casting {
             }
         } else {
             System.out.println("Document is null");
+        }
+    }
+    public void slide(com.door.Door door) {
+        if (door != null) {
+            door.open();
+            if (door instanceof SlidingDoor) {
+                SlidingDoor sliding = (SlidingDoor) door;
+                sliding.open();
+                sliding.lock();
+            } else {
+                System.out.println("Not a SlidingDoor");
+            }
+        } else {
+            System.out.println("Door is null");
+        }
+    }
+    public void edit(Editor editor) {
+        if (editor != null) {
+            editor.edit();
+            if (editor instanceof PhotoEditor) {
+                PhotoEditor photo = (PhotoEditor) editor;
+                photo.edit();
+            } else {
+                System.out.println("Not a PhotoEditor");
+            }
+        } else {
+            System.out.println("Editor is null");
+        }
+    }
+    public void operate(Remote remote) {
+        if (remote != null) {
+            remote.pressButton();
+            if (remote instanceof SmartRemote) {
+                SmartRemote smart = (SmartRemote) remote;
+                smart.pressButton();
+            } else {
+                System.out.println("Not a SmartRemote");
+            }
+        } else {
+            System.out.println("Remote is null");
+        }
+    }
+    public void cook(Recipe recipe) {
+        if (recipe != null) {
+            recipe.cook();
+            if (recipe instanceof VeganRecipe) {
+                VeganRecipe vegan = (VeganRecipe) recipe;
+                vegan.listIngredients();
+            } else {
+                System.out.println("Not a VeganRecipe");
+            }
+        } else {
+            System.out.println("Recipe is null");
+        }
+    }
+    public void sign(Contract contract) {
+        if (contract != null) {
+            contract.sign();
+            if (contract instanceof FreelanceContract) {
+                FreelanceContract freelance = (FreelanceContract) contract;
+                freelance.sign();
+            } else {
+                System.out.println("Not a FreelanceContract");
+            }
+        } else {
+            System.out.println("Contract is null");
+        }
+    }
+    public void enroll(Course course) {
+        if (course != null) {
+            course.enroll();
+            if (course instanceof JavaCourse) {
+                JavaCourse java = (JavaCourse) course;
+                java.enroll();
+            } else {
+                System.out.println("Not a JavaCourse");
+            }
+        } else {
+            System.out.println("Course is null");
+        }
+    }
+    public void fillBottle(com.container.Bottle bottle) {
+        if (bottle != null) {
+            bottle.fill();
+            if (bottle instanceof ThermoBottle) {
+                ThermoBottle smart = (ThermoBottle) bottle;
+                smart.fill();
+                smart.fill();
+            } else {
+                System.out.println("Not a SmartBottle");
+            }
+        } else {
+            System.out.println("Bottle is null");
+        }
+    }
+    public void operate(Device device) {
+        if (device != null) {
+            device.start();
+            if (device instanceof Smartphone) {
+                Smartphone smart = (Smartphone) device;
+                smart.makeCall();
+                smart.start();
+            } else {
+                System.out.println("Not a Smartphone");
+            }
+        } else {
+            System.out.println("Device is null");
+        }
+    }
+    public void control(Fan device) {
+        if (device != null) {
+            device.start();
+            if (device instanceof Fan) {
+                Fan fan = (Fan) device;
+                fan.rotate();
+            } else {
+                System.out.println("Not a Fan");
+            }
+        } else {
+            System.out.println("FanDevice is null");
         }
     }
 }

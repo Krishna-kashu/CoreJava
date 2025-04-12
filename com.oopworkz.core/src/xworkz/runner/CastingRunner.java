@@ -20,8 +20,24 @@ import com.climate.CeilingFan;
 import com.climate.Fan;
 import com.computing.GamingLaptop;
 import com.computing.NotebookComputer;
+import com.container.ThermoBottle;
 import com.content.Content;
 import com.content.VideoContent;
+import com.contract.Contract;
+import com.contract.FreelanceContract;
+import com.control.Remote;
+import com.control.SmartRemote;
+import com.cooking.Recipe;
+import com.cooking.VeganRecipe;
+import com.course.Course;
+import com.course.JavaCourse;
+import com.dashboard.Dashboard;
+import com.dashboard.UserDashboard;
+import com.document.Document;
+import com.document.PDFDocument;
+import com.door.SlidingDoor;
+import com.editor.Editor;
+import com.editor.PhotoEditor;
 import com.furnitureplus.MassageChair;
 import com.microwave.Microwave;
 import com.microwave.SmartMicrowave;
@@ -206,5 +222,87 @@ public class CastingRunner {
         casting.stream(content);
         casting.stream(video);
         casting.stream(content1);
+        System.out.println("\n--- Dashboard ---");
+        Dashboard dashboard = new Dashboard();
+        UserDashboard userDashboard = new UserDashboard();
+        Dashboard dashboardRef = new UserDashboard();
+
+        casting.view(dashboard);
+        casting.view(userDashboard);
+        casting.view(dashboardRef);
+
+        System.out.println("\n--- Document ---");
+        Document document = new Document();
+        PDFDocument pdfDocument = new PDFDocument();
+        Document docRef = new PDFDocument();
+
+        casting.print(document);
+        casting.print(pdfDocument);
+        casting.print(docRef);
+
+        System.out.println("\n--- Door ---");
+        com.door.Door door1 = new com.door.Door();
+        SlidingDoor slidingDoor = new SlidingDoor();
+        com.door.Door door2 = new SlidingDoor();
+
+        casting.slide(door1);
+        casting.slide(slidingDoor);
+        casting.slide(door2);
+
+        System.out.println("\n--- Editor ---");
+        Editor editor = new Editor();
+        PhotoEditor photoEditor = new PhotoEditor();
+        Editor editorRef = new PhotoEditor();
+
+        casting.edit(editor);
+        casting.edit(photoEditor);
+        casting.edit(editorRef);
+
+        System.out.println("\n--- Remote  ---");
+        Remote remote = new Remote();
+        SmartRemote smartRemote = new SmartRemote();
+        Remote remote1 = new SmartRemote();
+
+        casting.operate(remote);
+        casting.operate(smartRemote);
+        casting.operate(remote1);
+
+        System.out.println("\n--- Recipe  ---");
+        Recipe recipe = new Recipe();
+        VeganRecipe vegan = new VeganRecipe();
+        Recipe recipe1 = new VeganRecipe();
+
+        casting.cook(recipe);
+        casting.cook(vegan);
+        casting.cook(recipe1);
+
+        System.out.println("\n--- Contract  ---");
+        Contract contract = new Contract();
+        FreelanceContract freelance = new FreelanceContract();
+        Contract contract1 = new FreelanceContract();
+
+        casting.sign(contract);
+        casting.sign(freelance);
+        casting.sign(contract1);
+
+        System.out.println("\n--- Course  ---");
+        Course course = new Course();
+        JavaCourse java = new JavaCourse();
+        Course course1 = new JavaCourse();
+
+        casting.enroll(course);
+        casting.enroll(java);
+        casting.enroll(course1);
+
+        System.out.println("\n--- Bottle  ---");
+        com.container.Bottle bottle2 = new com.container.Bottle();
+        ThermoBottle thermoBottle = new ThermoBottle();
+        com.container.Bottle bottle3 = new ThermoBottle();
+
+        casting.fillBottle(bottle2);
+        casting.fillBottle(thermoBottle);
+        casting.fillBottle(bottle3);
+
+
     }
-}
+    }

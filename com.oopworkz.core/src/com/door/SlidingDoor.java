@@ -10,7 +10,7 @@ public class SlidingDoor extends Door {
         System.out.println("Running overridden open() in SlidingDoor");
     }
 
-    void lock() {
+    public void lock() {
         System.out.println("Running lock() in SlidingDoor");
     }
 }
