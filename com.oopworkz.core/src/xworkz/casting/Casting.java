@@ -54,7 +54,11 @@ import com.game.BoardGame;
 import com.game.Game;
 import com.gamelevel.BonusLevel;
 import com.gamelevel.GameLevel;
+import com.home.Refrigerator;
+import com.hydration.SmartBottle;
 import com.hygine.ToothBrush;
+import com.inputdevice.Keyboard;
+import com.inputdevice.MechanicalKeyboard;
 import com.microwave.Microwave;
 import com.microwave.SmartMicrowave;
 import com.security.Camera;
@@ -63,6 +67,16 @@ import com.chair.Chair;
 import com.chair.ReclinerChair;
 import com.furnitureplus.MassageChair;
 import com.officechair.OfficeChair;
+import com.instrument.Guitar;
+import com.instrument.Instrument;
+import com.interior.Furniture;
+import com.interior.Table;
+import com.jar.Container;
+import com.jar.Jar;
+import com.kitchen.DesignerMug;
+import com.kitchen.Mug;
+import com.kitchenware.Cup;
+import com.kitchenware.TravelCup;
 
 
 
@@ -495,6 +509,7 @@ public class Casting {
             device.start();
             if (device instanceof com.fan.Fan) {
                 com.fan.Fan fan = (com.fan.Fan) device;
+                fan.start();
                 fan.rotate();
             } else {
                 System.out.println("Not a Fan");
@@ -554,6 +569,119 @@ public class Casting {
             }
         } else {
             System.out.println("Game is null");
+        }
+    }
+
+    public void use(com.home.Appliance appliance) {
+        if (appliance != null) {
+            appliance.operate();
+            if (appliance instanceof Refrigerator) {
+                Refrigerator fridge = (Refrigerator) appliance;
+                fridge.defrost();
+                fridge.operate();
+            } else {
+                System.out.println("Not a Refrigerator");
+            }
+        } else {
+            System.out.println("Appliance is null");
+        }
+    }
+
+    public void check(com.hydration.Bottle bottle) {
+        if (bottle != null) {
+            bottle.pour();
+            if (bottle instanceof SmartBottle) {
+                SmartBottle smart = (SmartBottle) bottle;
+                smart.trackIntake();
+                smart.pour();
+            } else {
+                System.out.println("Not a SmartBottle");
+            }
+        } else {
+            System.out.println("Bottle is null");
+        }
+    }
+    public void type(Keyboard keyboard) {
+        if (keyboard != null) {
+            keyboard.type();
+            if (keyboard instanceof MechanicalKeyboard) {
+                MechanicalKeyboard mech = (MechanicalKeyboard) keyboard;
+                mech.type();
+            } else {
+                System.out.println("Not a MechanicalKeyboard");
+            }
+        } else {
+            System.out.println("Keyboard is null");
+        }
+    }
+    public void play(Instrument instrument) {
+        if (instrument != null) {
+            instrument.play();
+            if (instrument instanceof Guitar) {
+                Guitar guitar = (Guitar) instrument;
+                guitar.play();
+            } else {
+                System.out.println("Not a Guitar");
+            }
+        } else {
+            System.out.println("Instrument is null");
+        }
+    }
+
+    public void place(Furniture furniture) {
+        if (furniture != null) {
+            furniture.place();
+            if (furniture instanceof Table) {
+                Table table = (Table) furniture;
+                table.fold();
+                table.place();
+            } else {
+                System.out.println("Not a Table");
+            }
+        } else {
+            System.out.println("Furniture is null");
+        }
+    }
+
+    public void store(Container container) {
+        if (container != null) {
+            container.fill();
+            if (container instanceof Jar) {
+                Jar jar = (Jar) container;
+                jar.seal();
+            } else {
+                System.out.println("Not a Jar");
+            }
+        } else {
+            System.out.println("Container is null");
+        }
+    }
+
+    public void drink(Mug mug) {
+        if (mug != null) {
+            mug.fill();
+            if (mug instanceof DesignerMug) {
+                DesignerMug designer = (DesignerMug) mug;
+                designer.fill();
+            } else {
+                System.out.println("Not a DesignerMug");
+            }
+        } else {
+            System.out.println("Mug is null");
+        }
+    }
+
+    public void pour(Cup cup) {
+        if (cup != null) {
+            cup.pour();
+            if (cup instanceof TravelCup) {
+                TravelCup travel = (TravelCup) cup;
+                travel.pour();
+            } else {
+                System.out.println("Not a TravelCup");
+            }
+        } else {
+            System.out.println("Cup is null");
         }
     }
 }

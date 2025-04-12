@@ -39,6 +39,10 @@ import com.door.SlidingDoor;
 import com.editor.Editor;
 import com.editor.PhotoEditor;
 import com.furnitureplus.MassageChair;
+import com.home.Refrigerator;
+import com.hydration.SmartBottle;
+import com.inputdevice.Keyboard;
+import com.inputdevice.MechanicalKeyboard;
 import com.microwave.Microwave;
 import com.microwave.SmartMicrowave;
 import com.officechair.OfficeChair;
@@ -62,6 +66,16 @@ import com.form.Form;
 import com.form.RegistrationForm;
 import com.game.BoardGame;
 import com.game.Game;
+import com.instrument.Guitar;
+import com.instrument.Instrument;
+import com.interior.Furniture;
+import com.interior.Table;
+import com.jar.Container;
+import com.jar.Jar;
+import com.kitchen.DesignerMug;
+import com.kitchen.Mug;
+import com.kitchenware.Cup;
+import com.kitchenware.TravelCup;
 
 public class CastingRunner {
     public static void main(String[] args) {
@@ -367,5 +381,76 @@ public class CastingRunner {
         casting.play(boardGame);
         casting.play(gameRef);
 
+        System.out.println("\n--- Home Appliance ---");
+        com.home.Appliance appliance1 = new com.home.Appliance();
+        Refrigerator fridge = new Refrigerator();
+        com.home.Appliance applianceRef1 = new Refrigerator();
+
+        casting.use(appliance1);
+        casting.use(fridge);
+        casting.use(applianceRef1);
+
+        System.out.println("\n--- Hydration Bottle ---");
+        com.hydration.Bottle bottle4 = new com.hydration.Bottle();
+        SmartBottle smartBottle = new SmartBottle();
+        com.hydration.Bottle bottleRef = new SmartBottle();
+
+        casting.check(bottle4);
+        casting.check(smartBottle);
+        casting.check(bottleRef);
+
+        System.out.println("\n--- Input Device Keyboard ---");
+        Keyboard keyboard = new Keyboard();
+        MechanicalKeyboard mechanicalKeyboard = new MechanicalKeyboard();
+        Keyboard keyboardRef = new MechanicalKeyboard();
+
+        casting.type(keyboard);
+        casting.type(mechanicalKeyboard);
+        casting.type(keyboardRef);
+
+        System.out.println("\n--- Instrument ---");
+        Instrument instrument = new Instrument();
+        Guitar guitar = new Guitar();
+        Instrument instrumentRef = new Guitar();
+
+        casting.play(instrument);
+        casting.play(guitar);
+        casting.play(instrumentRef);
+
+        System.out.println("\n--- Interior Furniture ---");
+        Furniture furniture = new Furniture();
+        Table table = new Table();
+        Furniture furnitureRef = new Table();
+
+        casting.place(furniture);
+        casting.place(table);
+        casting.place(furnitureRef);
+
+        System.out.println("\n--- Jar Container ---");
+        Container container = new Container();
+        Jar jar = new Jar();
+        Container containerRef = new Jar();
+
+        casting.store(container);
+        casting.store(jar);
+        casting.store(containerRef);
+
+        System.out.println("\n--- Kitchen Mug ---");
+        Mug mug = new Mug();
+        DesignerMug designer = new DesignerMug();
+        Mug mugRef = new DesignerMug();
+
+        casting.drink(mug);
+        casting.drink(designer);
+        casting.drink(mugRef);
+
+        System.out.println("\n--- Kitchenware Cup ---");
+        Cup cup = new Cup();
+        TravelCup travel = new TravelCup();
+        Cup cupRef = new TravelCup();
+
+        casting.pour(cup);
+        casting.pour(travel);
+        casting.pour(cupRef);
     }
     }
