@@ -10,7 +10,7 @@ public class PDFDocument extends Document {
         System.out.println("Running overridden print() in PDFDocument");
     }
 
-    void encrypt() {
+    public void encrypt() {
         System.out.println("Running encrypt() in PDFDocument");
     }
 }

@@ -24,6 +24,14 @@ import com.climate.CeilingFan;
 import com.climate.Fan;
 import com.computing.GamingLaptop;
 import com.computing.NotebookComputer;
+import com.content.Content;
+import com.content.VideoContent;
+import com.dashboard.Dashboard;
+import com.dashboard.UserDashboard;
+import com.document.Document;
+import com.document.PDFDocument;
+import com.gamelevel.BonusLevel;
+import com.gamelevel.GameLevel;
 import com.hygine.ToothBrush;
 import com.microwave.Microwave;
 import com.microwave.SmartMicrowave;
@@ -37,20 +45,21 @@ import com.officechair.OfficeChair;
 
 
 public class Casting {
-    public void close(Door door){
-        if(door!=null){
+    public void close(Door door) {
+        if (door != null) {
             door.open();
-            if(door instanceof SmartDoor){
-                SmartDoor smartDoor=(SmartDoor) door;
+            if (door instanceof SmartDoor) {
+                SmartDoor smartDoor = (SmartDoor) door;
                 smartDoor.lockRemotely();
                 smartDoor.open();
-            }else{
+            } else {
                 System.out.println("door is not null");
             }
-        }else{
+        } else {
             System.out.println("door is null");
         }
     }
+
     public void checkAccount(Account account) {
         if (account != null) {
             account.deposit();
@@ -64,6 +73,7 @@ public class Casting {
             System.out.println("Account is null");
         }
     }
+
     public void runAppliance(Appliance appliance) {
         if (appliance != null) {
             appliance.turnOn();
@@ -77,6 +87,7 @@ public class Casting {
             System.out.println("Appliance is null");
         }
     }
+
     public void paint(Paint paint) {
         if (paint != null) {
             paint.apply();
@@ -90,19 +101,21 @@ public class Casting {
             System.out.println("Paint is null");
         }
     }
-        public void checkTransaction(BankTransaction transaction) {
-            if (transaction != null) {
-                transaction.execute();
-                if (transaction instanceof WithdrawalTransaction) {
-                    WithdrawalTransaction withdrawal = (WithdrawalTransaction) transaction;
-                    withdrawal.execute();
-                } else {
-                    System.out.println("Not a WithdrawalTransaction");
-                }
+
+    public void checkTransaction(BankTransaction transaction) {
+        if (transaction != null) {
+            transaction.execute();
+            if (transaction instanceof WithdrawalTransaction) {
+                WithdrawalTransaction withdrawal = (WithdrawalTransaction) transaction;
+                withdrawal.execute();
             } else {
-                System.out.println("Transaction is null");
+                System.out.println("Not a WithdrawalTransaction");
             }
+        } else {
+            System.out.println("Transaction is null");
         }
+    }
+
     public void checkMirror(Mirror mirror) {
         if (mirror != null) {
             mirror.reflect();
@@ -116,6 +129,7 @@ public class Casting {
             System.out.println("Mirror is null");
         }
     }
+
     public void checkBed(Bed bed) {
         if (bed != null) {
             bed.sleep();
@@ -129,6 +143,7 @@ public class Casting {
             System.out.println("Bed is null");
         }
     }
+
     public void checkBook(Book book) {
         if (book != null) {
             book.read();
@@ -157,6 +172,7 @@ public class Casting {
             System.out.println("Bottle is null");
         }
     }
+
     public void monitor(Camera camera) {
         if (camera != null) {
             camera.capture();
@@ -166,11 +182,12 @@ public class Casting {
                 securityCamera.capture();
             } else {
                 System.out.println("Not a SecurityCamera");
-                }
+            }
         } else {
             System.out.println("Camera is null");
         }
-        }
+    }
+
     public void relax(Chair chair) {
         if (chair != null) {
             chair.sit();
@@ -215,6 +232,7 @@ public class Casting {
             System.out.println("Office Chair is null");
         }
     }
+
     public void brush(Brush brush) {
         if (brush != null) {
             brush.clean();
@@ -229,6 +247,7 @@ public class Casting {
             System.out.println("Brush is null");
         }
     }
+
     public void brushTeeth(com.hygine.Brush brush) {
         if (brush != null) {
             brush.clean();
@@ -243,6 +262,7 @@ public class Casting {
             System.out.println("Brush is null");
         }
     }
+
     public void Stop(Fan fan) {
         if (fan != null) {
             fan.rotate();
@@ -257,6 +277,7 @@ public class Casting {
             System.out.println("Fan is null");
         }
     }
+
     public void benchmark(NotebookComputer laptop) {
         if (laptop != null) {
             laptop.boot();
@@ -270,6 +291,7 @@ public class Casting {
             System.out.println("Laptop is null");
         }
     }
+
     public void cook(Microwave microwave) {
         if (microwave != null) {
             microwave.heat();
@@ -284,6 +306,59 @@ public class Casting {
             System.out.println("Microwave is null");
         }
     }
+
+    public void stream(Content content) {
+        if (content != null) {
+            content.display();
+            if (content instanceof VideoContent) {
+                VideoContent video = (VideoContent) content;
+                video.playInFullScreen();
+                video.display();
+            } else {
+                System.out.println("Not a VideoContent");
+            }
+        } else {
+            System.out.println("Content is null");
+        }
     }
 
-
+    public void progress(GameLevel level) {
+        if (level != null) {
+            level.start();
+            if (level instanceof BonusLevel) {
+                BonusLevel bonus = (BonusLevel) level;
+                bonus.start();
+            } else {
+                System.out.println("Not a BonusLevel");
+            }
+        } else {
+            System.out.println("GameLevel is null");
+        }
+    }
+    public void view(Dashboard dashboard) {
+        if (dashboard != null) {
+            dashboard.render();
+            if (dashboard instanceof UserDashboard) {
+                UserDashboard user = (UserDashboard) dashboard;
+                user.render();
+            } else {
+                System.out.println("Not a UserDashboard");
+            }
+        } else {
+            System.out.println("Dashboard is null");
+        }
+    }
+    public void print(Document document) {
+        if (document != null) {
+            document.print();
+            if (document instanceof PDFDocument) {
+                PDFDocument pdf = (PDFDocument) document;
+                pdf.encrypt();
+            } else {
+                System.out.println("Not a PDFDocument");
+            }
+        } else {
+            System.out.println("Document is null");
+        }
+    }
+}

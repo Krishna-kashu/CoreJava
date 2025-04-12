@@ -20,6 +20,8 @@ import com.climate.CeilingFan;
 import com.climate.Fan;
 import com.computing.GamingLaptop;
 import com.computing.NotebookComputer;
+import com.content.Content;
+import com.content.VideoContent;
 import com.furnitureplus.MassageChair;
 import com.microwave.Microwave;
 import com.microwave.SmartMicrowave;
@@ -187,7 +189,7 @@ public class CastingRunner {
         casting.benchmark(gaming);
         casting.benchmark(laptopRef);
 
-        System.out.println("\n--- Microwave Hierarchy ---");
+        System.out.println("\n--- Microwave  ---");
         Microwave microwave = new Microwave();
         SmartMicrowave smartMicrowave = new SmartMicrowave();
         Microwave ref = new SmartMicrowave();
@@ -196,6 +198,13 @@ public class CastingRunner {
         casting.cook(smartMicrowave);
         casting.cook(ref);
 
+        System.out.println("\n--- Content  ---");
+        Content content = new Content();
+        VideoContent video = new VideoContent();
+        Content content1 = new VideoContent();
 
+        casting.stream(content);
+        casting.stream(video);
+        casting.stream(content1);
     }
 }

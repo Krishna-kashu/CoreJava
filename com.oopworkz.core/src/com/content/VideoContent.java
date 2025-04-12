@@ -10,7 +10,7 @@ public class VideoContent extends Content {
         System.out.println("Running overridden display in VideoContent");
     }
 
-    void playInFullScreen() {
+    public void playInFullScreen() {
         System.out.println("Running playInFullScreen in VideoContent");
     }
 }

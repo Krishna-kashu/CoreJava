@@ -10,7 +10,7 @@ public class GamingLaptop extends NotebookComputer {
         System.out.println("Running overridden boot() in GamingLaptop");
     }
 
-    void launchGame() {
+    public void launchGame() {
         System.out.println("Running launchGame() in GamingLaptop");
     }
 }
