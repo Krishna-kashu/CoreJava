@@ -10,7 +10,7 @@ public class Fan extends Device {
         System.out.println("Running overridden start() in Fan");
     }
 
-    void rotate() {
+    public void rotate() {
         System.out.println("Running rotate() in Fan");
     }
 }

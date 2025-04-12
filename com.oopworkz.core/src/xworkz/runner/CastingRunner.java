@@ -52,6 +52,16 @@ import com.bottle.WaterBottle;
 import com.hygine.ToothBrush;
 import com.brush.Brush;
 import com.brush.ElectricBrush;
+import com.electronics.Device;
+import com.electronics.Smartphone;
+import com.file.File;
+import com.file.TextFile;
+import com.footwear.RunningShoe;
+import com.footwear.Shoe;
+import com.form.Form;
+import com.form.RegistrationForm;
+import com.game.BoardGame;
+import com.game.Game;
 
 public class CastingRunner {
     public static void main(String[] args) {
@@ -303,6 +313,59 @@ public class CastingRunner {
         casting.fillBottle(thermoBottle);
         casting.fillBottle(bottle3);
 
+        System.out.println("\n--- Electronics Device ---");
+        Device device = new Device();
+        Smartphone smartphone = new Smartphone();
+        Device deviceRef = new Smartphone();
+
+        casting.operate(device);
+        casting.operate(smartphone);
+        casting.operate(deviceRef);
+
+        System.out.println("\n--- Fan Device ---");
+        com.fan.Device fanDevice = new com.fan.Device();
+        com.fan.Fan fan1 = new com.fan.Fan();
+        com.fan.Device fanRef2 = new com.fan.Fan();
+
+        casting.control(fanDevice);
+        casting.control(fan1);
+        casting.control(fanRef2);
+
+        System.out.println("\n--- File ---");
+        File file = new File();
+        TextFile textFile = new TextFile();
+        File fileRef = new TextFile();
+
+        casting.read(file);
+        casting.read(textFile);
+        casting.read(fileRef);
+
+        System.out.println("\n--- Footwear ---");
+        Shoe shoe = new Shoe();
+        RunningShoe runningShoe = new RunningShoe();
+        Shoe shoeRef = new RunningShoe();
+
+        casting.wear(shoe);
+        casting.wear(runningShoe);
+        casting.wear(shoeRef);
+
+        System.out.println("\n--- Form ---");
+        Form form = new Form();
+        RegistrationForm registration = new RegistrationForm();
+        Form formRef = new RegistrationForm();
+
+        casting.fill(form);
+        casting.fill(registration);
+        casting.fill(formRef);
+
+        System.out.println("\n--- Game ---");
+        Game game = new Game();
+        BoardGame boardGame = new BoardGame();
+        Game gameRef = new BoardGame();
+
+        casting.play(game);
+        casting.play(boardGame);
+        casting.play(gameRef);
 
     }
     }

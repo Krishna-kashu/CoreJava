@@ -10,7 +10,7 @@ public class TextFile extends File {
         System.out.println("Running overridden open() in TextFile");
     }
 
-    void countWords() {
+    public void countWords() {
         System.out.println("Running countWords() in TextFile");
     }
 }

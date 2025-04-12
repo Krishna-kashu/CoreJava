@@ -44,6 +44,14 @@ import com.editor.Editor;
 import com.editor.PhotoEditor;
 import com.electronics.Device;
 import com.electronics.Smartphone;
+import com.file.File;
+import com.file.TextFile;
+import com.footwear.RunningShoe;
+import com.footwear.Shoe;
+import com.form.Form;
+import com.form.RegistrationForm;
+import com.game.BoardGame;
+import com.game.Game;
 import com.gamelevel.BonusLevel;
 import com.gamelevel.GameLevel;
 import com.hygine.ToothBrush;
@@ -482,17 +490,70 @@ public class Casting {
             System.out.println("Device is null");
         }
     }
-    public void control(Fan device) {
+    public void control(com.fan.Device device) {
         if (device != null) {
             device.start();
-            if (device instanceof Fan) {
-                Fan fan = (Fan) device;
+            if (device instanceof com.fan.Fan) {
+                com.fan.Fan fan = (com.fan.Fan) device;
                 fan.rotate();
             } else {
                 System.out.println("Not a Fan");
             }
         } else {
             System.out.println("FanDevice is null");
+        }
+    }
+    public void read(File file) {
+        if (file != null) {
+            file.open();
+            if (file instanceof TextFile) {
+                TextFile text = (TextFile) file;
+                text.open();
+                text.countWords();
+            } else {
+                System.out.println("Not a TextFile");
+            }
+        } else {
+            System.out.println("File is null");
+        }
+    }
+    public void wear(Shoe shoe) {
+        if (shoe != null) {
+            shoe.wear();
+            if (shoe instanceof RunningShoe) {
+                RunningShoe running = (RunningShoe) shoe;
+                running.wear();
+            } else {
+                System.out.println("Not a RunningShoe");
+            }
+        } else {
+            System.out.println("Shoe is null");
+        }
+    }
+    public void fill(Form form) {
+        if (form != null) {
+            form.submit();
+            if (form instanceof RegistrationForm) {
+                RegistrationForm reg = (RegistrationForm) form;
+                reg.submit();
+            } else {
+                System.out.println("Not a RegistrationForm");
+            }
+        } else {
+            System.out.println("Form is null");
+        }
+    }
+    public void play(Game game) {
+        if (game != null) {
+            game.startGame();
+            if (game instanceof BoardGame) {
+                BoardGame board = (BoardGame) game;
+                board.startGame();
+            } else {
+                System.out.println("Not a BoardGame");
+            }
+        } else {
+            System.out.println("Game is null");
         }
     }
 }
