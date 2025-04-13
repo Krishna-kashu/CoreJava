@@ -39,6 +39,8 @@ import com.door.SlidingDoor;
 import com.editor.Editor;
 import com.editor.PhotoEditor;
 import com.furnitureplus.MassageChair;
+import com.gamelevel.BonusLevel;
+import com.gamelevel.GameLevel;
 import com.home.Refrigerator;
 import com.hydration.SmartBottle;
 import com.inputdevice.Keyboard;
@@ -104,6 +106,32 @@ import com.organizer.Calendar;
 import com.organizer.DigitalCalendar;
 import com.paymentMethod.PaymentMethod;
 import com.paymentMethod.CreditCard;
+import com.ticketing.TicketMachine;
+import com.ticketing.TrainTicketMachine;
+import com.time.Clock;
+import com.time.SmartClock;
+import com.timekeeping.AlarmClock;
+import com.tool.Hammer;
+import com.tool.Tool;
+import com.toolbox.ToolBox;
+import com.toolbox.Wrench;
+import com.transaction.Transaction;
+import com.transaction.OnlineTransaction;
+import com.transport.Car;
+import com.transport.Vehicle;
+import com.travel.Bag;
+import com.travel.LaptopBag;
+import com.tv.TV;
+import com.tv.TVRemote;
+import com.user.User;
+import com.user.AdminUser;
+import com.wearables.Watch;
+import com.wearables.SmartWatch;
+import com.website.Website;
+import com.website.Blog;
+import com.workshop.Drill;
+import com.writing.Pen;
+import com.writing.FountainPen;
 
 
 public class CastingRunner {
@@ -446,6 +474,15 @@ public class CastingRunner {
         casting.play(guitar);
         casting.play(instrumentRef);
 
+        System.out.println("\n--- GameLevel (BonusLevel) ---");
+        GameLevel baseLevel = new GameLevel();
+        BonusLevel bonusLevel = new BonusLevel();
+        GameLevel refBonus = new BonusLevel();
+
+        casting.progress(baseLevel);
+        casting.progress(bonusLevel);
+        casting.progress(refBonus);
+
         System.out.println("\n--- Interior Furniture ---");
         Furniture furniture = new Furniture();
         Table table = new Table();
@@ -491,6 +528,24 @@ public class CastingRunner {
         casting.switchOn(deskLamp);
         casting.switchOn(lampRef);
 
+        System.out.println("\n--- Document (PDFDocument) ---");
+        Document document1 = new Document();
+        PDFDocument pdfDoc = new PDFDocument();
+        Document refPdf = new PDFDocument();
+
+        casting.print(document1);
+        casting.print(pdfDoc);
+        casting.print(refPdf);
+
+        System.out.println("\n--- Game (BoardGame) ---");
+        Game baseGame = new Game();
+        BoardGame boardGame1 = new BoardGame();
+        Game refBoard = new BoardGame();
+
+        casting.play(baseGame);
+        casting.play(boardGame1);
+        casting.play(refBoard);
+
         System.out.println("\n--- Lesson ---");
         Lesson lesson = new Lesson();
         MathLesson math = new MathLesson();
@@ -508,6 +563,24 @@ public class CastingRunner {
         casting.read(book1);
         casting.read(audioBook);
         casting.read(bookRef);
+
+        System.out.println("\n--- Chair (OfficeChair) ---");
+        com.officechair.Chair chair1 = new com.officechair.Chair();
+        OfficeChair officeChair1 = new OfficeChair();
+        com.officechair.Chair refOffice = new OfficeChair();
+
+        casting.sit(chair1);
+        casting.sit(officeChair1);
+        casting.sit(refOffice);
+
+        System.out.println("\n--- Printer (LaserPrinter) ---");
+        Printer basePrinter = new Printer();
+        LaserPrinter laserPrinter = new LaserPrinter();
+        Printer refLaser = new LaserPrinter();
+
+        casting.output(basePrinter);
+        casting.output(laserPrinter);
+        casting.output(refLaser);
 
         System.out.println("\n--- Light ---");
         Light light = new Light();
@@ -617,11 +690,11 @@ public class CastingRunner {
 
         System.out.println("\n--- Office Chair ---");
         com.officechair.Chair chair3 = new com.officechair.Chair();
-        OfficeChair officeChair1 = new OfficeChair();
+        OfficeChair officeChair2 = new OfficeChair();
         com.officechair.Chair chairRef = new OfficeChair();
 
         casting.sit(chair3);
-        casting.sit(officeChair1);
+        casting.sit(officeChair2);
         casting.sit(chairRef);
 
         System.out.println("\n--- Organizer ---");
@@ -671,12 +744,12 @@ public class CastingRunner {
 
         System.out.println("\n--- Printing ---");
         com.printing.Printer printer1 = new com.printing.Printer();
-        LaserPrinter laserPrinter = new LaserPrinter();
+        com.printing.LaserPrinter laserPrinter1 = new com.printing.LaserPrinter();
         com.printing.Printer printerRef1 = new com.printing.LaserPrinter();
 
-        casting.output(printer);
-        casting.output(laserPrinter);
-        casting.output(printerRef);
+        casting.printDocs(printer1);
+        casting.printDocs(laserPrinter1);
+        casting.printDocs(printerRef1);
 
         System.out.println("\n--- Product ---");
         com.product.Product product = new com.product.Product();
@@ -858,5 +931,116 @@ public class CastingRunner {
         casting.bookOnlineTicket(online);
         casting.bookOnlineTicket(refOnline);
 
+        System.out.println("\n--- Ticketing ---");
+        TicketMachine machine = new TicketMachine();
+        TrainTicketMachine trainMachine = new TrainTicketMachine();
+        TicketMachine machineRef = new TrainTicketMachine();
+        casting.operateMachine(machine);
+        casting.operateMachine(trainMachine);
+        casting.operateMachine(machineRef);
+
+        System.out.println("\n--- Time ---");
+        Clock clock = new Clock();
+        SmartClock smartClock = new SmartClock();
+        Clock clockRef = new SmartClock();
+        casting.showTime(clock);
+        casting.showTime(smartClock);
+        casting.showTime(clockRef);
+
+        System.out.println("\n--- Timekeeping ---");
+        com.timekeeping.Clock tkClock = new com.timekeeping.Clock();
+        AlarmClock alarm = new AlarmClock();
+        com.timekeeping.Clock tkClockRef = new AlarmClock();
+        casting.alarmTest(tkClock);
+        casting.alarmTest(alarm);
+        casting.alarmTest(tkClockRef);
+
+        System.out.println("\n--- Tool ---");
+        Tool tool = new Tool();
+        Hammer hammer = new Hammer();
+        Tool toolRef = new Hammer();
+        casting.useTool(tool);
+        casting.useTool(hammer);
+        casting.useTool(toolRef);
+
+        System.out.println("\n--- Toolbox ---");
+        ToolBox box = new ToolBox();
+        Wrench wrench = new Wrench();
+        ToolBox boxRef = new Wrench();
+        casting.openToolbox(box);
+        casting.openToolbox(wrench);
+        casting.openToolbox(boxRef);
+
+        System.out.println("\n--- Transaction ---");
+        Transaction tx = new Transaction();
+        OnlineTransaction onlineTx = new OnlineTransaction();
+        Transaction txRef = new OnlineTransaction();
+        casting.handleTransaction(tx);
+        casting.handleTransaction(onlineTx);
+        casting.handleTransaction(txRef);
+
+        System.out.println("\n--- Transport ---");
+        Vehicle vehicle = new Vehicle();
+        Car car = new Car();
+        Vehicle vehicleRef = new Car();
+        casting.driveVehicle(vehicle);
+        casting.driveVehicle(car);
+        casting.driveVehicle(vehicleRef);
+
+        System.out.println("\n--- Travel ---");
+        Bag bag = new Bag();
+        LaptopBag laptopBag = new LaptopBag();
+        Bag bagRef = new LaptopBag();
+        casting.checkBag(bag);
+        casting.checkBag(laptopBag);
+        casting.checkBag(bagRef);
+
+        System.out.println("\n--- TV ---");
+        TV tv = new TV();
+        TVRemote tvRemote = new TVRemote();
+        TV tvRef = new TVRemote();
+        casting.operateTV(tv);
+        casting.operateTV(tvRemote);
+        casting.operateTV(tvRef);
+
+        System.out.println("\n--- User ---");
+        User user = new User();
+        AdminUser admin = new AdminUser();
+        User userRef = new AdminUser();
+        casting.manageUser(user);
+        casting.manageUser(admin);
+        casting.manageUser(userRef);
+
+        System.out.println("\n--- Wearables ---");
+        Watch watch = new Watch();
+        SmartWatch smartWatch = new SmartWatch();
+        Watch watchRef = new SmartWatch();
+        casting.wearWatch(watch);
+        casting.wearWatch(smartWatch);
+        casting.wearWatch(watchRef);
+
+        System.out.println("\n--- Website ---");
+        Website website = new Website();
+        Blog blog = new Blog();
+        Website websiteRef = new Blog();
+        casting.browseSite(website);
+        casting.browseSite(blog);
+        casting.browseSite(websiteRef);
+
+        System.out.println("\n--- Workshop ---");
+        com.workshop.Tool tool2 = new com.workshop.Tool();
+        Drill drill = new Drill();
+        com.workshop.Tool tool1 = new Drill();
+        casting.useWorkshopTool(tool2);
+        casting.useWorkshopTool(drill);
+        casting.useWorkshopTool(tool1);
+
+        System.out.println("\n--- Writing ---");
+        Pen pen = new Pen();
+        FountainPen fountain = new FountainPen();
+        Pen penRef = new FountainPen();
+        casting.writeSomething(pen);
+        casting.writeSomething(fountain);
+        casting.writeSomething(penRef);
     }
     }

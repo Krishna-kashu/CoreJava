@@ -143,6 +143,31 @@ import com.thermocup.ThermoCup;
 import com.ticket.Ticket;
 import com.ticket.MovieTicket;
 import com.ticketbooking.OnlineTicket;
+import com.ticketing.TicketMachine;
+import com.ticketing.TrainTicketMachine;
+import com.time.SmartClock;
+import com.timekeeping.AlarmClock;
+import com.tool.Hammer;
+import com.tool.Tool;
+import com.toolbox.ToolBox;
+import com.toolbox.Wrench;
+import com.transaction.Transaction;
+import com.transaction.OnlineTransaction;
+import com.transport.Car;
+import com.transport.Vehicle;
+import com.travel.Bag;
+import com.travel.LaptopBag;
+import com.tv.TV;
+import com.tv.TVRemote;
+import com.user.User;
+import com.user.AdminUser;
+import com.wearables.Watch;
+import com.wearables.SmartWatch;
+import com.website.Website;
+import com.website.Blog;
+import com.workshop.Drill;
+import com.writing.Pen;
+import com.writing.FountainPen;
 
 
 public class Casting {
@@ -206,8 +231,8 @@ public class Casting {
     public void checkTransaction(BankTransaction transaction) {
         if (transaction != null) {
             transaction.execute();
-            if (transaction instanceof WithdrawalTransaction) {
-                WithdrawalTransaction withdrawal = (WithdrawalTransaction) transaction;
+            if (transaction instanceof WithdrawalTransaction withdrawal) {
+                //WithdrawalTransaction withdrawal = (WithdrawalTransaction) transaction;
                 withdrawal.execute();
             } else {
                 System.out.println("Not a WithdrawalTransaction");
@@ -220,8 +245,8 @@ public class Casting {
     public void checkMirror(Mirror mirror) {
         if (mirror != null) {
             mirror.reflect();
-            if (mirror instanceof SmartMirror) {
-                SmartMirror smart = (SmartMirror) mirror;
+            if (mirror instanceof SmartMirror smart) {
+                //SmartMirror smart = (SmartMirror) mirror;
                 smart.showNews();
             } else {
                 System.out.println("Not a SmartMirror");
@@ -234,8 +259,8 @@ public class Casting {
     public void checkBed(Bed bed) {
         if (bed != null) {
             bed.sleep();
-            if (bed instanceof AdjustableBed) {
-                AdjustableBed adjustable = (AdjustableBed) bed;
+            if (bed instanceof AdjustableBed adjustable) {
+                //AdjustableBed adjustable = (AdjustableBed) bed;
                 adjustable.raiseHead();
             } else {
                 System.out.println("Not an AdjustableBed");
@@ -248,9 +273,9 @@ public class Casting {
     public void checkBook(Book book) {
         if (book != null) {
             book.read();
-            if (book instanceof EBook) {
-                EBook novel = (EBook) book;
-                novel.download();
+            if (book instanceof EBook ebook) {
+                //EBook novel = (EBook) book;
+                ebook.download();
             } else {
                 System.out.println("Not a Novel");
             }
@@ -262,8 +287,8 @@ public class Casting {
     public void checkBottle(Bottle bottle) {
         if (bottle != null) {
             bottle.open();
-            if (bottle instanceof WaterBottle) {
-                WaterBottle smart = (WaterBottle) bottle;
+            if (bottle instanceof WaterBottle smart) {
+                //WaterBottle smart = (WaterBottle) bottle;
                 smart.refill();
                 smart.open();
             } else {
@@ -1337,5 +1362,202 @@ public class Casting {
             System.out.println("Ticket (online) is null");
         }
     }
+    public void operateMachine(TicketMachine machine) {
+        if (machine != null) {
+            machine.issueTicket();
+            if (machine instanceof TrainTicketMachine) {
+                TrainTicketMachine trainTicketMachine=(TrainTicketMachine) machine;
+                trainTicketMachine.issueTicket();
+            } else {
+                System.out.println("Not a TrainTicketMachine");
+            }
+        } else {
+            System.out.println("TicketMachine is null");
+        }
+    }
 
+    public void showTime(com.time.Clock clock) {
+        if (clock != null) {
+            clock.showTime();
+            if (clock instanceof SmartClock) {
+                SmartClock smartClock=(SmartClock) clock;
+                smartClock.showTime();
+                smartClock.setAlarm();
+            } else {
+                System.out.println("Not a SmartClock");
+            }
+        } else {
+            System.out.println("Clock is null");
+        }
+    }
+
+    public void alarmTest(com.timekeeping.Clock clock) {
+        if (clock != null) {
+            clock.showTime();
+            if (clock instanceof AlarmClock) {
+                ((AlarmClock) clock).showTime();
+            } else {
+                System.out.println("Not an AlarmClock");
+            }
+        } else {
+            System.out.println("AlarmClock is null");
+        }
+    }
+
+    public void useTool(Tool tool) {
+        if (tool != null) {
+            tool.use();
+            if (tool instanceof Hammer) {
+                ((Hammer) tool).use();
+                Hammer hammer=(Hammer) tool;
+                hammer.swing();
+            } else {
+                System.out.println("Not a Hammer");
+            }
+        } else {
+            System.out.println("Tool is null");
+        }
+    }
+
+    public void openToolbox(ToolBox box) {
+        if (box != null) {
+            box.activate();
+            if (box instanceof Wrench) {
+                ((Wrench) box).activate();
+            } else {
+                System.out.println("Not a Wrench");
+            }
+        } else {
+            System.out.println("ToolBox is null");
+        }
+    }
+
+    public void handleTransaction(Transaction transaction) {
+        if (transaction != null) {
+            transaction.execute();
+            if (transaction instanceof OnlineTransaction) {
+                ((OnlineTransaction) transaction).execute();
+            } else {
+                System.out.println("Not an OnlineTransaction");
+            }
+        } else {
+            System.out.println("Transaction is null");
+        }
+    }
+
+    public void driveVehicle(Vehicle vehicle) {
+        if (vehicle != null) {
+            vehicle.move();
+            if (vehicle instanceof Car) {
+                ((Car) vehicle).honk();
+            } else {
+                System.out.println("Not a Car");
+            }
+        } else {
+            System.out.println("Vehicle is null");
+        }
+    }
+    public void checkBag(Bag bag) {
+        if (bag != null) {
+            bag.carry();
+            if (bag instanceof LaptopBag) {
+                ((LaptopBag) bag).protectLaptop();
+            } else {
+                System.out.println("Not a LaptopBag");
+            }
+        } else {
+            System.out.println("Bag is null");
+        }
+    }
+
+    public void operateTV(TV tv) {
+        if (tv != null) {
+            tv.powerOn();
+            if (tv instanceof TVRemote) {
+                ((TVRemote) tv).powerOn();
+            } else {
+                System.out.println("Not a TVRemote");
+            }
+        } else {
+            System.out.println("TV is null");
+        }
+    }
+
+    public void manageUser(User user) {
+        if (user != null) {
+            user.login();
+            if (user instanceof AdminUser) {
+                ((AdminUser) user).login();
+            } else {
+                System.out.println("Not an AdminUser");
+            }
+        } else {
+            System.out.println("User is null");
+        }
+    }
+
+    public void wearWatch(Watch watch) {
+        if (watch != null) {
+            watch.showTime();
+            if (watch instanceof SmartWatch) {
+                ((SmartWatch) watch).showTime();
+                ((SmartWatch) watch).trackSteps();
+            } else {
+                System.out.println("Not a SmartWatch");
+            }
+        } else {
+            System.out.println("Watch is null");
+        }
+    }
+
+    public void browseSite(Website website) {
+        if (website != null) {
+            website.load();
+            if (website instanceof Blog) {
+                ((Blog) website).load();
+            } else {
+                System.out.println("Not a Blog");
+            }
+        } else {
+            System.out.println("Website is null");
+        }
+    }
+
+    public void useWorkshopTool(com.workshop.Tool tool) {
+        if (tool != null) {
+            tool.use();
+            if (tool instanceof Drill) {
+                ((Drill) tool).use();
+            } else {
+                System.out.println("Not a Drill");
+            }
+        } else {
+            System.out.println("Tool is null");
+        }
+    }
+
+    public void writeSomething(Pen pen) {
+        if (pen != null) {
+            pen.write();
+            if (pen instanceof FountainPen) {
+                ((FountainPen) pen).write();
+            } else {
+                System.out.println("Not a FountainPen");
+            }
+        } else {
+            System.out.println("Pen is null");
+        }
+    }
+    public void printDocs(com.printing.Printer printer) {
+        if (printer != null) {
+            printer.print();
+            if (printer instanceof com.printing.LaserPrinter) {
+                ((com.printing.LaserPrinter) printer).print();
+            } else {
+                System.out.println("Not a LaserPrinter");
+            }
+        } else {
+            System.out.println("Printer is null");
+        }
+    }
 }
