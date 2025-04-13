@@ -174,8 +174,7 @@ public class Casting {
     public void close(Door door) {
         if (door != null) {
             door.open();
-            if (door instanceof SmartDoor) {
-                SmartDoor smartDoor = (SmartDoor) door;
+            if (door instanceof SmartDoor smartDoor) {
                 smartDoor.lockRemotely();
                 smartDoor.open();
             } else {
@@ -189,8 +188,7 @@ public class Casting {
     public void checkAccount(Account account) {
         if (account != null) {
             account.deposit();
-            if (account instanceof SavingsAccount) {
-                SavingsAccount savings = (SavingsAccount) account;
+            if (account instanceof SavingsAccount savings) {
                 savings.deposit();
             } else {
                 System.out.println("Not a SavingsAccount");
@@ -203,8 +201,7 @@ public class Casting {
     public void runAppliance(Appliance appliance) {
         if (appliance != null) {
             appliance.turnOn();
-            if (appliance instanceof WashingMachine) {
-                WashingMachine washingMachine = (WashingMachine) appliance;
+            if (appliance instanceof WashingMachine washingMachine) {
                 washingMachine.turnOn();
             } else {
                 System.out.println("Not a WashingMachine");
@@ -217,8 +214,7 @@ public class Casting {
     public void paint(Paint paint) {
         if (paint != null) {
             paint.apply();
-            if (paint instanceof SprayPaint) {
-                SprayPaint spray = (SprayPaint) paint;
+            if (paint instanceof SprayPaint spray) {
                 spray.apply();
             } else {
                 System.out.println("Not a SprayPaint");
@@ -302,8 +298,7 @@ public class Casting {
     public void monitor(Camera camera) {
         if (camera != null) {
             camera.capture();
-            if (camera instanceof SecurityCamera) {
-                SecurityCamera securityCamera = (SecurityCamera) camera;
+            if (camera instanceof SecurityCamera securityCamera) {
                 securityCamera.detectMotion();
                 securityCamera.capture();
             } else {
@@ -317,8 +312,7 @@ public class Casting {
     public void relax(Chair chair) {
         if (chair != null) {
             chair.sit();
-            if (chair instanceof ReclinerChair) {
-                ReclinerChair recliner = (ReclinerChair) chair;
+            if (chair instanceof ReclinerChair recliner) {
                 recliner.sit();
                 recliner.recline();
             } else {
@@ -332,8 +326,7 @@ public class Casting {
     public void massage(com.furnitureplus.Chair chair) {
         if (chair != null) {
             chair.sit();
-            if (chair instanceof MassageChair) {
-                MassageChair massage = (MassageChair) chair;
+            if (chair instanceof MassageChair massage) {
                 massage.sit();
                 massage.massage();
             } else {
@@ -347,8 +340,7 @@ public class Casting {
     public void roll(com.officechair.Chair chair) {
         if (chair != null) {
             chair.sit();
-            if (chair instanceof OfficeChair) {
-                OfficeChair office = (OfficeChair) chair;
+            if (chair instanceof OfficeChair office) {
                 office.sit();
                 office.adjustHeight();
             } else {
@@ -362,8 +354,7 @@ public class Casting {
     public void brush(Brush brush) {
         if (brush != null) {
             brush.clean();
-            if (brush instanceof ElectricBrush) {
-                ElectricBrush electricBrush = (ElectricBrush) brush;
+            if (brush instanceof ElectricBrush electricBrush) {
                 electricBrush.vibrate();
                 electricBrush.clean();
             } else {
@@ -377,8 +368,7 @@ public class Casting {
     public void brushTeeth(com.hygine.Brush brush) {
         if (brush != null) {
             brush.clean();
-            if (brush instanceof ToothBrush) {
-                ToothBrush toothBrush = (ToothBrush) brush;
+            if (brush instanceof ToothBrush toothBrush) {
                 toothBrush.clean();
                 toothBrush.vibrate();
             } else {
@@ -392,8 +382,7 @@ public class Casting {
     public void Stop(Fan fan) {
         if (fan != null) {
             fan.rotate();
-            if (fan instanceof CeilingFan) {
-                CeilingFan ceilingFan = (CeilingFan) fan;
+            if (fan instanceof CeilingFan ceilingFan) {
                 ceilingFan.rotate();
                 ceilingFan.changeSpeed();
             } else {
@@ -407,8 +396,7 @@ public class Casting {
     public void benchmark(NotebookComputer laptop) {
         if (laptop != null) {
             laptop.boot();
-            if (laptop instanceof GamingLaptop) {
-                GamingLaptop gaming = (GamingLaptop) laptop;
+            if (laptop instanceof GamingLaptop gaming) {
                 gaming.boot();
             } else {
                 System.out.println("Not a GamingLaptop");
@@ -421,8 +409,7 @@ public class Casting {
     public void cook(Microwave microwave) {
         if (microwave != null) {
             microwave.heat();
-            if (microwave instanceof SmartMicrowave) {
-                SmartMicrowave smart = (SmartMicrowave) microwave;
+            if (microwave instanceof SmartMicrowave smart) {
                 smart.heat();
                 smart.connectWiFi();
             } else {
@@ -436,8 +423,7 @@ public class Casting {
     public void stream(Content content) {
         if (content != null) {
             content.display();
-            if (content instanceof VideoContent) {
-                VideoContent video = (VideoContent) content;
+            if (content instanceof VideoContent video) {
                 video.playInFullScreen();
                 video.display();
             } else {
@@ -451,8 +437,7 @@ public class Casting {
     public void progress(GameLevel level) {
         if (level != null) {
             level.start();
-            if (level instanceof BonusLevel) {
-                BonusLevel bonus = (BonusLevel) level;
+            if (level instanceof BonusLevel bonus) {
                 bonus.start();
             } else {
                 System.out.println("Not a BonusLevel");
@@ -464,8 +449,7 @@ public class Casting {
     public void view(Dashboard dashboard) {
         if (dashboard != null) {
             dashboard.render();
-            if (dashboard instanceof UserDashboard) {
-                UserDashboard user = (UserDashboard) dashboard;
+            if (dashboard instanceof UserDashboard user) {
                 user.render();
             } else {
                 System.out.println("Not a UserDashboard");
@@ -477,8 +461,7 @@ public class Casting {
     public void print(Document document) {
         if (document != null) {
             document.print();
-            if (document instanceof PDFDocument) {
-                PDFDocument pdf = (PDFDocument) document;
+            if (document instanceof PDFDocument pdf) {
                 pdf.encrypt();
             } else {
                 System.out.println("Not a PDFDocument");
@@ -490,8 +473,7 @@ public class Casting {
     public void slide(com.door.Door door) {
         if (door != null) {
             door.open();
-            if (door instanceof SlidingDoor) {
-                SlidingDoor sliding = (SlidingDoor) door;
+            if (door instanceof SlidingDoor sliding) {
                 sliding.open();
                 sliding.lock();
             } else {
@@ -504,8 +486,7 @@ public class Casting {
     public void edit(Editor editor) {
         if (editor != null) {
             editor.edit();
-            if (editor instanceof PhotoEditor) {
-                PhotoEditor photo = (PhotoEditor) editor;
+            if (editor instanceof PhotoEditor photo) {
                 photo.edit();
             } else {
                 System.out.println("Not a PhotoEditor");
@@ -517,8 +498,7 @@ public class Casting {
     public void operate(Remote remote) {
         if (remote != null) {
             remote.pressButton();
-            if (remote instanceof SmartRemote) {
-                SmartRemote smart = (SmartRemote) remote;
+            if (remote instanceof SmartRemote smart) {
                 smart.pressButton();
             } else {
                 System.out.println("Not a SmartRemote");
@@ -530,8 +510,7 @@ public class Casting {
     public void cook(Recipe recipe) {
         if (recipe != null) {
             recipe.cook();
-            if (recipe instanceof VeganRecipe) {
-                VeganRecipe vegan = (VeganRecipe) recipe;
+            if (recipe instanceof VeganRecipe vegan) {
                 vegan.listIngredients();
             } else {
                 System.out.println("Not a VeganRecipe");
@@ -543,8 +522,7 @@ public class Casting {
     public void sign(Contract contract) {
         if (contract != null) {
             contract.sign();
-            if (contract instanceof FreelanceContract) {
-                FreelanceContract freelance = (FreelanceContract) contract;
+            if (contract instanceof FreelanceContract freelance) {
                 freelance.sign();
             } else {
                 System.out.println("Not a FreelanceContract");
@@ -556,8 +534,7 @@ public class Casting {
     public void enroll(Course course) {
         if (course != null) {
             course.enroll();
-            if (course instanceof JavaCourse) {
-                JavaCourse java = (JavaCourse) course;
+            if (course instanceof JavaCourse java) {
                 java.enroll();
             } else {
                 System.out.println("Not a JavaCourse");
@@ -569,8 +546,7 @@ public class Casting {
     public void fillBottle(com.container.Bottle bottle) {
         if (bottle != null) {
             bottle.fill();
-            if (bottle instanceof ThermoBottle) {
-                ThermoBottle smart = (ThermoBottle) bottle;
+            if (bottle instanceof ThermoBottle smart) {
                 smart.fill();
                 smart.fill();
             } else {
@@ -583,8 +559,7 @@ public class Casting {
     public void operate(Device device) {
         if (device != null) {
             device.start();
-            if (device instanceof Smartphone) {
-                Smartphone smart = (Smartphone) device;
+            if (device instanceof Smartphone smart) {
                 smart.makeCall();
                 smart.start();
             } else {
@@ -597,8 +572,7 @@ public class Casting {
     public void control(com.fan.Device device) {
         if (device != null) {
             device.start();
-            if (device instanceof com.fan.Fan) {
-                com.fan.Fan fan = (com.fan.Fan) device;
+            if (device instanceof com.fan.Fan fan) {
                 fan.start();
                 fan.rotate();
             } else {
@@ -611,8 +585,7 @@ public class Casting {
     public void read(File file) {
         if (file != null) {
             file.open();
-            if (file instanceof TextFile) {
-                TextFile text = (TextFile) file;
+            if (file instanceof TextFile text) {
                 text.open();
                 text.countWords();
             } else {
@@ -625,8 +598,7 @@ public class Casting {
     public void wear(Shoe shoe) {
         if (shoe != null) {
             shoe.wear();
-            if (shoe instanceof RunningShoe) {
-                RunningShoe running = (RunningShoe) shoe;
+            if (shoe instanceof RunningShoe running) {
                 running.wear();
             } else {
                 System.out.println("Not a RunningShoe");
@@ -638,8 +610,7 @@ public class Casting {
     public void fill(Form form) {
         if (form != null) {
             form.submit();
-            if (form instanceof RegistrationForm) {
-                RegistrationForm reg = (RegistrationForm) form;
+            if (form instanceof RegistrationForm reg) {
                 reg.submit();
             } else {
                 System.out.println("Not a RegistrationForm");
@@ -651,8 +622,7 @@ public class Casting {
     public void play(Game game) {
         if (game != null) {
             game.startGame();
-            if (game instanceof BoardGame) {
-                BoardGame board = (BoardGame) game;
+            if (game instanceof BoardGame board) {
                 board.startGame();
             } else {
                 System.out.println("Not a BoardGame");
@@ -665,8 +635,7 @@ public class Casting {
     public void use(com.home.Appliance appliance) {
         if (appliance != null) {
             appliance.operate();
-            if (appliance instanceof Refrigerator) {
-                Refrigerator fridge = (Refrigerator) appliance;
+            if (appliance instanceof Refrigerator fridge) {
                 fridge.defrost();
                 fridge.operate();
             } else {
@@ -680,8 +649,7 @@ public class Casting {
     public void check(com.hydration.Bottle bottle) {
         if (bottle != null) {
             bottle.pour();
-            if (bottle instanceof SmartBottle) {
-                SmartBottle smart = (SmartBottle) bottle;
+            if (bottle instanceof SmartBottle smart) {
                 smart.trackIntake();
                 smart.pour();
             } else {
@@ -694,8 +662,7 @@ public class Casting {
     public void type(Keyboard keyboard) {
         if (keyboard != null) {
             keyboard.type();
-            if (keyboard instanceof MechanicalKeyboard) {
-                MechanicalKeyboard mech = (MechanicalKeyboard) keyboard;
+            if (keyboard instanceof MechanicalKeyboard mech) {
                 mech.type();
             } else {
                 System.out.println("Not a MechanicalKeyboard");
@@ -707,8 +674,7 @@ public class Casting {
     public void play(Instrument instrument) {
         if (instrument != null) {
             instrument.play();
-            if (instrument instanceof Guitar) {
-                Guitar guitar = (Guitar) instrument;
+            if (instrument instanceof Guitar guitar) {
                 guitar.play();
             } else {
                 System.out.println("Not a Guitar");
@@ -721,8 +687,7 @@ public class Casting {
     public void place(Furniture furniture) {
         if (furniture != null) {
             furniture.place();
-            if (furniture instanceof Table) {
-                Table table = (Table) furniture;
+            if (furniture instanceof Table table) {
                 table.fold();
                 table.place();
             } else {
@@ -736,8 +701,7 @@ public class Casting {
     public void store(Container container) {
         if (container != null) {
             container.fill();
-            if (container instanceof Jar) {
-                Jar jar = (Jar) container;
+            if (container instanceof Jar jar) {
                 jar.seal();
             } else {
                 System.out.println("Not a Jar");
@@ -750,8 +714,7 @@ public class Casting {
     public void drink(Mug mug) {
         if (mug != null) {
             mug.fill();
-            if (mug instanceof DesignerMug) {
-                DesignerMug designer = (DesignerMug) mug;
+            if (mug instanceof DesignerMug designer) {
                 designer.fill();
             } else {
                 System.out.println("Not a DesignerMug");
@@ -764,8 +727,7 @@ public class Casting {
     public void pour(Cup cup) {
         if (cup != null) {
             cup.pour();
-            if (cup instanceof TravelCup) {
-                TravelCup travel = (TravelCup) cup;
+            if (cup instanceof TravelCup travel) {
                 travel.pour();
             } else {
                 System.out.println("Not a TravelCup");
@@ -777,8 +739,7 @@ public class Casting {
     public void switchOn(Lamp lamp) {
         if (lamp != null) {
             lamp.turnOn();
-            if (lamp instanceof DeskLamp) {
-                DeskLamp deskLamp = (DeskLamp) lamp;
+            if (lamp instanceof DeskLamp deskLamp) {
                 deskLamp.turnOn();
             } else {
                 System.out.println("Not a DeskLamp");
@@ -791,8 +752,7 @@ public class Casting {
     public void teach(Lesson lesson) {
         if (lesson != null) {
             lesson.teach();
-            if (lesson instanceof MathLesson) {
-                MathLesson math = (MathLesson) lesson;
+            if (lesson instanceof MathLesson math) {
                 math.teach();
             } else {
                 System.out.println("Not a MathLesson");
@@ -805,8 +765,7 @@ public class Casting {
     public void read(com.library.Book book) {
         if (book != null) {
             book.read();
-            if (book instanceof AudioBook) {
-                AudioBook audio = (AudioBook) book;
+            if (book instanceof AudioBook audio) {
                 audio.playAudio();
                 audio.read();
             } else {
@@ -820,8 +779,7 @@ public class Casting {
     public void illuminate(Light light) {
         if (light != null) {
             light.switchOn();
-            if (light instanceof SmartLight) {
-                SmartLight smart = (SmartLight) light;
+            if (light instanceof SmartLight smart) {
                 smart.switchOn();
             } else {
                 System.out.println("Not a SmartLight");
@@ -834,8 +792,7 @@ public class Casting {
     public void secure(Locker locker) {
         if (locker != null) {
             locker.lock();
-            if (locker instanceof DigitalLocker) {
-                DigitalLocker digital = (DigitalLocker) locker;
+            if (locker instanceof DigitalLocker digital) {
                 digital.encrypt();
             } else {
                 System.out.println("Not a DigitalLocker");
@@ -848,8 +805,7 @@ public class Casting {
     public void playMedia(MediaFile mediaFile) {
         if (mediaFile != null) {
             mediaFile.play();
-            if (mediaFile instanceof AudioFile) {
-                AudioFile audioFile = (AudioFile) mediaFile;
+            if (mediaFile instanceof AudioFile audioFile) {
                 //audioFile.adjustVolume();  this method is package default
                 audioFile.play();
             } else {
@@ -863,8 +819,7 @@ public class Casting {
     public void send(Message message) {
         if (message != null) {
             message.sendMessage();
-            if (message instanceof TextMessage) {
-                TextMessage text = (TextMessage) message;
+            if (message instanceof TextMessage text) {
                 text.sendMessage();
             } else {
                 System.out.println("Not a TextMessage");
@@ -876,8 +831,7 @@ public class Casting {
     public void reflect(com.mirror.Mirror mirror) {
         if (mirror != null) {
             mirror.reflect();
-            if (mirror instanceof DigitalMirror) {
-                DigitalMirror digital = (DigitalMirror) mirror;
+            if (mirror instanceof DigitalMirror digital) {
                 digital.reflect();
             } else {
                 System.out.println("Not a DigitalMirror");
@@ -890,8 +844,7 @@ public class Casting {
     public void playInstrument(Instrument instrument) {
         if (instrument != null) {
             instrument.play();
-            if (instrument instanceof Guitar) {
-                Guitar guitar = (Guitar) instrument;
+            if (instrument instanceof Guitar guitar) {
                 guitar.play();
             } else {
                 System.out.println("Not a Guitar");
@@ -904,8 +857,7 @@ public class Casting {
     public void navigate(Map map) {
         if (map != null) {
             map.showRoute();
-            if (map instanceof GPSMap) {
-                GPSMap gps = (GPSMap) map;
+            if (map instanceof GPSMap gps) {
                 gps.giveDirections();
                 gps.showRoute();
             } else {
@@ -919,8 +871,7 @@ public class Casting {
     public void writeNotes(Notebook notebook) {
         if (notebook != null) {
             notebook.write();
-            if (notebook instanceof SpiralNotebook) {
-                SpiralNotebook spiral = (SpiralNotebook) notebook;
+            if (notebook instanceof SpiralNotebook spiral) {
                 spiral.write();
             } else {
                 System.out.println("Not a SpiralNotebook");
@@ -933,8 +884,7 @@ public class Casting {
     public void saveNotes(com.notes.Notebook notebook) {
         if (notebook != null) {
             notebook.writeNotes();
-            if (notebook instanceof DigitalNotebook) {
-                DigitalNotebook digital = (DigitalNotebook) notebook;
+            if (notebook instanceof DigitalNotebook digital) {
                 digital.writeNotes();
             } else {
                 System.out.println("Not a DigitalNotebook");
@@ -947,8 +897,7 @@ public class Casting {
     public void shoot(com.camera.Camera camera) {
         if (camera != null) {
             camera.takePhoto();
-            if (camera instanceof DSLR) {
-                DSLR dslr = (DSLR) camera;
+            if (camera instanceof DSLR dslr) {
                 dslr.takePhoto();
             } else {
                 System.out.println("Not a DSLR");
@@ -961,8 +910,7 @@ public class Casting {
     public void notifyUser(Notification notification) {
         if (notification != null) {
             notification.send();
-            if (notification instanceof EmailNotification) {
-                EmailNotification email = (EmailNotification) notification;
+            if (notification instanceof EmailNotification email) {
                 email.send();
             } else {
                 System.out.println("Not an EmailNotification");
@@ -975,8 +923,7 @@ public class Casting {
     public void printDocument(Printer printer) {
         if (printer != null) {
             printer.print();
-            if (printer instanceof LaserPrinter) {
-                LaserPrinter laser = (LaserPrinter) printer;
+            if (printer instanceof LaserPrinter laser) {
                 laser.print();
                 laser.tonerLevel();
             } else {
@@ -990,8 +937,7 @@ public class Casting {
     public void sit(com.officechair.Chair chair) {
         if (chair != null) {
             chair.sit();
-            if (chair instanceof OfficeChair) {
-                OfficeChair office = (OfficeChair) chair;
+            if (chair instanceof OfficeChair office) {
                 office.adjustHeight();
             } else {
                 System.out.println("Not an OfficeChair");
@@ -1004,8 +950,7 @@ public class Casting {
     public void organize(Calendar calendar) {
         if (calendar != null) {
             calendar.displayDate();
-            if (calendar instanceof DigitalCalendar) {
-                DigitalCalendar digital = (DigitalCalendar) calendar;
+            if (calendar instanceof DigitalCalendar digital) {
                 digital.displayDate();
                 digital.addEvent();
             } else {
@@ -1019,8 +964,7 @@ public class Casting {
     public void makePayment(PaymentMethod method) {
         if (method != null) {
             method.processPayment();
-            if (method instanceof CreditCard) {
-                CreditCard credit = (CreditCard) method;
+            if (method instanceof CreditCard credit) {
                 credit.processPayment();
             } else {
                 System.out.println("Not a CreditCard");
@@ -1032,8 +976,7 @@ public class Casting {
     public void plan(Calendar calendar) {
         if (calendar != null) {
             calendar.displayDate();
-            if (calendar instanceof DigitalCalendar) {
-                DigitalCalendar digital = (DigitalCalendar) calendar;
+            if (calendar instanceof DigitalCalendar digital) {
                 digital.addEvent();
                 digital.displayDate();
             } else {
@@ -1047,8 +990,7 @@ public class Casting {
     public void grow(Plant plant) {
         if (plant != null) {
             plant.grow();
-            if (plant instanceof Flower) {
-                Flower flower = (Flower) plant;
+            if (plant instanceof Flower flower) {
                 flower.grow();
             } else {
                 System.out.println("Not a Flower");
@@ -1061,8 +1003,7 @@ public class Casting {
     public void cook(Utensil utensil) {
         if (utensil != null) {
             utensil.use();
-            if (utensil instanceof Pot) {
-                Pot pot = (Pot) utensil;
+            if (utensil instanceof Pot pot) {
                 pot.use();
             } else {
                 System.out.println("Not a Pot");
@@ -1075,8 +1016,7 @@ public class Casting {
     public void output(Printer printer) {
         if (printer != null) {
             printer.print();
-            if (printer instanceof LaserPrinter) {
-                LaserPrinter laser = (LaserPrinter) printer;
+            if (printer instanceof LaserPrinter laser) {
                 laser.tonerLevel();
                 laser.tonerLevel();
             } else {
@@ -1089,8 +1029,7 @@ public class Casting {
     public void checkProduct(Product product) {
         if (product != null) {
             product.apply();
-            if (product instanceof Shampoo) {
-                Shampoo shampoo = (Shampoo) product;
+            if (product instanceof Shampoo shampoo) {
                 shampoo.apply();
             } else {
                 System.out.println("Not a Shampoo");
@@ -1103,8 +1042,7 @@ public class Casting {
     public void conductQuiz(Quiz quiz) {
         if (quiz != null) {
             quiz.start();
-            if (quiz instanceof OnlineQuiz) {
-                OnlineQuiz online = (OnlineQuiz) quiz;
+            if (quiz instanceof OnlineQuiz online) {
                 online.start();
             } else {
                 System.out.println("Not an OnlineQuiz");
@@ -1117,8 +1055,7 @@ public class Casting {
     public void cookRecipe(com.recipe.Recipe recipe) {
         if (recipe != null) {
             recipe.prepare();
-            if (recipe instanceof DessertRecipe) {
-                DessertRecipe dessert = (DessertRecipe) recipe;
+            if (recipe instanceof DessertRecipe dessert) {
                 dessert.prepare();
             } else {
                 System.out.println("Not a DessertRecipe");
@@ -1131,8 +1068,7 @@ public class Casting {
     public void remind(Reminder reminder) {
         if (reminder != null) {
             reminder.alert();
-            if (reminder instanceof MeetingReminder) {
-                MeetingReminder meet = (MeetingReminder) reminder;
+            if (reminder instanceof MeetingReminder meet) {
                 meet.alert();
             } else {
                 System.out.println("Not a MeetingReminder");
@@ -1144,8 +1080,7 @@ public class Casting {
     public void viewReport(Report report) {
         if (report != null) {
             report.generate();
-            if (report instanceof SalesReport) {
-                SalesReport sales = (SalesReport) report;
+            if (report instanceof SalesReport sales) {
                 sales.generate();
             } else {
                 System.out.println("Not a SalesReport");
@@ -1158,8 +1093,7 @@ public class Casting {
     public void labelShelf(ShelfLabel label) {
         if (label != null) {
             label.displayPrice();
-            if (label instanceof DigitalShelfLabel) {
-                DigitalShelfLabel digital = (DigitalShelfLabel) label;
+            if (label instanceof DigitalShelfLabel digital) {
                 digital.displayPrice();
             } else {
                 System.out.println("Not a DigitalShelfLabel");
@@ -1172,8 +1106,7 @@ public class Casting {
     public void useBoard(Board board) {
         if (board != null) {
             board.write();
-            if (board instanceof SmartBoard) {
-                SmartBoard smart = (SmartBoard) board;
+            if (board instanceof SmartBoard smart) {
                 smart.write();
                 smart.connectToWifi();
             } else {
@@ -1187,8 +1120,7 @@ public class Casting {
     public void monitorSecurity(Camera camera) {
         if (camera != null) {
             camera.capture();
-            if (camera instanceof SecurityCamera) {
-                SecurityCamera security = (SecurityCamera) camera;
+            if (camera instanceof SecurityCamera security) {
                 security.detectMotion();
             } else {
                 System.out.println("Not a SecurityCamera");
@@ -1201,8 +1133,7 @@ public class Casting {
     public void checkSensor(Sensor sensor) {
         if (sensor != null) {
             sensor.readValue();
-            if (sensor instanceof TemperatureSensor) {
-                TemperatureSensor temperatureSensor = (TemperatureSensor) sensor;
+            if (sensor instanceof TemperatureSensor temperatureSensor) {
                 temperatureSensor.readValue();
             } else {
                 System.out.println("Not a TemperatureSensor");
@@ -1214,8 +1145,7 @@ public class Casting {
     public void checkService(Service service) {
         if (service != null) {
             service.provide();
-            if (service instanceof CleaningService) {
-                CleaningService cleaning = (CleaningService) service;
+            if (service instanceof CleaningService cleaning) {
                 cleaning.provide();
             } else {
                 System.out.println("Not a CleaningService");
@@ -1228,8 +1158,7 @@ public class Casting {
     public void updateSettings(AccountSettings settings) {
         if (settings != null) {
             settings.open();
-            if (settings instanceof PrivacySettings) {
-                PrivacySettings privacy = (PrivacySettings) settings;
+            if (settings instanceof PrivacySettings privacy) {
                 privacy.open();
             } else {
                 System.out.println("Not a PrivacySettings");
@@ -1242,8 +1171,7 @@ public class Casting {
     public void drawShape(Shape shape) {
         if (shape != null) {
             shape.draw();
-            if (shape instanceof Circle) {
-                Circle circle = (Circle) shape;
+            if (shape instanceof Circle circle) {
                 circle.draw();
             } else {
                 System.out.println("Not a Circle");
@@ -1256,8 +1184,7 @@ public class Casting {
     public void playSpeaker(Speaker speaker) {
         if (speaker != null) {
             speaker.playSound();
-            if (speaker instanceof BluetoothSpeaker) {
-                BluetoothSpeaker bt = (BluetoothSpeaker) speaker;
+            if (speaker instanceof BluetoothSpeaker bt) {
                 bt.connectBluetooth();
             } else {
                 System.out.println("Not a BluetoothSpeaker");
@@ -1270,8 +1197,7 @@ public class Casting {
     public void writeNotebook(com.stationery.Notebook notebook) {
         if (notebook != null) {
             notebook.open();
-            if (notebook instanceof SketchBook) {
-                SketchBook sketch = (SketchBook) notebook;
+            if (notebook instanceof SketchBook sketch) {
                 sketch.open();
             } else {
                 System.out.println("Not a SketchBook");
@@ -1283,8 +1209,7 @@ public class Casting {
     public void checkShelf(Shelf shelf) {
         if (shelf != null) {
             shelf.placeItem();
-            if (shelf instanceof Bookshelf) {
-                Bookshelf book = (Bookshelf) shelf;
+            if (shelf instanceof Bookshelf book) {
                 book.placeItem();
             } else {
                 System.out.println("Not a Bookshelf");
@@ -1297,8 +1222,7 @@ public class Casting {
     public void streamAudio(Stream stream) {
         if (stream != null) {
             stream.start();
-            if (stream instanceof AudioStream) {
-                AudioStream audio = (AudioStream) stream;
+            if (stream instanceof AudioStream audio) {
                 audio.start();
             } else {
                 System.out.println("Not an AudioStream");
@@ -1311,8 +1235,7 @@ public class Casting {
     public void handleSubscription(Subscription subscription) {
         if (subscription != null) {
             subscription.activate();
-            if (subscription instanceof PremiumSubscription) {
-                PremiumSubscription premium = (PremiumSubscription) subscription;
+            if (subscription instanceof PremiumSubscription premium) {
                 premium.activate();
             } else {
                 System.out.println("Not a PremiumSubscription");
@@ -1325,8 +1248,7 @@ public class Casting {
     public void useCup(com.thermocup.Cup cup) {
         if (cup != null) {
             cup.fill();
-            if (cup instanceof ThermoCup) {
-                ThermoCup thermo = (ThermoCup) cup;
+            if (cup instanceof ThermoCup thermo) {
                 thermo.maintainTemperature();
             } else {
                 System.out.println("Not a ThermoCup");
@@ -1338,8 +1260,7 @@ public class Casting {
     public void bookMovieTicket(Ticket ticket) {
         if (ticket != null) {
             ticket.book();
-            if (ticket instanceof MovieTicket) {
-                MovieTicket movie = (MovieTicket) ticket;
+            if (ticket instanceof MovieTicket movie) {
                 movie.book();
             } else {
                 System.out.println("Not a MovieTicket");
@@ -1352,8 +1273,7 @@ public class Casting {
     public void bookOnlineTicket(com.ticketbooking.Ticket ticket) {
         if (ticket != null) {
             ticket.book();
-            if (ticket instanceof OnlineTicket) {
-                OnlineTicket online = (OnlineTicket) ticket;
+            if (ticket instanceof OnlineTicket online) {
                 online.book();
             } else {
                 System.out.println("Not an OnlineTicket");
@@ -1365,8 +1285,7 @@ public class Casting {
     public void operateMachine(TicketMachine machine) {
         if (machine != null) {
             machine.issueTicket();
-            if (machine instanceof TrainTicketMachine) {
-                TrainTicketMachine trainTicketMachine=(TrainTicketMachine) machine;
+            if (machine instanceof TrainTicketMachine trainTicketMachine) {
                 trainTicketMachine.issueTicket();
             } else {
                 System.out.println("Not a TrainTicketMachine");
@@ -1379,8 +1298,7 @@ public class Casting {
     public void showTime(com.time.Clock clock) {
         if (clock != null) {
             clock.showTime();
-            if (clock instanceof SmartClock) {
-                SmartClock smartClock=(SmartClock) clock;
+            if (clock instanceof SmartClock smartClock) {
                 smartClock.showTime();
                 smartClock.setAlarm();
             } else {
@@ -1395,7 +1313,7 @@ public class Casting {
         if (clock != null) {
             clock.showTime();
             if (clock instanceof AlarmClock) {
-                ((AlarmClock) clock).showTime();
+                clock.showTime();
             } else {
                 System.out.println("Not an AlarmClock");
             }
@@ -1407,9 +1325,8 @@ public class Casting {
     public void useTool(Tool tool) {
         if (tool != null) {
             tool.use();
-            if (tool instanceof Hammer) {
-                ((Hammer) tool).use();
-                Hammer hammer=(Hammer) tool;
+            if (tool instanceof Hammer hammer) {
+                tool.use();
                 hammer.swing();
             } else {
                 System.out.println("Not a Hammer");
@@ -1423,7 +1340,7 @@ public class Casting {
         if (box != null) {
             box.activate();
             if (box instanceof Wrench) {
-                ((Wrench) box).activate();
+                box.activate();
             } else {
                 System.out.println("Not a Wrench");
             }
@@ -1436,7 +1353,7 @@ public class Casting {
         if (transaction != null) {
             transaction.execute();
             if (transaction instanceof OnlineTransaction) {
-                ((OnlineTransaction) transaction).execute();
+                transaction.execute();
             } else {
                 System.out.println("Not an OnlineTransaction");
             }
@@ -1474,7 +1391,7 @@ public class Casting {
         if (tv != null) {
             tv.powerOn();
             if (tv instanceof TVRemote) {
-                ((TVRemote) tv).powerOn();
+                tv.powerOn();
             } else {
                 System.out.println("Not a TVRemote");
             }
@@ -1487,7 +1404,7 @@ public class Casting {
         if (user != null) {
             user.login();
             if (user instanceof AdminUser) {
-                ((AdminUser) user).login();
+                user.login();
             } else {
                 System.out.println("Not an AdminUser");
             }
@@ -1500,7 +1417,7 @@ public class Casting {
         if (watch != null) {
             watch.showTime();
             if (watch instanceof SmartWatch) {
-                ((SmartWatch) watch).showTime();
+                watch.showTime();
                 ((SmartWatch) watch).trackSteps();
             } else {
                 System.out.println("Not a SmartWatch");
@@ -1514,7 +1431,7 @@ public class Casting {
         if (website != null) {
             website.load();
             if (website instanceof Blog) {
-                ((Blog) website).load();
+                website.load();
             } else {
                 System.out.println("Not a Blog");
             }
@@ -1527,7 +1444,7 @@ public class Casting {
         if (tool != null) {
             tool.use();
             if (tool instanceof Drill) {
-                ((Drill) tool).use();
+                tool.use();
             } else {
                 System.out.println("Not a Drill");
             }
@@ -1540,7 +1457,7 @@ public class Casting {
         if (pen != null) {
             pen.write();
             if (pen instanceof FountainPen) {
-                ((FountainPen) pen).write();
+                pen.write();
             } else {
                 System.out.println("Not a FountainPen");
             }
@@ -1552,7 +1469,7 @@ public class Casting {
         if (printer != null) {
             printer.print();
             if (printer instanceof com.printing.LaserPrinter) {
-                ((com.printing.LaserPrinter) printer).print();
+                printer.print();
             } else {
                 System.out.println("Not a LaserPrinter");
             }
