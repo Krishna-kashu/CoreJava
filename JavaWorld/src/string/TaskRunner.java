@@ -7,10 +7,10 @@ public class TaskRunner {
         System.out.println("Name: "+name);
         System.out.println("Updated Name:"+updatedName);
         String newName="BhavyaK";
-        if (updatedName == newName){
-            System.out.println("matching");
-        }else{
+        if (newName != updatedName) {
             System.out.println("not matching");
-        }
+    } else {
+        System.out.println("matching");
+    }
     }
 }
