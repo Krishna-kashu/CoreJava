@@ -8,8 +8,7 @@ public class ReplaceBy {
         }
 
         public static void main(String[] args) {
-            String input = "hello world how are you";
+            String input = "aaa bbb aaa bbbb aaaa";
             replaceSpace(input);
         }
     }
-

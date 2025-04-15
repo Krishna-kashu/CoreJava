@@ -11,9 +11,7 @@ public class SpaceCount {
         }
 
         public static void main(String[] args) {
-            String input = "hello world how are you";
+            String input = "bbb bbb bbbb bbbbbb bbbb";
             countSpaces(input);
         }
     }
-
-

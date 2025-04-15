@@ -21,7 +21,7 @@ public class WordFrequency {
         }
 
         public static void main(String[] args) {
-            String input = "hello world hello hello world";
+            String input = "abc bca abc abc bca bca bca";
             wordFrequency(input);
         }
     }
