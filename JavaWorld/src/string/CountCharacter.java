@@ -9,7 +9,6 @@ public class CountCharacter {
             }
             System.out.println("Character Count (excluding spaces): " + count);
         }
-
         public static void main(String[] args) {
             String input = "hello world";
             countCharacters(input);

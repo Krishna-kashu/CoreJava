@@ -1,5 +1,6 @@
 package string;
 
+
 public class SpaceCount {
 
         public static void countSpaces(String sentence) {
@@ -9,7 +10,6 @@ public class SpaceCount {
             }
             System.out.println("Space Count: " + spaceCount);
         }
-
         public static void main(String[] args) {
             String input = "bbb bbb bbbb bbbbbb bbbb";
             countSpaces(input);

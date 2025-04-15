@@ -14,7 +14,6 @@ public class TargetWord {
             }
             System.out.println("Word \"" + target + "\" present: " + found);
         }
-
         public static void main(String[] args) {
             String input = "hello world how are you";
             String targetWord = "world";
