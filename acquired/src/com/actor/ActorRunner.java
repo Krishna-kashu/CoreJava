@@ -17,5 +17,10 @@ public class ActorRunner{
             actor.perform();
             actor.express();
             actor.breathe();
+
+            Actor actor1=new Actor(30,"Rakshith Shetty");
+            Actor actor2=new Actor(actor1);
+            System.out.println(actor2);
+
         }
     }
