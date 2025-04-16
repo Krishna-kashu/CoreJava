@@ -13,5 +13,12 @@ public class ProductRunner {
         Shampoo shampoo = new Shampoo();
         shampoo.apply();
         shampoo.lather();
+
+        Product prod1 = new Product();
+        prod1.setName("Laptop");
+        prod1.setPrice(899.99);
+        Product prod2 = new Product(prod1);
+        System.out.println(prod2);
+
     }
 }

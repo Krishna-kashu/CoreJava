@@ -13,5 +13,12 @@ public class CameraRunner {
         SecurityCamera sc = new SecurityCamera();
         sc.capture();
         sc.detectMotion();
+
+        Camera cam1 = new Camera();
+        cam1.setResolution("4K");
+        cam1.setDslr(true);
+        Camera cam2 = new Camera(cam1);
+        System.out.println(cam2);
+
     }
 }

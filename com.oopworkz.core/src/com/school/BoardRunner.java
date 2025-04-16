@@ -13,5 +13,12 @@ public class BoardRunner {
         SmartBoard sb = new SmartBoard();
         sb.write();
         sb.connectToWifi();
+
+        Board board = new Board();
+        board.setType("Whiteboard");
+        board.setWidth(120);
+        Board board1 = new Board(board);
+        System.out.println(board1);
+
     }
 }

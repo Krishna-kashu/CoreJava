@@ -13,5 +13,12 @@ public class Runner {
         MeetingReminder meeting = new MeetingReminder();
         meeting.alert();
         meeting.addParticipants();
+
+        Reminder rem1 = new Reminder();
+        rem1.setTask("Meeting");
+        rem1.setTime("10:00 AM");
+        Reminder rem2 = new Reminder(rem1);
+        System.out.println(rem2);
+
     }
 }

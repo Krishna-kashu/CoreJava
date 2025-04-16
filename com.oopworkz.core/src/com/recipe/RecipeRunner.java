@@ -13,5 +13,12 @@ public class RecipeRunner {
         DessertRecipe dessert = new DessertRecipe();
         dessert.prepare();
         dessert.addSweeteners();
+
+        Recipe r1 = new Recipe();
+        r1.setDishName("Pasta");
+        r1.setCookTime(30);
+        Recipe r2 = new Recipe(r1);
+        System.out.println(r2);
+
     }
 }

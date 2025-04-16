@@ -13,5 +13,12 @@ public class ReportRunner {
         SalesReport sales = new SalesReport();
         sales.generate();
         sales.calculateRevenue();
+
+        Report rep1 = new Report();
+        rep1.setTitle("Sales Report");
+        rep1.setPages(12);
+        Report rep2 = new Report(rep1);
+        System.out.println(rep2);
+
     }
 }

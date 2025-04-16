@@ -13,5 +13,12 @@ public class ShelfLabelRunner {
         DigitalShelfLabel digital = new DigitalShelfLabel();
         digital.displayPrice();
         digital.syncInventory();
+
+        ShelfLabel s1 = new ShelfLabel();
+        s1.setItem("Milk");
+        s1.setPrice(2.99);
+        ShelfLabel s2 = new ShelfLabel(s1);
+        System.out.println(s2);
+
     }
 }

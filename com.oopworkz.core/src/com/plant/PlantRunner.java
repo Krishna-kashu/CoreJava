@@ -14,5 +14,12 @@ public class PlantRunner {
             Flower flower = new Flower();
             flower.grow();
             flower.bloom();
+
+            Plant p1 = new Plant();
+            p1.setSpecies("Rose");
+            p1.setHeight(30.5);
+            Plant p2 = new Plant(p1);
+            System.out.println(p2);
+
         }
     }

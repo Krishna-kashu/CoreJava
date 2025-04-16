@@ -13,5 +13,11 @@ public class ServiceRunner {
             CleaningService cleaning = new CleaningService();
             cleaning.provide();
             cleaning.sanitizeArea();
+            Service srv1 = new Service();
+            srv1.setServiceName("Internet");
+            srv1.setAvailable(true);
+            Service srv2 = new Service(srv1);
+            System.out.println(srv2);
+
         }
     }

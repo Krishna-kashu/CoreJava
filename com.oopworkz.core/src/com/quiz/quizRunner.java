@@ -13,5 +13,12 @@ public class quizRunner {
         OnlineQuiz tq = new OnlineQuiz();
         tq.start();
         tq.showTimer();
+
+        Quiz q1 = new Quiz();
+        q1.setTopic("Java");
+        q1.setTotalQuestions(10);
+        Quiz q2 = new Quiz(q1);
+        System.out.println(q2);
+
     }
 }

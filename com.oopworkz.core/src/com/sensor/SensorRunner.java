@@ -13,5 +13,12 @@ public class SensorRunner {
         TemperatureSensor temperatureSensor = new TemperatureSensor();
         temperatureSensor.readValue();
         temperatureSensor.calibrateSensor();
+
+        Sensor s1 = new Sensor();
+        s1.setType("Motion");
+        s1.setIsActive(true);
+        Sensor s2 = new Sensor(s1);
+        System.out.println(s2);
+
     }
 }

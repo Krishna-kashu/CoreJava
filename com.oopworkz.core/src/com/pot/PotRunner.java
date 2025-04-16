@@ -13,5 +13,12 @@ public class PotRunner {
         Pot pot = new Pot();
         pot.use();
         pot.boilWater();
+
+        Utensil utensil2 = new Utensil();
+        utensil2.setMaterial("Ceramic");
+        utensil2.setDiameter(20);
+        Utensil utensil3 = new Utensil(utensil2);
+        System.out.println(utensil3);
+
     }
 }

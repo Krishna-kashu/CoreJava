@@ -13,4 +13,5 @@ public class DigitalShelfLabel extends ShelfLabel {
     void syncInventory() {
         System.out.println("Running syncInventory() in DigitalShelfLabel");
     }
+
 }
