@@ -13,5 +13,10 @@ public class paintRunner {
         SprayPaint sp = new SprayPaint();
         sp.apply();
         sp.shakeCan();
+
+        Paint p2 = new Paint("Acrylic", 15);
+        Paint p3 = new Paint(p2);
+        System.out.println(p3);
+
     }
 }

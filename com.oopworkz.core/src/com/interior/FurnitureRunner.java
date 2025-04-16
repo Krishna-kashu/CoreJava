@@ -13,5 +13,10 @@ public class FurnitureRunner{
         Table t = new Table();
         t.place();
         t.fold();
+        System.out.println("**********");
+
+        Furniture furniture1 = new Furniture(111, "Wooden Chair");
+        Furniture furniture2 = new Furniture(furniture1);
+        System.out.println(furniture2);
     }
 }

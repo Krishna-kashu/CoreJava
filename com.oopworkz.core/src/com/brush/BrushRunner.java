@@ -13,5 +13,9 @@ public class BrushRunner {
         ElectricBrush eb = new ElectricBrush();
         eb.clean();
         eb.vibrate();
+
+        Brush brush1 = new Brush("Soft", "Colgate");
+        Brush brush2 = new Brush(brush1);
+        System.out.println(brush2);
     }
 }

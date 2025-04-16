@@ -13,5 +13,10 @@ public class FanRunner {
         CeilingFan ceilingFan = new CeilingFan();
         ceilingFan.rotate();
         ceilingFan.changeSpeed();
+
+        Fan fan2 = new Fan(3, "Black");
+        Fan fan3 = new Fan(fan2);
+        System.out.println(fan3);
+
     }
 }

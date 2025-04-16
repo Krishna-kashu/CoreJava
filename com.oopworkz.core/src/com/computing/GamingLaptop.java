@@ -13,4 +13,5 @@ public class GamingLaptop extends NotebookComputer {
     public void launchGame() {
         System.out.println("Running launchGame() in GamingLaptop");
     }
+
 }

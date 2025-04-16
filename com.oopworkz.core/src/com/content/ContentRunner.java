@@ -13,5 +13,9 @@ public class ContentRunner {
         VideoContent video = new VideoContent();
         video.display();
         video.playInFullScreen();
+        Content content2 = new Content("Artificial Intelligence Tutorial", "Video");
+        Content content3 = new Content(content2);
+        System.out.println(content3);
+
     }
 }

@@ -13,5 +13,9 @@ public class BottleRunner {
         WaterBottle wb = new WaterBottle();
         wb.open();
         wb.refill();
+
+        Bottle bottle2 = new Bottle(1000, "Blue");
+        Bottle bottle3 = new Bottle(bottle2);
+        System.out.println(bottle3);
     }
 }

@@ -13,5 +13,9 @@ public class ChairRunner {
         ReclinerChair recliner = new ReclinerChair();
         recliner.sit();
         recliner.recline();
+        Chair chair2 = new Chair("Recliner", 4);
+        Chair chair3 = new Chair(chair2);
+        System.out.println(chair3);
+
     }
 }

@@ -13,5 +13,8 @@ public class AccountRunner {
         SavingsAccount sa = new SavingsAccount();
         sa.deposit();
         sa.addInterest();
+        Account acc2 = new Account(101, "Ravi");
+        Account acc3 = new Account(acc2);
+        System.out.println(acc3);
     }
 }

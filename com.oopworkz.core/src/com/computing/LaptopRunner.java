@@ -13,5 +13,8 @@ public class LaptopRunner {
         GamingLaptop gaming = new GamingLaptop();
         gaming.boot();
         gaming.launchGame();
+        NotebookComputer notebookComputer = new NotebookComputer("Intel i9", "NVIDIA RTX 3080");
+        NotebookComputer notebookComputer1 = new NotebookComputer(notebookComputer);
+        System.out.println(notebookComputer1);
     }
 }

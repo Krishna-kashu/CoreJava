@@ -13,5 +13,9 @@ public class ContractRunner {
         FreelanceContract fc = new FreelanceContract();
         fc.sign();
         fc.addDeliverables();
+
+        Contract contract2 = new Contract("John Doe", 5000.0);
+        Contract contract3 = new Contract(contract2);
+        System.out.println(contract3);
     }
 }

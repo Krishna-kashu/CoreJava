@@ -13,5 +13,8 @@ public class BedRunner {
         AdjustableBed abed = new AdjustableBed();
         abed.sleep();
         abed.raiseHead();
+        Bed bed2 = new Bed("Queen", "Wood");
+        Bed bed3 = new Bed(bed2);
+        System.out.println(bed3);
     }
 }

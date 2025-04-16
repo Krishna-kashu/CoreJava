@@ -13,5 +13,10 @@ public class ApplianceRunner {
         WashingMachine washingMachine = new WashingMachine();
         washingMachine.turnOn();
         washingMachine.startWashCycle();
+        System.out.println("******");
+        Appliance app1 = new Appliance("Samsung", 750.5);
+        Appliance app2 = new Appliance(app1);
+        System.out.println(app2);
+
     }
 }

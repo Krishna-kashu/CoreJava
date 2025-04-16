@@ -13,5 +13,8 @@ public class MirrorRunner {
         SmartMirror sm = new SmartMirror();
         sm.reflect();
         sm.showNews();
+        Mirror m2 = new Mirror("Round", 4.5f);
+        Mirror m3 = new Mirror(m2);
+        System.out.println(m3);
     }
 }

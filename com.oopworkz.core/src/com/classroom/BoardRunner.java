@@ -13,5 +13,9 @@ public class BoardRunner {
         WhiteBoard wb = new WhiteBoard();
         wb.clean();
         wb.writeWithMarker();
+
+        Board board1 = new Board("Wood", 5.5);
+        Board board2 = new Board(board1);
+        System.out.println(board2);
     }
 }

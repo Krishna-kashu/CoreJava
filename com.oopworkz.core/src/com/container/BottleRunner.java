@@ -13,5 +13,8 @@ public class BottleRunner {
         ThermoBottle tb = new ThermoBottle();
         tb.fill();
         tb.maintainTemperature();
+        Bottle bottle1 = new Bottle(1000, "Plastic");
+        Bottle bottle2 = new Bottle(bottle1);
+        System.out.println(bottle2);
     }
 }
