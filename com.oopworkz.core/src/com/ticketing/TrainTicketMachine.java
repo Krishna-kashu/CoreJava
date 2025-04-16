@@ -13,4 +13,5 @@ public class TrainTicketMachine extends TicketMachine {
     void selectDestination() {
         System.out.println("Running selectDestination() in TrainTicketMachine");
     }
+
 }

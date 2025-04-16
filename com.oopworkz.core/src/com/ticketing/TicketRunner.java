@@ -13,5 +13,12 @@ public class TicketRunner {
         TrainTicketMachine train = new TrainTicketMachine();
         train.issueTicket();
         train.selectDestination();
+        TicketMachine tm1 = new TicketMachine();
+        tm1.setLocation("Central Station");
+        tm1.setIsOnline(true);
+
+        TicketMachine tm2 = new TicketMachine(tm1);
+        System.out.println(tm2);
+
     }
 }

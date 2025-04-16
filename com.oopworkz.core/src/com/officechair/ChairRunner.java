@@ -13,5 +13,13 @@ public class ChairRunner  {
         OfficeChair oc = new OfficeChair();
         oc.sit();
         oc.adjustHeight();
+
+        Chair c2 = new Chair();
+        c2.setMaterial("Wood");
+        c2.setLegs(4);
+
+        Chair c3 = new Chair(c2);
+        System.out.println(c3);
+
     }
 }

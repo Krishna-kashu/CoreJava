@@ -13,6 +13,13 @@ public class MApRunner{
         GPSMap gpsMap = new GPSMap();
         gpsMap.showRoute();
         gpsMap.giveDirections();
+        Map map2 = new Map();
+        map2.setRegion("Europe");
+        map2.setScale(1000000);
+
+        Map map3 = new Map(map2);
+        System.out.println(map3);
+
     }
 }
 

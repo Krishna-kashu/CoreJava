@@ -13,5 +13,12 @@ public class LampRunner {
         DeskLamp desk = new DeskLamp();
         desk.turnOn();
         desk.adjustBrightness();
+
+        Lamp lamp2 = new Lamp();
+        lamp2.setType("LED");
+        lamp2.setWattage(15);
+
+        Lamp lamp3 = new Lamp(lamp2);
+        System.out.println(lamp3);
     }
 }

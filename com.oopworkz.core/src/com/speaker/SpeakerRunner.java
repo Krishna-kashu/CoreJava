@@ -13,5 +13,13 @@ public class SpeakerRunner {
         BluetoothSpeaker bt = new BluetoothSpeaker();
         bt.playSound();
         bt.pairDevice();
+
+        Speaker spk1 = new Speaker();
+        spk1.setType("Bluetooth");
+        spk1.setPowerWatt(15.5);
+
+        Speaker spk2 = new Speaker(spk1);
+        System.out.println(spk2);
+
     }
 }

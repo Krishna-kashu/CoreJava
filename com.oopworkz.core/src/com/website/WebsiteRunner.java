@@ -13,5 +13,13 @@ public class WebsiteRunner {
         Blog blog = new Blog();
         blog.load();
         blog.writePost();
+
+        Website website = new Website();
+        website.setUrl("https://openai.com");
+        website.setIsSecure(true);
+
+        Website site2 = new Website(website);
+        System.out.println(site2);
+
     }
 }

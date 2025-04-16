@@ -13,5 +13,13 @@ public class TicketRunner  {
         MovieTicket movie = new MovieTicket();
         movie.book();
         movie.selectSeat();
+
+        Ticket t1 = new Ticket();
+        t1.setSeatNo("A12");
+        t1.setPrice(120.0);
+
+        Ticket t2 = new Ticket(t1);
+        System.out.println(t2);
+
     }
 }

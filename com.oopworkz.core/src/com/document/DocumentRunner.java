@@ -13,5 +13,10 @@ public class DocumentRunner {
         PDFDocument pdf = new PDFDocument();
         pdf.print();
         pdf.encrypt();
+
+        Document document1 = new Document("Project Proposal", 500);
+        Document document2 = new Document(document1);
+        System.out.println(document2);
+
     }
 }

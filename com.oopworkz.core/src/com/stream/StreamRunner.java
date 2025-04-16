@@ -13,5 +13,13 @@ public class StreamRunner {
         AudioStream audio = new AudioStream();
         audio.start();
         audio.end();
+
+        Stream s1 = new Stream();
+        s1.setPlatform("YouTube");
+        s1.setIsLive(true);
+
+        Stream s2 = new Stream(s1);
+        System.out.println(s2);
+
     }
 }

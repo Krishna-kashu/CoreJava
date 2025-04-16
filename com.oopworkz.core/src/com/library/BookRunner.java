@@ -13,5 +13,12 @@ public class BookRunner {
         AudioBook ab = new AudioBook();
         ab.read();
         ab.playAudio();
+
+        Book book1 = new Book();
+        book1.setTitle("Java Programming");
+        book1.setPages(500);
+
+        Book book2 = new Book(book1);
+        System.out.println(book2);
     }
 }

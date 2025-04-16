@@ -13,5 +13,9 @@ public class ShoeRunner{
         RunningShoe running = new RunningShoe();
         running.wear();
         running.tieLaces();
+        Shoe shoe2 = new Shoe("Nike", 9);
+        Shoe shoe3 = new Shoe(shoe2);
+        System.out.println(shoe3);
+
     }
 }

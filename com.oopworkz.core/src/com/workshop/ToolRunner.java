@@ -13,5 +13,13 @@ public class ToolRunner {
         Drill d = new Drill();
         d.use();
         d.changeBit();
+
+        Tool tool1 = new Tool();
+        tool1.setToolName("Screwdriver");
+        tool1.setMaterial("Iron");
+
+        Tool tool2 = new Tool(tool1);
+        System.out.println(tool2);
+
     }
 }

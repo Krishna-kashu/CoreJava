@@ -13,5 +13,13 @@ public class SpeakerRunner  {
         BluetoothSpeaker bluetoothSpeaker = new BluetoothSpeaker();
         bluetoothSpeaker.playSound();
         bluetoothSpeaker.connectBluetooth();
+
+        Speaker sp1 = new Speaker();
+        sp1.setBrand("Sony");
+        sp1.setVolumeLevel(7);
+
+        Speaker sp2 = new Speaker(sp1);
+        System.out.println(sp2);
+
     }
 }

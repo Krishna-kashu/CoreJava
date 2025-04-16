@@ -13,4 +13,5 @@ public class Fan extends Device {
     public void rotate() {
         System.out.println("Running rotate() in Fan");
     }
+
 }

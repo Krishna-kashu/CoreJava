@@ -13,5 +13,13 @@ public class VehicleRunner {
         Car c = new Car();
         c.move();
         c.honk();
+
+        Vehicle vehicle = new Vehicle();
+        vehicle.setVehicleType("Car");
+        vehicle.setRegistrationNo("TN10AB1234");
+
+        Vehicle vehicle1 = new Vehicle(vehicle);
+        System.out.println(vehicle1);
+
     }
 }

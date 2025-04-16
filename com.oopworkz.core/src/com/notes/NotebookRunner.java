@@ -13,5 +13,11 @@ public class NotebookRunner  {
         DigitalNotebook dn = new DigitalNotebook();
         dn.writeNotes();
         dn.syncCloud();
+        Notebook notebook1 = new Notebook();
+        notebook1.setSubject("Physics");
+        notebook1.setIsRuled(true);
+
+        Notebook notebook2 = new Notebook(notebook1);
+        System.out.println(notebook2);
     }
 }

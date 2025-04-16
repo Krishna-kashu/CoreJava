@@ -13,5 +13,9 @@ public class FanRunner {
         Fan fan = new Fan();
         fan.start();
         fan.rotate();
+        Device fanDevice1 = new Device("Usha", 1200);
+        Device fanDevice2 = new Device(fanDevice1);
+        System.out.println(fanDevice2);
+
     }
 }

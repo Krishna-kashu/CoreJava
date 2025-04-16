@@ -13,5 +13,12 @@ public class MugRunner {
         DesignerMug designerMug = new DesignerMug();
         designerMug.fill();
         designerMug.design();
+        Mug mug2 = new Mug();
+        mug2.setColor("Red");
+        mug2.setCapacityMl(350);
+
+        Mug mug3 = new Mug(mug2);
+        System.out.println(mug3);
+
     }
 }

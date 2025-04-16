@@ -13,5 +13,9 @@ public class CourseRunner {
         JavaCourse pc = new JavaCourse();
         pc.enroll();
         pc.assignProject();
+        Course course2 = new Course("Java Programming", 6);
+        Course course3 = new Course(course2);
+        System.out.println(course3);
+
     }
 }

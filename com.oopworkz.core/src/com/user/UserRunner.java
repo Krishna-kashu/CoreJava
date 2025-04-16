@@ -13,5 +13,13 @@ public class UserRunner {
         AdminUser admin = new AdminUser();
         admin.login();
         admin.resetPassword();
+
+        User user2 = new User();
+        user2.setUsername("CodeMaster42");
+        user2.setIsPremium(true);
+
+        User user3 = new User(user2);
+        System.out.println(user3);
+
     }
 }

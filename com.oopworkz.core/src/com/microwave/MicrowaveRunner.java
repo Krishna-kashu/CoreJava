@@ -13,5 +13,12 @@ public class MicrowaveRunner {
         SmartMicrowave smart = new SmartMicrowave();
         smart.heat();
         smart.connectWiFi();
+        Microwave micro1 = new Microwave();
+        micro1.setPowerWatts(900);
+        micro1.setBrand("LG");
+
+        Microwave micro2 = new Microwave(micro1);
+        System.out.println(micro2);
+
     }
 }

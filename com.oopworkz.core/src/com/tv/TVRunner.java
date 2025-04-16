@@ -13,5 +13,13 @@ public class TVRunner{
         TVRemote remote = new TVRemote();
         remote.powerOn();
         remote.changeChannel();
+
+        TV tv2 = new TV();
+        tv2.setBrand("Samsung");
+        tv2.setScreenSize(55);
+
+        TV tv3 = new TV(tv2);
+        System.out.println(tv3);
+
     }
 }

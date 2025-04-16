@@ -13,5 +13,10 @@ public class FormRunner {
         RegistrationForm regForm = new RegistrationForm();
         regForm.submit();
         regForm.validateFields();
+
+        Form form2 = new Form("Admission Form", 10);
+        Form form3 = new Form(form2);
+        System.out.println(form3);
+
     }
 }

@@ -13,5 +13,13 @@ public class ClockRunner {
         SmartClock sc = new SmartClock();
         sc.showTime();
         sc.setAlarm();
+
+        Clock clock1 = new Clock();
+        clock1.setType("Analog");
+        clock1.setBrand("Titan");
+
+        Clock clock2 = new Clock(clock1);
+        System.out.println(clock2);
+
     }
 }

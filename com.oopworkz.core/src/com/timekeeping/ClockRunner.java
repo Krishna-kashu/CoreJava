@@ -13,5 +13,12 @@ public class ClockRunner {
         AlarmClock alarm = new AlarmClock();
         alarm.showTime();
         alarm.setAlarm();
+        Clock clk1 = new Clock();
+        clk1.setModel("Casio Wave Ceptor");
+        clk1.setBatteryOperated(true);
+
+        Clock clk2 = new Clock(clk1);
+        System.out.println(clk2);
+
     }
 }

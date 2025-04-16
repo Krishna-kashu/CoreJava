@@ -13,5 +13,13 @@ public class SettingsRunner {
         PrivacySettings privacy = new PrivacySettings();
         privacy.open();
         privacy.enableTwoFactor();
+
+        AccountSettings acc2 = new AccountSettings();
+        acc2.setUsername("user123");
+        acc2.setNotificationsEnabled(true);
+
+        AccountSettings acc3 = new AccountSettings(acc2);
+        System.out.println(acc3);
+
     }
 }

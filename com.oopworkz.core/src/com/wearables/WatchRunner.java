@@ -13,5 +13,12 @@ public class WatchRunner {
         SmartWatch sw = new SmartWatch();
         sw.showTime();
         sw.trackSteps();
+        Watch watch = new Watch();
+        watch.setBrand("Fossil");
+        watch.setSmartWatch(true);
+
+        Watch watch1 = new Watch(watch);
+        System.out.println(watch1);
+
     }
 }

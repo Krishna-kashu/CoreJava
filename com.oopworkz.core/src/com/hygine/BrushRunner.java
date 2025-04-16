@@ -13,5 +13,10 @@ public class BrushRunner {
         ToothBrush tb = new ToothBrush();
         tb.clean();
         tb.vibrate();
+
+        Brush brush1 = new Brush("Nylon", 14.0);
+        Brush brush2 = new Brush(brush1);
+        System.out.println(brush2);
+
     }
 }

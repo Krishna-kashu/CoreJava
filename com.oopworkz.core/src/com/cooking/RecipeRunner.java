@@ -13,5 +13,10 @@ public class RecipeRunner {
         VeganRecipe vegan = new VeganRecipe();
         vegan.cook();
         vegan.listIngredients();
+
+        Recipe recipe2 = new Recipe("Pasta", "Noodles, Tomato, Garlic");
+        Recipe recipe3 = new Recipe(recipe2);
+        System.out.println(recipe3);
+
     }
 }

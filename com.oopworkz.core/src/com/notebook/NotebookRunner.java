@@ -13,5 +13,12 @@ public class NotebookRunner {
         SpiralNotebook spiral = new SpiralNotebook();
         spiral.write();
         spiral.tearPage();
+        Notebook note1 = new Notebook();
+        note1.setBrand("Classmate");
+        note1.setNumberOfPages(200);
+
+        Notebook note2 = new Notebook(note1);
+        System.out.println(note2);
+
     }
 }

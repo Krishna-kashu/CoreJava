@@ -13,5 +13,10 @@ public class ChairRunner {
         MassageChair massageChair = new MassageChair();
         massageChair.sit();
         massageChair.massage();
+
+        Chair chair2 = new Chair(4, true);
+        Chair chair3 = new Chair(chair2);
+        System.out.println(chair3);
+
     }
 }

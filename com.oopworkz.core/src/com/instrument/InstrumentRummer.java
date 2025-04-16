@@ -13,5 +13,9 @@ public class InstrumentRummer {
         Guitar guitar = new Guitar();
         guitar.play();
         guitar.tuneStrings();
+        Instrument instrument2 = new Instrument("Violin", 12000.0);
+        Instrument instrument3 = new Instrument(instrument2);
+        System.out.println(instrument3);
+
     }
 }

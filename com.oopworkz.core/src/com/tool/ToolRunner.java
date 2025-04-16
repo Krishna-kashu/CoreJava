@@ -14,5 +14,13 @@ public class ToolRunner {
         Hammer hammer = new Hammer();
         hammer.use();
         hammer.swing();
+
+        Tool tool2 = new Tool();
+        tool2.setToolName("Hammer");
+        tool2.setMaterial("Steel");
+
+        Tool t = new Tool(tool2);
+        System.out.println(t);
+
     }
 }

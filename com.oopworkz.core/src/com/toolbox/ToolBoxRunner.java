@@ -13,5 +13,13 @@ public class ToolBoxRunner {
         Wrench wrench = new Wrench();
         wrench.activate();
         wrench.adjustJawWidth();
+
+        ToolBox box1 = new ToolBox();
+        box1.setNumberOfTools(10);
+        box1.setOwner("Mechanic");
+
+        ToolBox box2 = new ToolBox(box1);
+        System.out.println(box2);
+
     }
 }

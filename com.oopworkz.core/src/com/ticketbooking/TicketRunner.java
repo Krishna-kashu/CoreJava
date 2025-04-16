@@ -13,5 +13,13 @@ public class TicketRunner {
         OnlineTicket ot = new OnlineTicket();
         ot.book();
         ot.sendEmail();
+
+        Ticket tb1 = new Ticket();
+        tb1.setDestination("Chennai");
+        tb1.setTravelDate("2025-05-10");
+
+        Ticket tb2 = new Ticket(tb1);
+        System.out.println(tb2);
+
     }
 }

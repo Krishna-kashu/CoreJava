@@ -13,5 +13,13 @@ public class NotificationRunner{
         EmailNotification emailNotification = new EmailNotification();
         emailNotification.send();
         emailNotification.addAttachment();
+
+        Notification n1 = new Notification();
+        n1.setMessage("Welcome!");
+        n1.setIsRead(false);
+
+        Notification n2 = new Notification(n1);
+        System.out.println(n2);
+
     }
 }

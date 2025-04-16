@@ -13,5 +13,13 @@ public class PenRunner {
         FountainPen fountain = new FountainPen();
         fountain.write();
         fountain.refillInk();
+
+        Pen pen2 = new Pen();
+        pen2.setInkColor("Blue");
+        pen2.setBrand("Parker");
+
+        Pen pen3 = new Pen(pen2);
+        System.out.println(pen3);
+
     }
 }

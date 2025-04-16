@@ -13,5 +13,12 @@ public class ShelfRunner {
         Bookshelf bookShelf = new Bookshelf();
         bookShelf.placeItem();
         bookShelf.arrangeBooks();
+        Shelf shelf2 = new Shelf();
+        shelf2.setNumberOfCompartments(4);
+        shelf2.setMaterial("Metal");
+
+        Shelf shelf3 = new Shelf(shelf2);
+        System.out.println(shelf3);
+
     }
 }

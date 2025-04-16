@@ -13,5 +13,10 @@ public class GameRunner {
             BonusLevel bonus = new BonusLevel();
             bonus.start();
             bonus.unlockReward();
+
+            GameLevel level2 = new GameLevel("Boss Fight", 9.5);
+            GameLevel level3 = new GameLevel(level2);
+            System.out.println(level3);
+
         }
     }

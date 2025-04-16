@@ -13,5 +13,9 @@ public class DoorRunner {
         SlidingDoor sliding = new SlidingDoor();
         sliding.open();
         sliding.lock();
+        Door door2 = new Door("Wooden", 1.5);
+        Door door3 = new Door(door2);
+        System.out.println(door3);
+
     }
 }

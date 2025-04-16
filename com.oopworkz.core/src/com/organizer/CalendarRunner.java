@@ -13,5 +13,13 @@ public class CalendarRunner {
         DigitalCalendar dc = new DigitalCalendar();
         dc.displayDate();
         dc.addEvent();
+
+        Calendar cal1 = new Calendar();
+        cal1.setMonth("April");
+        cal1.setYear(2025);
+
+        Calendar cal2 = new Calendar(cal1);
+        System.out.println(cal2);
+
     }
 }

@@ -13,5 +13,12 @@ public class LessonRunner {
         MathLesson math = new MathLesson();
         math.teach();
         math.solveEquation();
+
+        Lesson lesson2 = new Lesson();
+        lesson2.setSubject("Mathematics");
+        lesson2.setDurationMinutes(60);
+
+        Lesson lesson3 = new Lesson(lesson2);
+        System.out.println(lesson3);
     }
 }

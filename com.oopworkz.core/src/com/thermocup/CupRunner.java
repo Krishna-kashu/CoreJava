@@ -13,5 +13,13 @@ public class CupRunner {
         ThermoCup tc = new ThermoCup();
         tc.fill();
         tc.maintainTemperature();
+
+        Cup cup1 = new Cup();
+        cup1.setColor("Blue");
+        cup1.setVolume(250.0);
+
+        Cup cup2 = new Cup(cup1);
+        System.out.println(cup2);
+
     }
 }

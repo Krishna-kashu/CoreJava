@@ -13,5 +13,9 @@ public class DashboardRunner {
         UserDashboard ud = new UserDashboard();
         ud.render();
         ud.showUserStats();
+        Dashboard dashboard1 = new Dashboard("Admin Dashboard", 100);
+        Dashboard dashboard2 = new Dashboard(dashboard1);
+        System.out.println(dashboard2);
+
     }
 }

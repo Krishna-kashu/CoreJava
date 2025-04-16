@@ -13,5 +13,13 @@ public class MirrorRunner {
         DigitalMirror  digitalMirror=new DigitalMirror();
         digitalMirror.reflect();
         digitalMirror.connectToApp();
+
+        Mirror mirror2 = new Mirror();
+        mirror2.setShape("Round");
+        mirror2.setHeight(60.5);
+
+        Mirror mirror3 = new Mirror(mirror2);
+        System.out.println(mirror3);
+
     }
 }

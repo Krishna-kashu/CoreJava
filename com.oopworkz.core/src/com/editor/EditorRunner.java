@@ -13,5 +13,10 @@ public class EditorRunner {
         PhotoEditor photoEditor = new PhotoEditor();
         photoEditor.edit();
         photoEditor.applyFilter();
+
+        Editor editor2 = new Editor("VS Code", 1.7);
+        Editor editor3 = new Editor(editor2);
+        System.out.println(editor3);
+
     }
 }

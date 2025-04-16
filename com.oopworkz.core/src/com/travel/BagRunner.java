@@ -13,5 +13,13 @@ public class BagRunner {
         LaptopBag laptopBag = new LaptopBag();
         laptopBag.carry();
         laptopBag.protectLaptop();
+        Bag bag2 = new Bag();
+        bag2.setBrand("Skybags");
+        bag2.setCompartments(3);
+
+        Bag bag3 = new Bag(bag2);
+        System.out.println(bag3);
+
+
     }
 }

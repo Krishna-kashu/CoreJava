@@ -13,5 +13,12 @@ public class MessageRunner {
             TextMessage text = new TextMessage();
             text.sendMessage();
             text.addEmoji();
+            Message msg2 = new Message();
+            msg2.setSender("Alice");
+            msg2.setContent("Hello there!");
+
+            Message msg3 = new Message(msg2);
+            System.out.println(msg3);
+
         }
     }

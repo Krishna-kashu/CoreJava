@@ -13,5 +13,9 @@ public class BottleRunner {
         SmartBottle smartBottle = new SmartBottle();
         smartBottle.pour();
         smartBottle.trackIntake();
+
+        Bottle bottle2 = new Bottle(750, "Steel");
+        Bottle bottle3 = new Bottle(bottle2);
+        System.out.println(bottle3);
     }
 }

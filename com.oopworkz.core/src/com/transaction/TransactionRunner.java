@@ -13,5 +13,12 @@ public class TransactionRunner {
         OnlineTransaction onlineTx = new OnlineTransaction();
         onlineTx.execute();
         onlineTx.verifyOTP();
+        Transaction transaction = new Transaction();
+        transaction.setAmount(5000.75);
+        transaction.setTransactionId("TXN12345");
+
+        Transaction transaction1 = new Transaction(transaction);
+        System.out.println(transaction1);
+
     }
 }

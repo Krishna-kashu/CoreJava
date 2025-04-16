@@ -13,5 +13,9 @@ public class FileRunner {
         TextFile textFile = new TextFile();
         textFile.open();
         textFile.countWords();
+        File file2 = new File("Resume.pdf", 350);
+        File file3 = new File(file2);
+        System.out.println(file3);
+
     }
 }

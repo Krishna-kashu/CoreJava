@@ -13,5 +13,12 @@ public static void main(String[] args) {
     TravelCup tc = new TravelCup();
     tc.pour();
     tc.sealLid();
+
+    Cup cup1 = new Cup();
+    cup1.setMaterial("Ceramic");
+    cup1.setCapacityMl(300);
+
+    Cup cup2 = new Cup(cup1);
+    System.out.println(cup2);
 }
 }

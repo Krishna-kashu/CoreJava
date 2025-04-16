@@ -13,5 +13,13 @@ public class PaymentRunner {
         CreditCard creditCard = new CreditCard();
         creditCard.processPayment();
         creditCard.validateCard();
+
+        PaymentMethod pay1 = new PaymentMethod();
+        pay1.setType("Credit Card");
+        pay1.setIsActive(true);
+
+        PaymentMethod pay2 = new PaymentMethod(pay1);
+        System.out.println(pay2);
+
     }
 }

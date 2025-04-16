@@ -13,5 +13,12 @@ public class MediaFileRunner {
         AudioFile af = new AudioFile();
         af.play();
         af.adjustVolume();
+        MediaFile media1 = new MediaFile();
+        media1.setFileName("video.mp4");
+        media1.setFileSize(1024.5);
+
+        MediaFile media2 = new MediaFile(media1);
+        System.out.println(media2);
+
     }
 }
