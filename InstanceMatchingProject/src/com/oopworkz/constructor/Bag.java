@@ -18,7 +18,7 @@ public class Bag {
 
     @Override
     public String toString() {
-        return "Bottle{" +
+        return "Bag{" +
                 "color='" + color + ", cost=" + cost +", laptop Bag=" + isLaptopBag + ", brand='" + brand  + '}';
     }
 
@@ -28,7 +28,7 @@ public class Bag {
             Bag other = (Bag) obj;
             if (Objects.equals(this.color, other.color) &&
                     Objects.equals(this.cost, other.cost)) {
-                System.out.println("Bottle is matching..");
+                System.out.println("Bag is matching..");
                 return true;
             }
         }

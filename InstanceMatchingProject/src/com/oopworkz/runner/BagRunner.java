@@ -17,8 +17,5 @@ public class BagRunner {
         boolean bNotMatch = b1.equals(b2);
         System.out.println("Bag match: " + bMatch);
         System.out.println("Bag not match: " + bNotMatch);
-
-
-
     }
 }
