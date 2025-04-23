@@ -1,4 +1,7 @@
 package com.abstractExample.external;
+
+import com.abstractExample.internal.Computer;
+
 public class Laptop extends Computer {
     @Override
     public void turnOn() {
