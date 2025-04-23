@@ -11,4 +11,3 @@ package com.project.interfaces.internal.rule;
         void enableTimer();
         void disableTimer();
     }
-}
