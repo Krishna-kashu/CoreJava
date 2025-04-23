@@ -11,6 +11,7 @@ public class ThreeMethodRunner {
             smartMirror.turnOn();
             smartMirror.showTime();
             smartMirror.showWeather();
+
             smartMirror1.turnOn();
             smartMirror1.showTime();
             smartMirror1.showWeather();
@@ -21,6 +22,7 @@ public class ThreeMethodRunner {
             ov1.preheat();
             ov1.bake();
             ov1.turnOff();
+
             ov2.preheat();
             ov2.bake();
             ov2.turnOff();
@@ -31,6 +33,7 @@ public class ThreeMethodRunner {
             ap1.startPurifying();
             ap1.stopPurifying();
             ap1.showAirQuality();
+
             ap2.startPurifying();
             ap2.stopPurifying();
             ap2.showAirQuality();
@@ -41,6 +44,7 @@ public class ThreeMethodRunner {
             bl1.blend();
             bl1.pulse();
             bl1.clean();
+
             bl2.blend();
             bl2.pulse();
             bl2.clean();
@@ -51,7 +55,9 @@ public class ThreeMethodRunner {
             ac1.setAlarm();
             ac1.snooze();
             ac1.stopAlarm();
+
             ac2.setAlarm();
-            ac2.snooze(); ac2.stopAlarm();
+            ac2.snooze();
+            ac2.stopAlarm();
         }
 }

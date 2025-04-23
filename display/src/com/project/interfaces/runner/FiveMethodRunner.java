@@ -14,6 +14,7 @@ public class FiveMethodRunner {
         t1.setSchedule();
         t1.showCurrentTemp();
         t1.turnOff();
+
         t2.increaseTemperature();
         t2.decreaseTemperature();
         t2.setSchedule();
@@ -25,8 +26,10 @@ public class FiveMethodRunner {
         LaundryMachineImpl l2 = new LaundryMachineImpl();
         l1.loadClothes();
         l1.addDetergent();
-        l1.selectCycle(); l1.startWash();
+        l1.selectCycle();
+        l1.startWash();
         l1.drainWater();
+
         l2.loadClothes();
         l2.addDetergent();
         l2.selectCycle();
@@ -41,6 +44,7 @@ public class FiveMethodRunner {
         to1.toast();
         to1.popUp();
         to1.cleanTray();
+
         to2.insertBread();
         to2.setTimer();
         to2.toast();
@@ -55,6 +59,7 @@ public class FiveMethodRunner {
         s1.setPressure();
         s1.stopShower();
         s1.cleanNozzle();
+
         s2.startShower();
         s2.setTemperature();
         s2.setPressure();
@@ -69,6 +74,7 @@ public class FiveMethodRunner {
         c1.grind();
         c1.stopGrinding();
         c1.cleanGrinder();
+
         c2.fillBeans();
         c2.selectGrindSize();
         c2.grind();
