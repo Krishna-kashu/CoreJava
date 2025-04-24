@@ -1,5 +1,5 @@
 package com.oopsworkz.internal;
 
-public interface Class {
+public interface Session {
     void attend();
 }

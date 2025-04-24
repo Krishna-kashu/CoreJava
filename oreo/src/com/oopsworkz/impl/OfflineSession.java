@@ -1,8 +1,8 @@
 package com.oopsworkz.impl;
 
-import com.oopsworkz.internal.Class;
+import com.oopsworkz.internal.Session;
 
-public class OfflineClass implements Class
+public class OfflineSession implements Session
 {
     @Override
     public void attend() {
