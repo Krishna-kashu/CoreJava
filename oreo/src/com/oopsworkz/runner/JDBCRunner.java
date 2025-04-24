@@ -1,8 +1,8 @@
 package com.oopsworkz.runner;
 
-import com.oopsworkz.external.MysqlJDBC;
-import com.oopsworkz.external.OracleJDBC;
-import com.oopsworkz.internal.Instagram;
+import com.oopsworkz.impl.MysqlJDBC;
+import com.oopsworkz.impl.OracleJDBC;
+import com.oopsworkz.other.Instagram;
 import com.oopsworkz.internal.JDBC;
 
 public class JDBCRunner {

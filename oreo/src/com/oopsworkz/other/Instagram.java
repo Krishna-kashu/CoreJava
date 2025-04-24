@@ -1,4 +1,6 @@
-package com.oopsworkz.internal;
+package com.oopsworkz.other;
+
+import com.oopsworkz.internal.JDBC;
 
 public class Instagram {
     private JDBC jdbc;
