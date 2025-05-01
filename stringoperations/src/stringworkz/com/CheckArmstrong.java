@@ -7,6 +7,6 @@ public class CheckArmstrong {
             sum += Math.pow(digit, 3);
             num /= 10;
         }
-        System.out.println("Armstrong: " + (sum == original)); // Output: true
+        System.out.println("Armstrong: " + (sum == original));
     }
 }
