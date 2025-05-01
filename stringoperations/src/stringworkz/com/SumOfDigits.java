@@ -1,3 +1,5 @@
+package stringworkz.com;
+
 public class SumOfDigits {
     public static void main(String[] args) {
         int num = 456, sum = 0;
