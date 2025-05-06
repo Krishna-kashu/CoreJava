@@ -18,6 +18,6 @@ public class Mico extends GenericServlet {
 //    }
     public void service(ServletRequest servletRequest, ServletResponse servletResponse)
     {
-
+        System.out.println("Running service in Mico");
     }
 }
