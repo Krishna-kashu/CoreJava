@@ -1,0 +1,2 @@
+public class KabbadiServlet {
+}
