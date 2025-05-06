@@ -13,6 +13,6 @@ public class BadmintonServlet extends GenericServlet {
     }
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-        System.out.println("Running service badmintonServlet");
+        System.out.println("Running service BadmintonServlet");
     }
 }

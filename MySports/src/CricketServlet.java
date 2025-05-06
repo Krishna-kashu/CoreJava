@@ -5,7 +5,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/cricket", loadOnStartup = 1)
+@WebServlet(urlPatterns = "/cricket", loadOnStartup = 3)
 public class CricketServlet extends GenericServlet {
 
     public CricketServlet(){
