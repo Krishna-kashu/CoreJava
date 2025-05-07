@@ -27,6 +27,6 @@ public class FeedBackServlet extends GenericServlet {
 
         servletResponse.setContentType("text/html");
         PrintWriter writer=servletResponse.getWriter();
-        writer.println(name+", Thanks for submitting the feedback, Your response has been recorded");
+        writer.println(name+", Thanks for submitting the feedback, Your response has been recorded.");
     }
 }

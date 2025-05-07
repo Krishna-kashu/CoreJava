@@ -4,6 +4,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 
 @WebServlet(urlPatterns = "/hockey", loadOnStartup = 5)
@@ -14,5 +15,8 @@ public class HockeyServlet extends GenericServlet {
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
         System.out.println("Running Service by HockeyServlet ");
+
+        PrintWriter a = servletResponse.getWriter();
+        a.println("Hockey page response delivered.");
     }
 }
