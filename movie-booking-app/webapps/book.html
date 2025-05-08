@@ -3,8 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <title>Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        .booking-form {
+            background-color: #fff;
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            font-family: Arial, sans-serif;
+        }
+
+        .booking-form input[type="text"],
+        .booking-form input[type="tel"],
+        .booking-form input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .booking-form input[type="submit"] {
+            background-color: pink;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .booking-form input[type="submit"]:hover {
+            background-color: #ff7f9c;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-<h1> Book a ticket!</h1>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<h1>Book a Ticket</h1>
+
+<form class="booking-form" action="movieBook">
+    Name:
+    <input type="text" name="name" placeholder="Enter your name">
+    Movie:
+    <input type="text" name="moviename" placeholder="Enter the movie name">
+    Contact number:
+    <input type="tel" name="contactnumber" placeholder="Enter Contact number">
+    Number of Tickets:
+    <input type="number" placeholder="Enter Number of tickets" name="ticketNumber">
+    <input type="submit" value="Book Now">
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
