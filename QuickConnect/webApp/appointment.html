@@ -3,8 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Appointment</title>
+    <script>
+        function showAppointmentDetails() {
+          const name = document.getElementById("name").value;
+          const mail = document.getElementById("mail").value;
+          const age = document.getElementById("age").value;
+          const address = document.getElementById("address").value;
+          const detailsDiv = document.getElementById("details");
+
+          detailsDiv.innerHTML = `
+            <h3>Appointment Details</h3>
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${mail}</p>
+            <p><strong>Age:</strong> ${age}</p>
+            <p><strong>Address:</strong> ${address}</p>
+          `;
+
+          return false; // prevent form submission
+        }
+    </script>
 </head>
 <body>
-
+<h2>Book an Appointment</h2>
+<form onsubmit="return showAppointmentDetails()">
+    <input type="text" id="name" placeholder="Name" required><br>
+    <input type="email" id="mail" placeholder="Email" required><br>
+    <input type="number" id="age" placeholder="Age"><br>
+    <input type="text" id="address" placeholder="Address"><br>
+    <button type="submit">Submit</button>
+</form>
+<div id="details"></div>
 </body>
 </html>
