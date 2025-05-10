@@ -9,6 +9,10 @@ import java.io.IOException;
 public class QuickConnectServlet extends GenericServlet {
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
+        servletRequest.getParameter("name");
+        servletRequest.getParameter("name");
+        servletRequest.getParameter("name");
+        servletRequest.getParameter("name");
 
     }
 }
