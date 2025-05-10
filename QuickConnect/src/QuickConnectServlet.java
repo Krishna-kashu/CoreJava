@@ -21,13 +21,19 @@ public class QuickConnectServlet extends GenericServlet {
 
         servletResponse.setContentType("text/html");
         PrintWriter writer = servletResponse.getWriter();
-        writer.println("\n"+fname+""+lname+", your details submitted successfully!\n\n");
-        writer.println("\nName: "+fname+""+lname);
-        writer.println("\nE-mail: "+mail);
-        writer.println("\nAge: "+ age);
-        writer.println("\nAddress: "+address);
-        writer.println("\nSickness: "+sickness);
-        writer.println("\nMobile Number: "+mob);
-        writer.println("\nGender "+gender);
+
+        writer.println("<html><head><title>Appointment Confirmation</title></head><body style='font-family:Arial; background:#e0f7fa;'>");
+        writer.println("<h2 style='color:#00796b;'>Thank you, " + fname + " " + lname + ", your details were submitted successfully!</h2>");
+        writer.println("<div style='background:#fff;padding:20px;border-radius:8px;width:50%;margin:auto;'>");
+        writer.println("<p><strong>Name:</strong> " + fname + " " + lname + "</p>");
+        writer.println("<p><strong>Email:</strong> " + mail + "</p>");
+        writer.println("<p><strong>Age:</strong> " + age + "</p>");
+        writer.println("<p><strong>Address:</strong> " + address + "</p>");
+        writer.println("<p><strong>Sickness:</strong> " + sickness + "</p>");
+        writer.println("<p><strong>Mobile Number:</strong> " + mob + "</p>");
+        writer.println("<p><strong>Gender:</strong> " + gender + "</p>");
+        writer.println("</div>");
+        writer.println("</body></html>");
+
     }
 }
