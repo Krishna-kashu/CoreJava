@@ -21,13 +21,13 @@ public class QuickConnectServlet extends GenericServlet {
 
         servletResponse.setContentType("text/html");
         PrintWriter writer = servletResponse.getWriter();
-        writer.println(fname+""+lname+", your details submitted successfully!\n\n");
-        writer.println("Name: "+fname+""+lname);
-        writer.println("E-mail: "+mail);
-        writer.println("Age: "+ age);
-        writer.println("Address: "+address);
-        writer.println("Sickness: "+sickness);
-        writer.println("Mobile Number: "+mob);
-        writer.println("Gender "+gender);
+        writer.println("\n"+fname+""+lname+", your details submitted successfully!\n\n");
+        writer.println("\nName: "+fname+""+lname);
+        writer.println("\nE-mail: "+mail);
+        writer.println("\nAge: "+ age);
+        writer.println("\nAddress: "+address);
+        writer.println("\nSickness: "+sickness);
+        writer.println("\nMobile Number: "+mob);
+        writer.println("\nGender "+gender);
     }
 }
