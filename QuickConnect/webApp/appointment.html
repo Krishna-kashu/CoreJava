@@ -7,14 +7,14 @@
 </head>
 <body>
 <h2>Book an Appointment</h2>
-<form onsubmit="return showAppointmentDetails()">
-    <p>First Name: </p><input type="text" id="fname" placeholder="Enter your First Name" required><br>
-    <p>Last Name: </p><input type="text" id="lname" placeholder="Enter your Last Name" ><br>
-    <p>E-mail: </p><input type="email" id="mail" placeholder="Enter your Email" required><br>
-    <p>Age: </p><input type="number" id="age" placeholder="Enter your Age" required><br>
-    <p>Address: </p><input type="text" id="address" placeholder="Enter your Address" required><br>
-    <p>Sickness</p><input type="text" id="sickness" placeholder="Type here" required> <br>
-    <p>Mobile No.</p><input type="tel" id="mobile" placeholder="Enter your Mobile Number" required> <br>
+<form action="quick" method="post">
+    <p>First Name: </p><input type="text" name="fname" placeholder="Enter your First Name" required><br>
+    <p>Last Name: </p><input type="text" name="lname" id="lname" placeholder="Enter your Last Name" ><br>
+    <p>E-mail: </p><input type="email" name="mail" id="mail" placeholder="Enter your Email" required><br>
+    <p>Age: </p><input type="number" name="age" id="age" placeholder="Enter your Age" required><br>
+    <p>Address: </p><input type="text" name="address" id="address" placeholder="Enter your Address" required><br>
+    <p>Sickness: </p><input type="text" name="sickness" id="sickness" placeholder="Type here" required> <br>
+    <p>Mobile Number: </p><input type="tel" name="mobile" id="mobile" placeholder="Enter your Mobile Number" required> <br>
     <p>Select Gender </p>
     <label for="male">Male</label>
     <input type="radio" id="male" name="gender" value="male">
