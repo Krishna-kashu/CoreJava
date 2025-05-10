@@ -1,13 +1,13 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #e0f7fa, #fff);
+    background: linear-gradient(to right, #ffe6f0, #fff);
     margin: 0;
     padding: 20px;
     color: #333;
 }
 
 h1, h2 {
-    color: #006064;
+    color: #d5006e; /* hot pink heading */
     text-align: center;
 }
 
@@ -24,7 +24,7 @@ nav li {
 
 a {
     text-decoration: none;
-    color: #00838f;
+    color: #ff1493; /* hot pink links */
     font-weight: bold;
 }
 
@@ -42,17 +42,41 @@ input, textarea, button {
     padding: 10px;
     margin: 8px 0;
     box-sizing: border-box;
-    border: 1px solid #b0bec5;
+    border: 1px solid #ffb6c1; /* light pink border */
     border-radius: 5px;
 }
 
 button {
-    background-color: #00897b;
+    background-color: #ff1493; /* hot pink button */
     color: white;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #00695c;
+    background-color: #c2185b; /* darker pink on hover */
+}
+/* Do NOT override Bootstrap navbar colors */
+.navbar {
+    background-color: #ffe6f0 !important;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #d5006e !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #c2185b !important;
+}
+
+.btn-outline-pink {
+    border-color: #d5006e;
+    color: #d5006e;
+}
+
+.btn-outline-pink:hover {
+    background-color: #d5006e;
+    color: white;
 }

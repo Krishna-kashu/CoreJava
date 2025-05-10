@@ -2,16 +2,102 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css">
+    <title>HealthCare Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ffe4ec, #fff1f5);
+            text-align: center;
+            color: #d5006e;
+        }
+
+        .navbar {
+            background-color: #fff0f5;
+        }
+
+        .navbar-brand, .nav-link {
+            color: #d5006e !important;
+            font-weight: bold;
+        }
+
+        .welcome-section {
+            margin-top: 60px;
+        }
+
+        .welcome-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ec407a;
+        }
+
+        .footer {
+            margin-top: 40px;
+            color: #555;
+        }
+
+        .btn-outline-success {
+            border-color: #66bb6a;
+            color: #388e3c;
+        }
+
+        .btn-outline-success:hover {
+            background-color: #66bb6a;
+            color: white;
+        }
+
+        .search-form {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+    </style>
 </head>
 <body>
-<h1>Welcome!</h1>
-<nav>
-    <ul>
-        <li><a href="appointment.html">Book an Appointment</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-    </ul>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+            </ul>
+
+            <!-- Search -->
+            <form class="d-flex search-form">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
 </nav>
+
+<!-- Main Content -->
+<div class="welcome-section">
+    <h1>Welcome!</h1>
+    <p><a href="appointment.html" class="fw-bold">Book an Appointment</a> | <a href="contact.html" class="fw-bold">Contact Us</a></p>
+</div>
+
+
+<div class="footer">
+    <p>© 2025 HealthCare Portal. All rights reserved.</p>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
