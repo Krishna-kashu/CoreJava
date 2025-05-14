@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donation</title>
+    <style>
+        form {
+    background-color:#d9d9e4;
+    padding: 20px;
+    margin: auto;
+    width: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+
+}
+    </style>
+</head>
+<body>
+<center>
+<h2>Welcome to Donation App</h2>
+</center>
+<form action="donation" method="post">
+    <center>
+    <p>First Name: </p><input type="text" name="fname" placeholder="Enter your First Name" required><br>
+    <p>Last Name: </p><input type="text" name="lname" placeholder="Enter your Last Name" ><br>
+    <p>E-mail: </p><input type="email" name="mail" placeholder="Email" required><br>
+    <p>Donation Amount: </p><input type="number" name="donation" placeholder="Enter the amount you want to donate" required><br><br>
+    <button type="submit">Donate</button>
+    </center>
+</form>
+</body>
+</html>

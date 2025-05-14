@@ -47,16 +47,16 @@ input, textarea, button {
 }
 
 button {
-    background-color: #ff1493; /* hot pink button */
+    background-color: #ff1493;
     color: white;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #c2185b; /* darker pink on hover */
+    background-color: #c2185b;
 }
-/* Do NOT override Bootstrap navbar colors */
+
 .navbar {
     background-color: #ffe6f0 !important;
 }
