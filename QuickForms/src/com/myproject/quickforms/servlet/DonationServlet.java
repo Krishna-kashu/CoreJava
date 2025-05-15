@@ -15,14 +15,10 @@ public class DonationServlet extends GenericServlet {
         String email = servletRequest.getParameter("donorEmail");
         String message = servletRequest.getParameter("donationMessage");
 
-//        System.out.println("Using request dispatcher to forward the request and response to another servlet/jsp");
-//        RequestDispatcher requestDispatcher = servletRequest.getRequestDispatcher("laboratorySuccess");
-//        requestDispatcher.forward(servletRequest,servletResponse);
-//        System.out.println("using request dispatcher to forward the req and res to another jsp/servlet");
-        // abstraction : Servlet Chaining
-        RequestDispatcher requestDispatcher=
-                servletRequest.getRequestDispatcher("donationSuccess.jsp");
-        // jsp--> generate servlet--> service(servletRequest,servletResponse)==>write HTML;
+        System.out.println("Using request dispatcher to forward the request and response to another servlet/jsp");
+        RequestDispatcher requestDispatcher = servletRequest.getRequestDispatcher("donationSuccess.jsp");
         requestDispatcher.forward(servletRequest,servletResponse);
+        System.out.println("using request dispatcher to forward the req and res to another jsp/servlet");
+
     }
 }
