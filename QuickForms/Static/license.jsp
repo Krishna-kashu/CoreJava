@@ -60,7 +60,7 @@
     <label for="idProof">ID Proof Number:</label>
     <input type="text" id="IDProof" name="idProof" required>
 
-    <label for="reason">Reason for Request:</label>
+    <label for="request">Reason for Request:</label>
     <textarea id="request" name="reason" rows="4" required></textarea>
 
     <button type="submit">Submit</button>
