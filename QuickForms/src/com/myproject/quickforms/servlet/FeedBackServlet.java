@@ -2,10 +2,11 @@ package com.myproject.quickforms.servlet;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import java.io.IOException;
 
 @WebServlet(urlPatterns = "/feedback", loadOnStartup = 2)
-public class FeedBackServlet extends GenericServlet {
+public class FeedBackServlet extends HttpServlet {
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
         System.out.println("Service method called bt Tomcat");
