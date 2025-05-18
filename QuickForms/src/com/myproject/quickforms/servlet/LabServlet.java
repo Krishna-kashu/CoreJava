@@ -2,10 +2,11 @@ package com.myproject.quickforms.servlet;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import java.io.IOException;
 
 @WebServlet(urlPatterns = "/lab", loadOnStartup = 4)
-public class LabServlet extends GenericServlet {
+public class LabServlet extends HttpServlet {
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
         System.out.println("Service method called bt Tomcat");
