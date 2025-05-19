@@ -44,6 +44,12 @@
 <div class="thank-you-box">
     <h1>Thank you for your feedback!</h1>
         <br>
+    <h2>"${message}"</h2>
+
+    <p><span class="label">Name:</span> ${name}</p>
+    <p><span class="label">Contact:</span> "${contact}</p>
+    <p><span class="label">Email:</span> ${email}</p>
+    <p><span class="label">Feedback:</span>${feedback}</p>
     <a href="index.jsp">Back to Home</a>
 </div>
 
