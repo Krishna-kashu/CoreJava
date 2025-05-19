@@ -43,7 +43,12 @@
 
 <div class="thank-you-box">
     <h2>Thank You!</h2>
-    <p>Your FIR has been submitted successfully.</p>
+    <h2>${message}</h2>
+    <p><strong>Name:</strong> ${name}</p>
+    <p><strong>Contact:</strong> ${contact}</p>
+    <p><strong>Date & Time:</strong> ${datetime}</p>
+    <p><strong>Location:</strong> ${location}</p>
+    <p><strong>Description:</strong> ${description}</p>
     <a href="index.jsp">Back to Home</a>
 </div>
 

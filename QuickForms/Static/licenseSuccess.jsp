@@ -42,8 +42,12 @@
 <body>
 
 <div class="thank-you-box">
-    <h1>Thank you for submitting the License form!</h1>
-        <br>
+    <p><strong>Name:</strong> ${name}</p>
+    <p><strong>License:</strong> ${license}</p>
+    <p><strong>ID Proof:</strong> ${idProof}</p>
+    <p><strong>Reason:</strong> ${reason}</p>
+    <p style="color:green;"><strong>${message}</strong></p>
+    <br>
     <a href="index.jsp">Back to Home</a>
 </div>
 

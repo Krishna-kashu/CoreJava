@@ -57,8 +57,11 @@
     <label for="contact">Contact Number:</label>
     <input type="text" id="contact" name="contact" required>
 
-    <label for="email">E-mail:</label>
+    <label for="mail">E-mail:</label>
     <input type="email" id="mail" name="email" required>
+
+    <label for="amount">Donation Amount:</label>
+    <input type="number" id="amount" name="amount" required>
 
     <label for="description">Message:</label>
     <textarea id="description" name="description" rows="4" required></textarea>

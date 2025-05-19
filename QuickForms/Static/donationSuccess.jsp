@@ -42,8 +42,15 @@
 <body>
 
 <div class="thank-you-box">
-    <h1>Thank you for your support!</h1>
-        <p><h2>Donate again</h2></p>
+    <h2 class="success">${message}</h2>
+
+    <div class="details">
+        <p><strong>Donor Name:</strong> ${donorName}</p>
+        <p><strong>Donation Amount:</strong> ${donorNumber}</p>
+        <p><strong>Email:</strong> ${donorEmail}</p>
+        <p><strong>Donation Message:</strong> ${donationMessage}</p>
+        <p><strong>Message:</strong> ${message}</p>
+    </div>
     <a href="index.jsp">Back to Home</a>
 </div>
 

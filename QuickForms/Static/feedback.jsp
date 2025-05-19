@@ -57,10 +57,10 @@
     <label for="contact">Contact Number:</label>
     <input type="tel" id="contact" name="contact" required>
 
-    <label for="email">E-mail:</label>
+    <label for="mail">E-mail:</label>
     <input type="email" id="mail" name="email" required>
 
-    <label for="description">Feedback:</label>
+    <label for="feedback">Feedback:</label>
     <textarea id="feedback" name="feedback" rows="4" required></textarea>
 
     <button type="submit">Submit</button>
