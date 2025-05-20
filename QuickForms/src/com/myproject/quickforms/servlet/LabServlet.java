@@ -1,5 +1,7 @@
 package com.myproject.quickforms.servlet;
 
+import com.myproject.quickforms.dto.LabDTO;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,20 +16,23 @@ public class LabServlet extends HttpServlet {
         System.out.println("doPost() method called by Tomcat");
 
         String name = req.getParameter("name");
-        String number = req.getParameter("RollNumber");
-        String RNumber = req.getParameter("RNumber");
+        String rollNumber = req.getParameter("RollNumber");
+        String expNumber = req.getParameter("ExpNumber");
         String observation = req.getParameter("observation");
 
-        System.out.println("Using request dispatcher to forward the request and response to another servlet/jsp");
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("laboratorySuccess.jsp");
+        LabDTO labData = new LabDTO();
+        labData.setName(name);
+        labData.setRollNumber(rollNumber);
+        labData.setExpNumber(expNumber);
+        labData.setObservation(observation);
 
-        req.setAttribute("name", name);
-        req.setAttribute("RollNumber", number);
-        req.setAttribute("RNumber", RNumber);
-        req.setAttribute("observation", observation);
+
+        req.setAttribute("labData", labData);
         req.setAttribute("message", "Observation recorded successfully!");
 
+
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("laboratorySuccess.jsp");
         requestDispatcher.forward(req, resp);
-        System.out.println("using request dispatcher to forward the req and res to another jsp/servlet");
     }
-    }
+}
+

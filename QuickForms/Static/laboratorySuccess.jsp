@@ -2,56 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Thank You</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f2f2f2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .thank-you-box {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .thank-you-box h2 {
-            color: #28a745;
-        }
-        .thank-you-box p {
-            margin-top: 10px;
-        }
-        .thank-you-box a {
-            display: inline-block;
-            margin-top: 20px;
-            text-decoration: none;
-            color: white;
-            background-color: #007BFF;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-        .thank-you-box a:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Lab Observation Submitted</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
 
-<div class="thank-you-box">
-    <p><strong>Name:</strong> ${name}</p>
-    <p><strong>Roll Number:</strong> ${RollNumber}</p>
-    <p><strong>Reference Number:</strong> ${RNumber}</p>
-    <p><strong>Observation:</strong> ${observation}</p>
-    <p style="color:green;"><strong>${message}</strong></p>
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-body text-center">
+            <h2 class="text-success mb-4">${message}</h2>
 
-    <br>
-    <a href="index.jsp">Back to Home</a>
+            <table class="table table-bordered table-striped table-hover">
+                <thead class="table-dark">
+                <tr>
+                    <th>Field</th>
+                    <th>Details</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td>${labData.name}</td>
+                </tr>
+                <tr>
+                    <td>Roll Number</td>
+                    <td>${labData.rollNumber}</td>
+                </tr>
+                <tr>
+                    <td>Experiment Number</td>
+                    <td>${labData.expNumber}</td>
+                </tr>
+                <tr>
+                    <td>Observation</td>
+                    <td>${labData.observation}</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <a href="index.jsp" class="btn btn-primary mt-3">Back to Form</a>
+        </div>
+    </div>
 </div>
 
 </body>
 </html>
->

@@ -58,7 +58,7 @@
     <input type="text" id="rollNumber" name="RollNumber" required>
 
     <label for="experiment">Experiment Number:</label>
-    <input type="number" id="number" name="RNumber" required>
+    <input type="number" id="experiment" name="ExpNumber" required>
 
     <label for="Observation">Observation:</label>
     <textarea id="observation" name="observation" rows="4" required></textarea>
