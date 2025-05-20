@@ -2,55 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Thank You</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f2f2f2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .thank-you-box {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .thank-you-box h2 {
-            color: #28a745;
-        }
-        .thank-you-box p {
-            margin-top: 10px;
-        }
-        .thank-you-box a {
-            display: inline-block;
-            margin-top: 20px;
-            text-decoration: none;
-            color: white;
-            background-color: #007BFF;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-        .thank-you-box a:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Feedback Submitted</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
 
-<div class="thank-you-box">
-    <h1>Thank you for your feedback!</h1>
-        <br>
-    <h2>"${message}"</h2>
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-body text-center">
+            <h2 class="text-success mb-4">${message}</h2>
 
-    <p><span class="label">Name:</span> ${name}</p>
-    <p><span class="label">Contact:</span> "${contact}</p>
-    <p><span class="label">Email:</span> ${email}</p>
-    <p><span class="label">Feedback:</span>${feedback}</p>
-    <a href="index.jsp">Back to Home</a>
+            <table class="table table-bordered table-striped table-hover">
+                <thead class="table-dark">
+                <tr>
+                    <th>Field</th>
+                    <th>Details</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td>${feedbackData.name}</td>
+                </tr>
+                <tr>
+                    <td>Contact Number</td>
+                    <td>${feedbackData.contact}</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>${feedbackData.email}</td>
+                </tr>
+                <tr>
+                    <td>Feedback</td>
+                    <td>${feedbackData.feedback}</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <a href="index.jsp" class="btn btn-primary mt-3">Back to Home</a>
+        </div>
+    </div>
 </div>
 
 </body>
