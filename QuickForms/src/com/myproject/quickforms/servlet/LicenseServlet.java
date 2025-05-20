@@ -1,10 +1,10 @@
 package com.myproject.quickforms.servlet;
 
+import com.myproject.quickforms.dto.LicenseDTO;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 
 @WebServlet(urlPatterns = "/license", loadOnStartup = 5)
@@ -18,17 +18,18 @@ public class LicenseServlet extends HttpServlet {
         String idProof = req.getParameter("idProof");
         String reason = req.getParameter("reason");
 
-        System.out.println("Using request dispatcher to forward the request and response to another servlet/jsp");
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("licenseSuccess.jsp");
+        LicenseDTO dto = new LicenseDTO();
+        dto.setName(name);
+        dto.setLicense(license);
+        dto.setIdProof(idProof);
+        dto.setReason(reason);
 
-        req.setAttribute("name", name);
-        req.setAttribute("license", license);
-        req.setAttribute("idProof", idProof);
-        req.setAttribute("reason", reason);
         req.setAttribute("message", "Request submitted successfully!");
+        req.setAttribute("licenseData", dto);
 
-        requestDispatcher.forward(req,resp);
-        System.out.println("using request dispatcher to forward the req and res to another jsp/servlet");
-
+        System.out.println("Forwarding request to licenseSuccess.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("licenseSuccess.jsp");
+        dispatcher.forward(req, resp);
+        System.out.println("Request forwarded successfully");
     }
 }
