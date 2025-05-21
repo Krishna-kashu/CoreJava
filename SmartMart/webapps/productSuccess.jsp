@@ -60,10 +60,7 @@
                     <td>Warranty</td>
                     <td>${product.warranty}</td>
                 </tr>
-                <tr>
-                    <td>IsReturnable</td>
-                    <td>${product.isReturnable}</td>
-                </tr>
+
                 </tbody>
             </table>
 

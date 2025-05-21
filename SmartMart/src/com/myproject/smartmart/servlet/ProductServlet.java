@@ -3,7 +3,6 @@ package com.myproject.smartmart.servlet;
 import com.myproject.smartmart.dto.ProductDTO;
 import com.myproject.smartmart.service.ProductService;
 import com.myproject.smartmart.service.ProductServiceImpl;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,6 +19,7 @@ public class ProductServlet extends HttpServlet {
 
         String name = req.getParameter("name");
         String type = req.getParameter("type");
+        String weight = req.getParameter("weight");
         String incomingPrice = req.getParameter("incomingPrice");
         String sellingPrice = req.getParameter("sellingPrice");
         String mrp = req.getParameter("mrp");
@@ -29,13 +29,14 @@ public class ProductServlet extends HttpServlet {
         String color = req.getParameter("color");
         String manufDate = req.getParameter("manufDate");
         String warranty = req.getParameter("warranty");
-
+        String email = req.getParameter("email");
         String returnPolicy = req.getParameter("returnPolicy");
         boolean isReturnable = (returnPolicy != null && returnPolicy.equals("on"));
 
         ProductDTO productDTO = new ProductDTO();
         productDTO.setName(name);
         productDTO.setType(type);
+        productDTO.setWeight(weight);
         productDTO.setIncomingPrice(incomingPrice);
         productDTO.setSellingPrice(sellingPrice);
         productDTO.setMrp(mrp);
