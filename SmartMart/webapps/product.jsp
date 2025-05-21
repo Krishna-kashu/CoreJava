@@ -30,11 +30,11 @@
 
 <div class="container mt-4">
     <h2 class="mb-4 text-center">Add New Product</h2>
-
+    <h4> ${message}</h4>
     <form action="product" method="post">
         <div class="mb-3">
             <label class="form-label">Email address</label>
-            <input type="email" class="form-control" required>
+            <input type="email" class="form-control" name="email" required>
             <div class="form-text">Enter valid email address</div>
         </div>
 
@@ -117,7 +117,7 @@
                 <label class="form-check-label">Yes</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="returnPolicy" value="no">
+                <input class="form-check-input" type="radio" name="returnPolicy" value="no" required>
                 <label class="form-check-label">No</label>
             </div>
         </div>
