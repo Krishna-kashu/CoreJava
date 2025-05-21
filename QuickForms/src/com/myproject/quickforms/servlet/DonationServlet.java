@@ -1,6 +1,8 @@
 package com.myproject.quickforms.servlet;
 
 import com.myproject.quickforms.dto.DonationDTO;
+import com.myproject.quickforms.service.DonationService;
+import com.myproject.quickforms.service.DonationServiceImpl;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
@@ -29,10 +31,22 @@ public class DonationServlet extends HttpServlet {
         donationDTO.setEmail(email);
         donationDTO.setDescription(message);
 
-        req.setAttribute("donation", donationDTO);
-        req.setAttribute("message", "Donation received successfully!");
+        DonationService donationService=new DonationServiceImpl();
 
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("donationSuccess.jsp");
-        requestDispatcher.forward(req, resp);
+        boolean saved= donationService.save(donationDTO);
+        if(saved) {
+            RequestDispatcher dispatcher =
+                    req.getRequestDispatcher("donationSuccess.jsp");
+
+            req.setAttribute("message", "Donation received successfully!");
+            req.setAttribute("donation", donationDTO);
+            dispatcher.forward(req,resp);
+        }
+        else{
+            RequestDispatcher dispatcher = req.getRequestDispatcher("donation.jsp");
+            req.setAttribute("message", "Donation failed!");
+            dispatcher.forward(req,resp);
+        }
+
     }
 }
