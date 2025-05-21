@@ -49,6 +49,7 @@
 <body>
 
 <form action="donate" method="post">
+    <h4> ${message}</h4>
     <h2>Donation Form</h2>
 
     <label for="name">Donor Name:</label>
