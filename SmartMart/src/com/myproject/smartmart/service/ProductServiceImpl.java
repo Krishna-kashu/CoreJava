@@ -16,10 +16,7 @@ public class ProductServiceImpl implements ProductService {
 
         boolean valid = true;
 
-        if (dto.getName() == null) {
-            System.out.println("Name is mandatory");
-            valid = false;
-        } else if (dto.getName().length() < 3 || dto.getName().length() > 20) {
+        if (dto.getName().length() < 3 || dto.getName().length() > 20) {
             System.out.println("Name must be 3-20 characters");
             valid = false;
         } else {
@@ -33,31 +30,22 @@ public class ProductServiceImpl implements ProductService {
             System.out.println("Type OK");
         }
 
-        if (dto.getIncomingPrice() == null) {
-            System.out.println("Incoming price is mandatory");
-            valid = false;
-        } else if (Integer.parseInt(dto.getIncomingPrice()) <= 1 || Integer.parseInt(dto.getIncomingPrice()) >= 10000) {
-            System.out.println("Incoming price must be > 1 and < 100");
+        if (Integer.parseInt(dto.getIncomingPrice()) <= 1 || Integer.parseInt(dto.getIncomingPrice()) >= 10000) {
+            System.out.println("Incoming price must be > 1 and < 10000");
             valid = false;
         } else {
             System.out.println("Incoming price OK");
         }
 
-        if (dto.getSellingPrice() == null) {
-            System.out.println("Selling price is mandatory");
-            valid = false;
-        } else if (Integer.parseInt(dto.getSellingPrice()) <= 1 || Integer.parseInt(dto.getSellingPrice()) >= 10000) {
-            System.out.println("Selling price must be > 1 and < 100");
+        if (Integer.parseInt(dto.getSellingPrice()) <= 1 || Integer.parseInt(dto.getSellingPrice()) >= 10000) {
+            System.out.println("Selling price must be > 1 and < 10000");
             valid = false;
         } else {
             System.out.println("Selling price OK");
         }
 
-        if (dto.getMrp() == null) {
-            System.out.println("MRP is mandatory");
-            valid = false;
-        } else if (Integer.parseInt(dto.getMrp()) <= 1 || Integer.parseInt(dto.getMrp()) >= 100) {
-            System.out.println("MRP must be > 1 and < 100");
+        if (Integer.parseInt(dto.getMrp()) <= 1 || Integer.parseInt(dto.getMrp()) >= 10000) {
+            System.out.println("MRP must be > 1 and < 10000");
             valid = false;
         } else {
             System.out.println("MRP OK");
@@ -70,10 +58,7 @@ public class ProductServiceImpl implements ProductService {
             System.out.println("Description OK");
         }
 
-        if (dto.getBrand() == null) {
-            System.out.println("Brand is mandatory");
-            valid = false;
-        } else if (dto.getBrand().length() < 3 || dto.getBrand().length() > 20) {
+        if (dto.getBrand().length() < 3 || dto.getBrand().length() > 20) {
             System.out.println("Brand must be 3-20 characters");
             valid = false;
         } else {
@@ -84,22 +69,12 @@ public class ProductServiceImpl implements ProductService {
             System.out.println("Quantity is mandatory");
             valid = false;
 
-        } else if (Integer.parseInt(dto.getQuantity()) <= 1 || Integer.parseInt(dto.getQuantity()) >= 100) {
-            System.out.println("Quantity must be > 1 and < 100");
+        } else if (Integer.parseInt(dto.getQuantity()) <= 0 || Integer.parseInt(dto.getQuantity()) >= 100) {
+            System.out.println("Quantity must be > 0 and < 100");
             valid = false;
         } else {
             System.out.println("Quantity OK");
         }
-
-//        if (dto.getColor() == null) {
-//            System.out.println("Color is mandatory");
-//            valid = false;
-//        } else if (dto.getColor().length() < 2 || dto.getColor().length() > 20) {
-//            System.out.println("Color must be 3-20 characters");
-//            valid = false;
-//        } else {
-//            System.out.println("Color OK");
-//        }
 
         if (dto.getManufDate() == null) {
             System.out.println("Manufacture date is mandatory");
