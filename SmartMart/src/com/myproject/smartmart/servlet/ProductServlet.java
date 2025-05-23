@@ -40,6 +40,7 @@ public class ProductServlet extends HttpServlet {
         productDTO.setIncomingPrice(incomingPrice);
         productDTO.setSellingPrice(sellingPrice);
         productDTO.setMrp(mrp);
+        productDTO.setEmail(email);
         productDTO.setDescription(description);
         productDTO.setBrand(brand);
         productDTO.setQuantity(quantity);
