@@ -5,6 +5,6 @@ import com.myproject.quickforms.dto.FirDTO;
 public class FIRServiceImpl implements FIRService{
     @Override
     public boolean save(FirDTO firDTO) {
-        return false;
+        return true;
     }
 }
