@@ -1,6 +1,6 @@
 package com.myproject.quickforms.servlet;
 
-import com.myproject.quickforms.dto.firDTO;
+import com.myproject.quickforms.dto.FirDTO;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
@@ -19,7 +19,7 @@ public class FIRServlet extends HttpServlet {
         String location = req.getParameter("location");
         String description = req.getParameter("description");
 
-        firDTO dto = new firDTO();
+        FirDTO dto = new FirDTO();
         dto.setName(name);
         dto.setContact(number);
         dto.setDatetime(datetime);

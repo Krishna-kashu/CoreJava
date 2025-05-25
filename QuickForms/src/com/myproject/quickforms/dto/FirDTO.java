@@ -1,6 +1,6 @@
 package com.myproject.quickforms.dto;
 
-public class firDTO {
+public class FirDTO {
     private String name;
     private String contact;
     private String datetime;
