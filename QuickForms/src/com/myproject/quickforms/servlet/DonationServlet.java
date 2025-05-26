@@ -35,8 +35,7 @@ public class DonationServlet extends HttpServlet {
 
         boolean saved= donationService.save(donationDTO);
         if(saved) {
-            RequestDispatcher dispatcher =
-                    req.getRequestDispatcher("donationSuccess.jsp");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("donationSuccess.jsp");
 
             req.setAttribute("message", "Donation received successfully!");
             req.setAttribute("donation", donationDTO);
@@ -47,6 +46,5 @@ public class DonationServlet extends HttpServlet {
             req.setAttribute("message", "Donation failed!");
             dispatcher.forward(req,resp);
         }
-
     }
 }
