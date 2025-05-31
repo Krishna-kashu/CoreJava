@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="44c86c10-f093-4618-b49a-07d670cdd7ce" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../got/src/Runner/BeachRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/Runner/CardRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/Runner/ChurchRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/Runner/CoinRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/Runner/CombRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/Runner/DroneRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/Runner/ForestRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/Runner/PerfumeRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/Runner/PowderRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/Runner/ShellRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/Runner/TempleRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/external/ATM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/external/Boy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/external/Collector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/external/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/external/Hiker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/external/MakeupBox.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/external/NGO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/external/Pilot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/external/Pray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/external/ShopKeeper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/external/Stylist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Battery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Beach.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Bottle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Box.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Card.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Church.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Coin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Comb.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Drone.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Father.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Forest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Hair.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Machine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Perfume.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Powder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/PowderBox.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Shell.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Stone.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Temple.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Tree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Trust.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../got/src/com/xworkz/god/internal/Wave.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Krishna-kashu&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://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@github.com/Krishna-kashu/CoreJava&quot;,
+    &quot;accountId&quot;: &quot;ec742ab9-72b7-4cf2-8697-48589c1ba618&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2vU9aQ13mig5I6GyQigO130BaiL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="com.xworkz.acquired" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="com.xworkz.acquired" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="44c86c10-f093-4618-b49a-07d670cdd7ce" name="Changes" comment="" />
+      <created>1744188860672</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744188860672</updated>
+    </task>
+    <servers />
+  </component>
+</project>
