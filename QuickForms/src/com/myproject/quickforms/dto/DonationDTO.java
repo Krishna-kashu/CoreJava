@@ -8,6 +8,9 @@ public class DonationDTO {
     private String amount;
     private String description;
 
+    public DonationDTO(){
+        System.out.println("no-argument constructor of DonationDTO");
+    }
     public String getName() {
         return name;
     }
