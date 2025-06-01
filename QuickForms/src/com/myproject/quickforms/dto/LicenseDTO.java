@@ -6,7 +6,9 @@ public class LicenseDTO {
     private String idProof;
     private String reason;
 
-    public LicenseDTO() {}
+    public LicenseDTO() {
+        System.out.println("no-arg constructor of LicenseDTO");
+    }
 
     public String getName() {
         return name;

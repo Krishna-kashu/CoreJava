@@ -46,5 +46,4 @@ public class FirDTO {
     public void setDescription(String description) {
         this.description = description;
     }
-
 }

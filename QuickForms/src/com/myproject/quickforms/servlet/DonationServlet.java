@@ -41,7 +41,8 @@ public class DonationServlet extends HttpServlet {
             req.setAttribute("message", "Donation received successfully!");
             req.setAttribute("donation", donationDTO);
             dispatcher.forward(req,resp);
-        } else{
+        } else
+        {
             RequestDispatcher dispatcher = req.getRequestDispatcher("donation.jsp");
             req.setAttribute("message", "Donation failed!");
             dispatcher.forward(req,resp);
