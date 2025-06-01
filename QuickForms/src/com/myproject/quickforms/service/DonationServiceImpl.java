@@ -3,6 +3,10 @@ package com.myproject.quickforms.service;
 import com.myproject.quickforms.dto.DonationDTO;
 
 public class DonationServiceImpl implements DonationService{
+
+    public DonationServiceImpl(){
+        System.out.println("no argument constructor of DonationServiceImpl");
+    }
     @Override
     public boolean save(DonationDTO donationDTO) {
 
