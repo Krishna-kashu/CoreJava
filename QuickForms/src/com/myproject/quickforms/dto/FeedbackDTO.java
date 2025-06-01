@@ -6,6 +6,9 @@ public class FeedbackDTO {
     private String email;
     private String feedback;
 
+    public FeedbackDTO(){
+        System.out.println("no-argument const. of FeedbackDTO");
+    }
     public String getName() {
         return name;
     }
