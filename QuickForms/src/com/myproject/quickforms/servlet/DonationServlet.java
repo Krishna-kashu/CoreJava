@@ -14,6 +14,9 @@ import java.io.IOException;
 @WebServlet(urlPatterns = "/donate", loadOnStartup = 1)
 public class DonationServlet extends HttpServlet {
 
+    public DonationServlet(){
+        System.out.println("no-argument constructor of DonationServlet");
+    }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("doPost() method called by Tomcat");
