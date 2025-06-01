@@ -7,6 +7,9 @@ public class FirDTO {
     private String location;
     private String description;
 
+    public FirDTO(){
+        System.out.println("no-argument const. of FirDTO");
+    }
     public String getName() {
         return name;
     }
