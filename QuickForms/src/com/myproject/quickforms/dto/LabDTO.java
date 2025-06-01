@@ -6,7 +6,9 @@ public class LabDTO {
     private String expNumber;
     private String observation;
 
-    public LabDTO() {}
+    public LabDTO() {
+        System.out.println("no-argument constructor of labDTO");
+    }
 
     public String getName() {
         return name;
