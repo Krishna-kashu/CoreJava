@@ -10,7 +10,9 @@ import java.io.IOException;
 @WebServlet(urlPatterns = "/event", loadOnStartup = 1)
 public class EventServlet extends GenericServlet {
 
-    public EventServlet(){}
+    public EventServlet(){
+        System.out.println("no argument constructor of EventServlet");
+    }
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
         System.out.println("Running Service by tomcat");
