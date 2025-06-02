@@ -13,6 +13,7 @@ public class EventServlet extends GenericServlet {
     public EventServlet(){
         System.out.println("no argument constructor of EventServlet");
     }
+    
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
         System.out.println("Running Service by tomcat");
