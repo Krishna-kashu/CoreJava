@@ -5,3 +5,4 @@ public class CategoryInvalidException extends RuntimeException{
         super(message);
     }
 }
+
