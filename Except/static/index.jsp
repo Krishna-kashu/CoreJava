@@ -19,6 +19,9 @@
             <option value="Books">Books</option>
             <option value="Home">Home</option>
         </select><br/><br/>
+        <input type="text" name="reason" placeholder="Reason for Free Product">
+        <input type="text" name="discount" placeholder="Discount %">
+        <input type="text" name="description" placeholder="Product Description">
         <input type="submit" value="Submit Product" />
     </form>
 </div>
