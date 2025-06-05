@@ -6,6 +6,10 @@ public class ProductDTO {
     private double price;
     private int quantity;
     private String category;
+    private String reason;
+    private double discount;
+    private String description;
+
 
     public int getProductId() {
         return productId;
@@ -45,5 +49,43 @@ public class ProductDTO {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public String getReason() {
+        return reason;
+    }
+
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
+
+    public double getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(double discount) {
+        this.discount = discount;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "ProductDTO{" +
+                "productId=" + productId +
+                ", productName='" + productName + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                ", category='" + category + '\'' +
+                ", reason='" + reason + '\'' +
+                ", discount=" + discount +
+                ", description='" + description + '\'' +
+                '}';
     }
 }
