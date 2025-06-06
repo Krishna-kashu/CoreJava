@@ -17,7 +17,7 @@ public class RestaurantRunner {
         RestaurantDTO dto = new RestaurantDTO();
         dto.setName("RCB Cafe");
         dto.setLocation("Bangalore");
-        dto.setContactDetails(999999999);
+        dto.setContactDetails(9999999999L);
         dto.setEmail("rcb@cafe.com");
         dto.setRating(4.5);
         dto.setFoodMenu(new String[]{"Burger","Pizza","Coffee"});
