@@ -1,6 +1,5 @@
 package com.rcb.restaurant.runner;
 
-
 import com.rcb.restaurant.dto.RestaurantDTO;
 import com.rcb.restaurant.exception.InvalidBookingException;
 import com.rcb.restaurant.exception.InvalidNameException;
@@ -25,7 +24,7 @@ public class RestaurantRunner {
         dto.setType("Cafe");
         dto.setOpeningTime(LocalTime.parse("09:00"));
         dto.setClosingTime(LocalTime.parse("12:00"));
-        dto.setBookedDate(LocalDate.parse("2025-06-05"));
+        dto.setBookedDate(LocalDate.parse("2025-06-07"));
         dto.setBookedTime(LocalTime.parse("10:30"));
 
         RestaurantService service = new RestaurantServiceImpl();
