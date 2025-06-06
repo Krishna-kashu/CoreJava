@@ -14,7 +14,7 @@ import java.util.Arrays;
 public class RestaurantDTO {
     private String name;
     private String location;
-    private double contactDetails;
+    private long contactDetails;
     private String email;
     private double rating;
     private String[] foodMenu;
@@ -23,22 +23,4 @@ public class RestaurantDTO {
     private LocalTime closingTime;
     private LocalDate bookedDate;
     private LocalTime bookedTime;
-
-
-    public String toString() {
-        return "RestaurantDTO{" +
-                "name='" + name + '\'' +
-                ", location='" + location + '\'' +
-                ", contactDetails=" + contactDetails +
-                ", email='" + email + '\'' +
-                ", rating=" + rating +
-                ", foodMenu=" + Arrays.toString(foodMenu) +
-                ", type='" + type + '\'' +
-                ", openingTime=" + openingTime +
-                ", closingTime=" + closingTime +
-                ", bookedDate=" + bookedDate +
-                ", bookedTime=" + bookedTime +
-                '}';
-
-    }
 }
