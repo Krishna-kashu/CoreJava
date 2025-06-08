@@ -1,11 +1,11 @@
 package com.mywork.exceptionWorld.dto;
 
 public class UserDTO {
-    private String nickname;
-    public UserDTO(String nickname) {
-        this.nickname = nickname;
+    private String nickName;
+    public UserDTO(String nickName) {
+        this.nickName = nickName;
     }
     public String getNickname() {
-        return nickname;
+        return nickName;
     }
 }
