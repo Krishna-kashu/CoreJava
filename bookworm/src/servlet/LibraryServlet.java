@@ -1,6 +1,8 @@
 package servlet;
 
 import dto.LibraryDTO;
+import repository.LibraryRepo;
+import repository.LibraryRepoImpl;
 import service.LibraryService;
 import service.LibraryServiceImpl;
 
@@ -39,6 +41,9 @@ public class LibraryServlet extends HttpServlet {
             req.setAttribute("message","Book Details saved successfully");
             req.setAttribute("details",libraryDTO);
             requestDispatcher.forward(req,resp);
+
+            LibraryRepo libraryRepo = new LibraryRepoImpl();
+            libraryRepo.persist(libraryDTO);
         }else{
             RequestDispatcher dispatcher = req.getRequestDispatcher("libraryForm.jsp");
               req.setAttribute("message", "Save failed!");
