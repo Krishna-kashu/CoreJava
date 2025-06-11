@@ -1,4 +1,7 @@
 package com.myWorkz.weatherApp.repository;
 
-public class WeatherRepo {
+import com.myWorkz.weatherApp.dto.WeatherDTO;
+
+public interface WeatherRepo {
+    String persist(WeatherDTO weatherDTO);
 }
