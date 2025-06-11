@@ -29,7 +29,7 @@
 
         <div class="mb-3">
             <label for="year" class="form-label">Published Year:</label>
-            <input type="date" class="form-control" id="year" name="year" required>
+            <input type="number" class="form-control" id="year" name="year" required>
         </div>
 
         <div class="mb-3">
