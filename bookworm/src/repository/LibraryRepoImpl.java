@@ -21,16 +21,12 @@ public class LibraryRepoImpl implements LibraryRepo{
                 try {
                     Class.forName("com.mysql.cj.jdbc.Driver");
 
-
                     Connection connection= DriverManager.getConnection(url,username,password);
 
-
-                    String sql="insert into add_book_table values(0,'"+libraryDTO.getName()+"','"+libraryDTO.getBookID()+"',"+libraryDTO.getAuthorName()+","+libraryDTO.getPublishedYear()+","+libraryDTO.getCost()+")";
+                    String sql="insert into add_book_table values(0,'"+libraryDTO.getName()+"','"+libraryDTO.getBookID()+"','"+libraryDTO.getAuthorName()+"',"+libraryDTO.getPublishedYear()+","+libraryDTO.getCost()+")";
                     Statement statement=connection.createStatement();
 
-
                     statement.executeUpdate(sql);
-
 
                 } catch (ClassNotFoundException | SQLException e) {
                     throw new RuntimeException(e);
