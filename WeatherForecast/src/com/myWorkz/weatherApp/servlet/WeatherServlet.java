@@ -1,7 +1,11 @@
 package com.myWorkz.weatherApp.servlet;
 
 import com.myWorkz.weatherApp.dto.WeatherDTO;
+import com.myWorkz.weatherApp.service.WeatherService;
+import com.myWorkz.weatherApp.service.WeatherServiceImpl;
 
+import javax.servlet.DispatcherType;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,20 +39,35 @@ public class WeatherServlet extends HttpServlet {
         WeatherDTO weatherDTO = new WeatherDTO();
         weatherDTO.setPlaceName(placeName);
         weatherDTO.setWeather(weather);
-        weatherDTO.setMinTemp(minTemp);
-        weatherDTO.setMaxTemp(maxTemp);
-        weatherDTO.setCloudy(cloudy);
-        weatherDTO.setRaining(raining);
-        weatherDTO.setRainInMM(rainMM);
-        weatherDTO.setHumidity(humidity);
-        weatherDTO.setWindSpeed(windSpeed);
+        weatherDTO.setMinTemp(Float.parseFloat(minTemp));
+        weatherDTO.setMaxTemp(Float.parseFloat(maxTemp));
+        weatherDTO.setCloudy(Boolean.valueOf(cloudy));
+        weatherDTO.setRaining(Boolean.valueOf(raining));
+        weatherDTO.setRainInMM(Float.valueOf(rainMM));
+        weatherDTO.setHumidity(Float.valueOf(humidity));
+        weatherDTO.setWindSpeed(Float.valueOf(windSpeed));
         weatherDTO.setSunRiseTime(sunriseTime);
         weatherDTO.setSunSetTime(sunsetTime);
         weatherDTO.setMoonRiseTime(moonRiseTime);
         weatherDTO.setMoonSetTime(moonSetTime);
         weatherDTO.setRainStartTime(rainStartTime);
         weatherDTO.setRainEndTime(rainEndTime);
-        weatherDTO.setPrecipitation(precipitation);
+        weatherDTO.setPrecipitation(Float.valueOf(precipitation));
 
+        WeatherService weatherService = new WeatherServiceImpl();
+        boolean saved = weatherService.save(weatherDTO);
+
+        if(saved){
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("WeatherSuccess.jsp");
+
+            req.setAttribute("message", "Details saved successfully");
+            req.setAttribute("info", weatherDTO);
+            requestDispatcher.forward(req, resp);
+        }else {
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("WeatherForm.jsp");
+
+            req.setAttribute("message", "Save failed");
+            requestDispatcher.forward(req, resp);
+        }
     }
 }
