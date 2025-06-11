@@ -1,5 +1,7 @@
 package com.myWorkz.weatherApp.service;
 
-public class WeatherService {
+import com.myWorkz.weatherApp.dto.WeatherDTO;
 
+public interface WeatherService {
+        boolean save(WeatherDTO weatherDTO);
 }
