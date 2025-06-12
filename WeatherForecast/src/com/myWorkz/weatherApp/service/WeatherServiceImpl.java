@@ -1,6 +1,8 @@
 package com.myWorkz.weatherApp.service;
 
 import com.myWorkz.weatherApp.dto.WeatherDTO;
+import com.myWorkz.weatherApp.repository.WeatherRepo;
+import com.myWorkz.weatherApp.repository.WeatherRepoImpl;
 
 public class WeatherServiceImpl implements WeatherService{
     @Override
@@ -43,7 +45,7 @@ public class WeatherServiceImpl implements WeatherService{
             return false;
         }
 
-        Boolean cloudy = weatherDTO.getCloudy();
+        String cloudy = weatherDTO.getCloudy();
         if (cloudy != null) {
             System.out.println("Cloudy value is valid");
         } else {
@@ -51,7 +53,7 @@ public class WeatherServiceImpl implements WeatherService{
             return false;
         }
 
-        Boolean raining = weatherDTO.getRaining();
+        String raining = weatherDTO.getRaining();
         if (raining != null) {
             System.out.println("Raining value is valid");
         } else {
@@ -138,8 +140,12 @@ public class WeatherServiceImpl implements WeatherService{
             System.out.println("Precipitation must be non-negative");
             return false;
         }
-
         System.out.println("All validations passed");
-        return true;
+
+        WeatherRepo weatherRepo = new WeatherRepoImpl();
+        String result = weatherRepo.persist(weatherDTO);
+        System.out.println("Persist result: " + result);
+        return result.equalsIgnoreCase("success");
+
     }
 }
