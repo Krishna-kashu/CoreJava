@@ -4,7 +4,6 @@ import com.myWorkz.weatherApp.dto.WeatherDTO;
 import com.myWorkz.weatherApp.service.WeatherService;
 import com.myWorkz.weatherApp.service.WeatherServiceImpl;
 
-import javax.servlet.DispatcherType;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -41,8 +40,8 @@ public class WeatherServlet extends HttpServlet {
         weatherDTO.setWeather(weather);
         weatherDTO.setMinTemp(Float.parseFloat(minTemp));
         weatherDTO.setMaxTemp(Float.parseFloat(maxTemp));
-        weatherDTO.setCloudy(Boolean.valueOf(cloudy));
-        weatherDTO.setRaining(Boolean.valueOf(raining));
+        weatherDTO.setCloudy(cloudy);
+        weatherDTO.setRaining(raining);
         weatherDTO.setRainInMM(Float.valueOf(rainMM));
         weatherDTO.setHumidity(Float.valueOf(humidity));
         weatherDTO.setWindSpeed(Float.valueOf(windSpeed));
@@ -53,6 +52,7 @@ public class WeatherServlet extends HttpServlet {
         weatherDTO.setRainStartTime(rainStartTime);
         weatherDTO.setRainEndTime(rainEndTime);
         weatherDTO.setPrecipitation(Float.valueOf(precipitation));
+
 
         WeatherService weatherService = new WeatherServiceImpl();
         boolean saved = weatherService.save(weatherDTO);
