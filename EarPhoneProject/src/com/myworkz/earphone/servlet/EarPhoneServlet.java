@@ -1,7 +1,12 @@
 package com.myworkz.earphone.servlet;
 
 import com.myworkz.earphone.dto.EarPhoneDTO;
+import com.myworkz.earphone.repository.EarPhoneRepo;
+import com.myworkz.earphone.repository.EarPhoneRepoImpl;
+import com.myworkz.earphone.service.EarPhoneService;
+import com.myworkz.earphone.service.EarPhoneServiceImpl;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,7 +22,7 @@ public class EarPhoneServlet extends HttpServlet {
 
         String brand = req.getParameter("brand");
         String type = req.getParameter("type");
-        Double cost =
+        String cost = req.getParameter("cost");
         String feature = req.getParameter("features");
         String color = req.getParameter("color");
         String warranty = req.getParameter("warranty");
@@ -25,8 +30,28 @@ public class EarPhoneServlet extends HttpServlet {
         EarPhoneDTO earPhoneDTO = new EarPhoneDTO();
         earPhoneDTO.setBrand(brand);
         earPhoneDTO.setType(type);
-        earPhoneDTO.
+        earPhoneDTO.setCost(Double.parseDouble(cost));
+        earPhoneDTO.setColor(color);
+        earPhoneDTO.setFeatures(feature);
+        earPhoneDTO.setWarranty(warranty);
 
+        EarPhoneService earPhoneService = new EarPhoneServiceImpl();
+        boolean saved = earPhoneService.save(earPhoneDTO);
+
+
+        if(saved){
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("success.jsp");
+            req.setAttribute("message", "Details Saved Successfully");
+            req.setAttribute("details", earPhoneDTO);
+            requestDispatcher.forward(req,resp);
+
+            EarPhoneRepo earPhoneRepo = new EarPhoneRepoImpl();
+            earPhoneRepo.persist(earPhoneDTO);
+        }else{
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("form.jsp");
+            req.setAttribute("message", "Something Went Wrong try again");
+            requestDispatcher.forward(req,resp);
+        }
 
     }
 }
