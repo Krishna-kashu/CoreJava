@@ -18,40 +18,79 @@ import java.io.IOException;
 public class EarPhoneServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("Running doPost bt tomcat");
+        System.out.println("Running doPost by Tomcat");
 
         String brand = req.getParameter("brand");
         String type = req.getParameter("type");
         String cost = req.getParameter("cost");
-        String feature = req.getParameter("features");
+        String features = req.getParameter("features");
         String color = req.getParameter("color");
         String warranty = req.getParameter("warranty");
+
+        boolean hasErrors = false;
+        StringBuilder errors = new StringBuilder();
+
+        if (brand == null || brand.trim().isEmpty()) {
+            hasErrors = true;
+            errors.append("Brand is required.<br>");
+        }
+        if (type == null || type.trim().isEmpty()) {
+            hasErrors = true;
+            errors.append("Type is required.<br>");
+        }
+        double costValue = 0;
+        try {
+            costValue = Double.parseDouble(cost);
+            if (costValue <= 0) {
+                hasErrors = true;
+                errors.append("Cost must be positive.<br>");
+            }
+        } catch (NumberFormatException e) {
+            hasErrors = true;
+            errors.append("Invalid cost format.<br>");
+        }
+        if (features == null || features.trim().length() < 10) {
+            hasErrors = true;
+            errors.append("Features must be at least 10 characters.<br>");
+        }
+        if (color == null || color.trim().isEmpty()) {
+            hasErrors = true;
+            errors.append("Color is required.<br>");
+        }
+        if (warranty == null || warranty.trim().isEmpty()) {
+            hasErrors = true;
+            errors.append("Warranty must be selected.<br>");
+        }
 
         EarPhoneDTO earPhoneDTO = new EarPhoneDTO();
         earPhoneDTO.setBrand(brand);
         earPhoneDTO.setType(type);
-        earPhoneDTO.setCost(Double.parseDouble(cost));
+        earPhoneDTO.setCost(costValue);
         earPhoneDTO.setColor(color);
-        earPhoneDTO.setFeatures(feature);
+        earPhoneDTO.setFeatures(features);
         earPhoneDTO.setWarranty(warranty);
 
-        EarPhoneService earPhoneService = new EarPhoneServiceImpl();
-        boolean saved = earPhoneService.save(earPhoneDTO);
-
-
-        if(saved){
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("success.jsp");
-            req.setAttribute("message", "Details Saved Successfully");
-            req.setAttribute("details", earPhoneDTO);
-            requestDispatcher.forward(req,resp);
-
-            EarPhoneRepo earPhoneRepo = new EarPhoneRepoImpl();
-            earPhoneRepo.persist(earPhoneDTO);
-        }else{
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("form.jsp");
-            req.setAttribute("message", "Something Went Wrong try again");
-            requestDispatcher.forward(req,resp);
+        if (hasErrors) {
+            req.setAttribute("message", errors.toString());
+            req.setAttribute("dto", earPhoneDTO);
+            req.getRequestDispatcher("form.jsp").forward(req, resp);
+            return;
         }
 
+        EarPhoneService service = new EarPhoneServiceImpl();
+        boolean saved = service.save(earPhoneDTO);
+
+        if (saved) {
+            req.setAttribute("message", "Details Saved Successfully");
+            req.setAttribute("details", earPhoneDTO);
+            req.getRequestDispatcher("success.jsp").forward(req, resp);
+
+            EarPhoneRepo repo = new EarPhoneRepoImpl();
+            repo.persist(earPhoneDTO);
+        } else {
+            req.setAttribute("message", "Something Went Wrong. Try again.");
+            req.setAttribute("dto", earPhoneDTO);
+            req.getRequestDispatcher("form.jsp").forward(req, resp);
+        }
     }
 }
