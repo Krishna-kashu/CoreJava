@@ -9,6 +9,7 @@
 <div class="container text-center mt-5">
     <h1 class="mb-4">Welcome to EarPhone Registration</h1>
     <a href="form.jsp" class="btn btn-primary">Go to Form</a>
+    <a href="EarPhoneViewer.jsp" class="btn btn-primary">Find EarPhone</a>
 </div>
 </body>
 </html>
