@@ -1,6 +1,10 @@
 package com.myworkz.earphone.service;
 
 import com.myworkz.earphone.dto.EarPhoneDTO;
+import com.myworkz.earphone.repository.EarPhoneRepo;
+import com.myworkz.earphone.repository.EarPhoneRepoImpl;
+
+import java.util.Optional;
 
 public class EarPhoneServiceImpl implements EarPhoneService{
     @Override
@@ -49,5 +53,17 @@ public class EarPhoneServiceImpl implements EarPhoneService{
             }
         }
         return true;
+    }
+
+    @Override
+    public Optional<EarPhoneDTO> findById(int id) {
+        System.out.println("Running overridden findById in EarPhoneServiceImpl");
+
+        if(id>0){
+            System.out.println("id is valid : "+id);
+            EarPhoneRepo earPhoneRepo = new EarPhoneRepoImpl();
+            return earPhoneRepo.findById(id);
+        }
+        return EarPhoneService.super.findById(id);
     }
 }
