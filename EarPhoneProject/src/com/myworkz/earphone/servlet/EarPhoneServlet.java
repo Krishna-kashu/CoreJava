@@ -6,15 +6,15 @@ import com.myworkz.earphone.repository.EarPhoneRepoImpl;
 import com.myworkz.earphone.service.EarPhoneService;
 import com.myworkz.earphone.service.EarPhoneServiceImpl;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Optional;
 
-@WebServlet(urlPatterns = "/ear", loadOnStartup = 1)
+@WebServlet(urlPatterns = {"/ear", "/phone"}, loadOnStartup = 1)
 public class EarPhoneServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -77,6 +77,7 @@ public class EarPhoneServlet extends HttpServlet {
             return;
         }
 
+
         EarPhoneService service = new EarPhoneServiceImpl();
         boolean saved = service.save(earPhoneDTO);
 
@@ -91,6 +92,30 @@ public class EarPhoneServlet extends HttpServlet {
             req.setAttribute("message", "Something Went Wrong. Try again.");
             req.setAttribute("dto", earPhoneDTO);
             req.getRequestDispatcher("form.jsp").forward(req, resp);
+        }
+
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("Running doDet method in");
+        String earPhoneID = req.getParameter("phoneID");
+
+        if(earPhoneID!=null){
+            int id = Integer.parseInt(earPhoneID);
+
+            System.out.println("Search id : "+ id);
+
+            EarPhoneService earPhoneService = new EarPhoneServiceImpl();
+
+            Optional<EarPhoneDTO> optionalEarPhoneDTO = earPhoneService.findById(id);
+            if(optionalEarPhoneDTO.isPresent())
+            {
+                System.out.println("EarPhone data is found");
+            }
+            else{
+                System.out.println("data not found for id :"+id);
+            }
         }
     }
 }
