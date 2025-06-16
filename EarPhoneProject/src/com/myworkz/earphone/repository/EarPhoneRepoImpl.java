@@ -4,21 +4,22 @@ import com.mysql.cj.jdbc.Driver;
 import com.myworkz.earphone.dto.EarPhoneDTO;
 
 import java.sql.*;
+import java.util.Optional;
 
 public class EarPhoneRepoImpl implements EarPhoneRepo {
     @Override
     public boolean persist(EarPhoneDTO earPhoneDTO) {
         System.out.println("running persist in EarPhoneRepoImpl");
-        if(earPhoneDTO != null){
+        if (earPhoneDTO != null) {
             System.out.println("earPhoneDTO is not null");
             String url = "jdbc:mysql://localhost:3306/book_worm";
             String userName = "root";
             String password = "Krishna@2002";
 
-            try{
+            try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
 
-                Connection connection = DriverManager.getConnection(url,userName,password);
+                Connection connection = DriverManager.getConnection(url, userName, password);
 
                 String sql = "INSERT INTO earphone_registration_table (brand, type, cost, features, color, warranty) VALUES (?, ?, ?, ?, ?, ?)";
                 PreparedStatement stmt = connection.prepareStatement(sql);
@@ -31,13 +32,19 @@ public class EarPhoneRepoImpl implements EarPhoneRepo {
 
                 stmt.executeUpdate();
 
-            }catch (ClassNotFoundException | SQLException e){
-                throw  new RuntimeException(e);
+            } catch (ClassNotFoundException | SQLException e) {
+                throw new RuntimeException(e);
             }
-        }else {
+        } else {
             System.out.println("earPhoneDTO is null");
         }
 
         return true;
+    }
+
+    @Override
+    public Optional<EarPhoneDTO> findById(int id) {
+        System.out.println("Running overridden findById in EarPhoneRepoImpl");
+        return EarPhoneRepo.super.findById(id);
     }
 }
