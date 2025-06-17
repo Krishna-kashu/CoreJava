@@ -98,7 +98,7 @@ public class EarPhoneServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("Running doDet method in");
+        System.out.println("Running doDet method in Servlet");
         String earPhoneID = req.getParameter("phoneID");
 
         if(earPhoneID!=null){
