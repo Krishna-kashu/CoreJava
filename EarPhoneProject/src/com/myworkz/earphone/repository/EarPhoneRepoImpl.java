@@ -29,7 +29,7 @@ public class EarPhoneRepoImpl implements EarPhoneRepo {
                 statement.setString(5, earPhoneDTO.getColor());
                 statement.setString(6, earPhoneDTO.getWarranty());
 
-                statement.executeUpdate(sql);
+                statement.executeUpdate();
 
 
             } catch (ClassNotFoundException | SQLException e) {
