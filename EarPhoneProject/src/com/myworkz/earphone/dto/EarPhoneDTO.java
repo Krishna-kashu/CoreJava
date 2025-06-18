@@ -2,6 +2,7 @@ package com.myworkz.earphone.dto;
 
 import lombok.*;
 
+@Data
 @Getter
 @Setter
 @AllArgsConstructor
