@@ -111,7 +111,8 @@ public class EarPhoneServlet extends HttpServlet {
             Optional<EarPhoneDTO> optionalEarPhoneDTO = earPhoneService.findById(id);
             if(optionalEarPhoneDTO.isPresent())
             {
-                System.out.println("EarPhone data is found");
+                EarPhoneDTO earPhoneDTO = optionalEarPhoneDTO.get();
+                System.out.println("EarPhone data is found :"+earPhoneDTO);
             }
             else{
                 System.out.println("data not found for id :"+id);
