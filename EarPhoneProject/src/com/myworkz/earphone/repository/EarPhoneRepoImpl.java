@@ -4,7 +4,6 @@ import com.myworkz.earphone.constant.DBProperties;
 import com.myworkz.earphone.dto.EarPhoneDTO;
 
 import java.sql.*;
-import java.time.LocalDate;
 import java.util.Optional;
 
 public class EarPhoneRepoImpl implements EarPhoneRepo {
