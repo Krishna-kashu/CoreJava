@@ -62,7 +62,37 @@
     <div class="result-message">${result}</div>
     <a href="login.jsp" class="btn-logout">Log Out</a>
 </div>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Created By</th>
+        <th>Created Time</th>
+    </tr>
 
+    <%
+    com.xworkz.loginsystem.dto.LoginDto[] dtos = (com.xworkz.loginsystem.dto.LoginDto[]) request.getAttribute("loginDtos");
+    if (dtos != null) {
+    for (com.xworkz.loginsystem.dto.LoginDto dto : dtos) {
+    if (dto != null) {
+    %>
+    <tr>
+        <td><%= dto.getId() %></td>
+        <td><%= dto.getUserName() %></td>
+        <td><%= dto.getUserEmail() %></td>
+        <td><%= dto.getUserPassword() %></td>
+        <td><%= dto.getCreatedBy() %></td>
+        <td><%= dto.getCreatedTime() %></td>
+    </tr>
+    <%
+    }
+    }
+    }
+    %>
+
+</table>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
