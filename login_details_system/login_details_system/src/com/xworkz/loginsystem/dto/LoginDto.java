@@ -12,7 +12,6 @@ import java.time.LocalDateTime;
 @Data
 
 public class LoginDto {
-
     private int id;
     private String userName;
     private String userEmail;

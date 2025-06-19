@@ -4,15 +4,15 @@ import com.xworkz.loginsystem.dto.LoginDto;
 import com.xworkz.loginsystem.utils.JdbcUtils;
 
 import java.sql.*;
+import java.util.Arrays;
 
 public class LoginRepositoryImpl implements LoginRepository{
     @Override
     public boolean persist(LoginDto loginDto) {
 
-        //load the driver
         try {
             Class.forName(JdbcUtils.jdbcDriver);
-            //get connection
+
            Connection connection = DriverManager.getConnection(JdbcUtils.jdbcUrl,JdbcUtils.jdbcUserName,JdbcUtils.jdbcPassword);
             String query = "insert into login_details_table(user_name,user_email,user_password,created_by,created_time) values(?,?,?,?,?)";
            PreparedStatement statement = connection.prepareStatement(query);
@@ -35,18 +35,17 @@ public class LoginRepositoryImpl implements LoginRepository{
     @Override
     public LoginDto[] findAll() {
         int index=0;
-        int arraySize=1;
-       LoginDto[] loginDtos=null;
+        LoginDto[] loginDtos=new LoginDto[1];
 
         try {
             Class.forName(JdbcUtils.jdbcDriver);
-            //get connection
+
             Connection connection = DriverManager.getConnection(JdbcUtils.jdbcUrl, JdbcUtils.jdbcUserName, JdbcUtils.jdbcPassword);
             String fetchAll ="select * from login_details_table";
            PreparedStatement statement = connection.prepareStatement(fetchAll);
           ResultSet resultSet = statement.executeQuery();
             while(resultSet.next()){
-                loginDtos=new LoginDto[arraySize];
+
                 System.out.println(resultSet.getInt(1));
                 System.out.println(resultSet.getString(2));
                 System.out.println(resultSet.getString(3));
@@ -65,9 +64,9 @@ public class LoginRepositoryImpl implements LoginRepository{
                 loginDto.setCreatedTime(resultSet.getTimestamp(6));
 
                 loginDtos[index]=loginDto;
-                arraySize++;
-                index++;
 
+                index++;
+                loginDtos= Arrays.copyOf(loginDtos,index+1);
             }
 
         }catch (ClassNotFoundException|SQLException e){
