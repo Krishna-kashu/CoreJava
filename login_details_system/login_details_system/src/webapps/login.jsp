@@ -58,7 +58,7 @@
         </div>
         <div class="d-flex justify-content-between">
             <input type="submit" value="Login" class="btn btn-primary btn-custom">
-            <input type="reset" value="Clear" class="btn btn-warning btn-custom">
+            <input type="reset" value="Clear" class="btn btn-secondary btn-custom">
         </div>
     </form>
 </div>
