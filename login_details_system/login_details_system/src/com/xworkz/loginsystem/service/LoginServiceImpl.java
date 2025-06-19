@@ -18,7 +18,6 @@ public class LoginServiceImpl implements LoginService{
         }
         return false;
     }
-
     @Override
     public LoginDto[] findAll() {
         System.out.println(Arrays.toString(loginRepository.findAll()));

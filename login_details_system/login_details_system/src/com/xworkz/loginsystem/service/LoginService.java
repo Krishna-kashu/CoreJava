@@ -6,5 +6,4 @@ public interface LoginService {
 
     boolean save(LoginDto loginDto);
     LoginDto[] findAll();
-
 }
