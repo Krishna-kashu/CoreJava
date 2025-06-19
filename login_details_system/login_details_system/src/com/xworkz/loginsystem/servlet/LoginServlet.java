@@ -23,7 +23,6 @@ public class LoginServlet extends HttpServlet {
         String userEmail = req.getParameter("userEmail");
         String userPassword = req.getParameter("userPassword");
 
-        //create a instance of dto
         LoginDto loginDto =  new LoginDto();
         loginDto.setUserName(userName);
         loginDto.setUserEmail(userEmail);
@@ -42,13 +41,12 @@ public class LoginServlet extends HttpServlet {
         resp.setContentType("text/html");
         req.setAttribute("result","Successfully logged in");
         dispatcher.forward(req,resp);
-
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        LoginDto[] loginDtos = loginService.findAll();
-        RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("success.jsp");
         resp.setContentType("text/html");
         req.setAttribute("loginDtos",loginDtos);
         dispatcher.forward(req,resp);
