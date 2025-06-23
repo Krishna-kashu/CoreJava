@@ -31,8 +31,9 @@ public class SareeRunner {
         collection.add(sareeDTO9);
         collection.add(sareeDTO10);
 
+        System.out.println("Saree Collections: ");
         for(SareeDTO sareeDTO : collection){
-            System.out.println("Saree Collections: ");
+
             System.out.println(sareeDTO);
         }
     }
