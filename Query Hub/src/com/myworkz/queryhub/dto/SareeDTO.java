@@ -1,8 +1,7 @@
 package com.myworkz.queryhub.dto;
 
 
-/* Create a Collection of SareeDTOs (type,color,material,cost) with 10 elements
-Loop it and print it on Console
+/*
 
 Create a Collection of Camping Accessories (5 properties) with 10 elements
 Loop it and print it on Console
