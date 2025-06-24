@@ -33,7 +33,7 @@ public class ApplianceRunner {
 
         System.out.println("Appliance details:");
         for (ApplianceDTO dto : collection) {
-            System.out.println(dto);
+            System.out.println("Brand:"+dto.getBrand()+", Name: " +dto.getName()+", Price: "+dto.getPrice()+", Power Consumption: "+dto.getPowerConsumption());
         }
     }
 }
