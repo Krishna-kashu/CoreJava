@@ -1,22 +1,5 @@
 package com.myworkz.queryhub.dto;
 
-
-/*
-
-Create a Collection of Camping Accessories (5 properties) with 10 elements
-Loop it and print it on Console
-
-Create a Collection of furniture  (5 properties) with 10 elements
-Loop it and print it on Console
-
-Create a Collection of appliances  (5 properties) with 10 elements
-Loop it and print it on Console
-
-Create a Collection of your choice  (5 properties) with 10 elements
-Loop it and print it on Console
-*/
-
-
 import lombok.*;
 
 @AllArgsConstructor
