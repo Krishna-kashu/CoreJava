@@ -2,6 +2,7 @@ package com.myworkz.queryhub.dto;
 
 import lombok.*;
 
+@EqualsAndHashCode
 @NoArgsConstructor
 @Setter
 @Getter
