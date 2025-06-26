@@ -1,38 +1,66 @@
 package com.myworkz.queryhub.runner;
 
 import com.myworkz.queryhub.dto.GadgetDTO;
+import com.myworkz.queryhub.repository.GadgetRepo;
+import com.myworkz.queryhub.repository.GadgetRepoImpl;
+
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 public class GadgetRunner {
     public static void main(String[] args) {
 
-        GadgetDTO gadget1 = new GadgetDTO("Smartphone", "Apple", true, 20.0, 90000.0);
-        GadgetDTO gadget2 = new GadgetDTO("Smartwatch", "Samsung", true, 48.0, 25000.0);
-        GadgetDTO gadget3 = new GadgetDTO("Bluetooth Speaker", "JBL", true, 10.0, 5000.0);
-        GadgetDTO gadget4 = new GadgetDTO("Wireless Earbuds", "boAt", true, 6.0, 1500.0);
-        GadgetDTO gadget5 = new GadgetDTO("Tablet", "Lenovo", false, 12.0, 30000.0);
-        GadgetDTO gadget6 = new GadgetDTO("Laptop", "Dell", false, 8.0, 65000.0);
-        GadgetDTO gadget7 = new GadgetDTO("Portable Charger", "Mi", false, 0.0, 1200.0);
-        GadgetDTO gadget8 = new GadgetDTO("VR Headset", "Meta", true, 4.0, 40000.0);
-        GadgetDTO gadget9 = new GadgetDTO("Digital Camera", "Canon", false, 5.0, 55000.0);
-        GadgetDTO gadget10 = new GadgetDTO("Fitness Band", "Noise", true, 72.0, 3000.0);
+        GadgetRepo gadgetRepo = new GadgetRepoImpl();
+        Collection<GadgetDTO> gadgetDTOS = gadgetRepo.findAll();
 
-        Collection<GadgetDTO> gadgets = new ArrayList<>();
-        gadgets.add(gadget1);
-        gadgets.add(gadget2);
-        gadgets.add(gadget3);
-        gadgets.add(gadget4);
-        gadgets.add(gadget5);
-        gadgets.add(gadget6);
-        gadgets.add(gadget7);
-        gadgets.add(gadget8);
-        gadgets.add(gadget9);
-        gadgets.add(gadget10);
-
-        System.out.println("Gadget details:");
-        for (GadgetDTO dto : gadgets) {
-            System.out.println(dto);
+        System.out.println("************* Using for-each *************");
+        for (GadgetDTO gadgetDTO : gadgetDTOS) {
+            System.out.println(gadgetDTO);
         }
+
+        System.out.println("************* Using Iterator *************");
+        Iterator<GadgetDTO> iterator = gadgetDTOS.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+        System.out.println("************* Gadgets priced above ₹30000 *************");
+        for (GadgetDTO gadgetDTO : gadgetDTOS) {
+            if (gadgetDTO.getPrice() > 30000.0) {
+                System.out.println("Premium Gadget: " + gadgetDTO.getName() + " by " + gadgetDTO.getBrand() + " - ₹" + gadgetDTO.getPrice());
+            }
+        }
+
+        GadgetDTO searchGadget = new GadgetDTO("Laptop", "Dell", false, 8.0, 65000.0);
+        System.out.println("\nContains 'Laptop by Dell'? " + gadgetDTOS.contains(searchGadget));
+
+
+        Collection<GadgetDTO> anotherList = gadgetRepo.findAll();
+        System.out.println("Both gadget collections are equal? " + gadgetDTOS.equals(anotherList));
+
+
+        System.out.println("Is gadget collection empty? " + gadgetDTOS.isEmpty());
+
+
+        Collection<GadgetDTO> newGadgets = new ArrayList<>();
+        newGadgets.add(new GadgetDTO("Tablet", "Samsung", true, 5.0, 30000.0));
+        newGadgets.add(new GadgetDTO("Smartwatch", "Garmin", true, 1.5, 18000.0));
+
+
+        boolean containsAll = gadgetDTOS.containsAll(anotherList);
+        System.out.println("Original collection contains all elements of anotherList? " + containsAll);
+
+
+        gadgetDTOS.addAll(newGadgets);
+        System.out.println("After addAll, total gadgets: " + gadgetDTOS.size());
+
+
+        gadgetDTOS.remove(searchGadget);
+        System.out.println("After removing 'Laptop', contains? " + gadgetDTOS.contains(searchGadget));
+
+
+        gadgetDTOS.removeAll(newGadgets);
+        System.out.println("After removeAll(newGadgets), total gadgets: " + gadgetDTOS.size());
     }
 }
