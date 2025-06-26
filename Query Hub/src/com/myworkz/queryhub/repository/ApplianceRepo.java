@@ -5,5 +5,4 @@ import java.util.Collection;
 
 public interface ApplianceRepo {
     Collection<ApplianceDTO> findAll();
-
 }
