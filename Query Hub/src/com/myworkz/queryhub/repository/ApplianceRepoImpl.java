@@ -22,7 +22,6 @@ public class ApplianceRepoImpl implements ApplianceRepo{
         ApplianceDTO appliance10 = new ApplianceDTO("Room Heater", "Usha", false, 1000.0, 2500.0);
 
         Collection<ApplianceDTO> collection = new ArrayList<>();
-
         collection.add(appliance1);
         collection.add(appliance2);
         collection.add(appliance3);
@@ -33,6 +32,7 @@ public class ApplianceRepoImpl implements ApplianceRepo{
         collection.add(appliance8);
         collection.add(appliance9);
         collection.add(appliance10);
+
         return collection;
     }
 }
