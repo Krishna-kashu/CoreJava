@@ -1,40 +1,65 @@
 package com.myworkz.queryhub.runner;
 
 import com.myworkz.queryhub.dto.SareeDTO;
+import com.myworkz.queryhub.repository.SareeRepo;
+import com.myworkz.queryhub.repository.SareeRepoImpl;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 public class SareeRunner {
     public static void main(String[] args) {
 
-        SareeDTO sareeDTO1 = new SareeDTO("Silk","Kanjeevaram Silk", 7499.00, "Zari Work", "Maroon-Gold", "Wedding");
-        SareeDTO sareeDTO2 = new SareeDTO("Cotton", "Bengal Tant", 1299.00, "Woven", "White-Red", "Festive");
-        SareeDTO sareeDTO3 = new SareeDTO("Georgette", "Daily Drape", 899.00, "Floral Print", "Peach", "Casual");
-        SareeDTO sareeDTO4 = new SareeDTO("Chiffon", "Light Breeze", 1149.50, "Plain with Border", "Sky Blue", "Office");
-        SareeDTO sareeDTO5 = new SareeDTO("Linen", "Eco Linen Saree", 1999.00, "Hand Block Print", "Olive Green", "Daily Wear");
-        SareeDTO sareeDTO6 = new SareeDTO("Crepe", "Urban Chic", 1549.00, "Abstract Print", "Grey-Yellow", "Party");
-        SareeDTO sareeDTO7 = new SareeDTO("Silk Blend", "Banarasi Touch", 3499.00, "Zari with Meenakari", "Royal Blue", "Reception");
-        SareeDTO sareeDTO8 = new SareeDTO("Synthetic", "Budget Beauty", 599.00, "Printed", "Pink", "Casual");
-        SareeDTO sareeDTO9 = new SareeDTO("Tussar Silk", "Tribal Threads", 2799.00, "Tribal Motifs", "Beige-Brown", "Cultural");
-        SareeDTO sareeDTO10 = new SareeDTO("Organza", "Festive Glow", 3299.00, "Embroidered", "Lemon Yellow", "Engagement");
+        SareeRepo sareeRepo = new SareeRepoImpl();
+        Collection<SareeDTO> sareeDTOS = sareeRepo.findAll();
 
-        Collection<SareeDTO> collection =new ArrayList<>();
-        collection.add(sareeDTO1);
-        collection.add(sareeDTO2);
-        collection.add(sareeDTO3);
-        collection.add(sareeDTO4);
-        collection.add(sareeDTO5);
-        collection.add(sareeDTO6);
-        collection.add(sareeDTO7);
-        collection.add(sareeDTO8);
-        collection.add(sareeDTO9);
-        collection.add(sareeDTO10);
-
-        System.out.println("Saree Collections: ");
-        for(SareeDTO sareeDTO : collection){
-
+        System.out.println("************* Using for-each *************");
+        for (SareeDTO sareeDTO : sareeDTOS) {
             System.out.println(sareeDTO);
         }
+
+        System.out.println("************* Using Iterator *************");
+        Iterator<SareeDTO> iterator = sareeDTOS.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+        System.out.println("************* Sarees priced above 3000 *************");
+        for (SareeDTO sareeDTO : sareeDTOS) {
+            if (sareeDTO.getCost() > 3000.0) {
+                System.out.println("Premium Saree: " + sareeDTO.getName() + " - ₹" + sareeDTO.getCost());
+            }
+        }
+        SareeDTO searchSaree = new SareeDTO("Tussar Silk", "Tribal Threads", 2799.00, "Tribal Motifs", "Beige-Brown", "Cultural");
+        System.out.println("\nContains 'Tussar Silk'? " + sareeDTOS.contains(searchSaree));
+
+
+        Collection<SareeDTO> anotherList = sareeRepo.findAll();
+        System.out.println("Both saree collections are equal? " + sareeDTOS.equals(anotherList));
+
+        System.out.println("Is saree collection empty? " + sareeDTOS.isEmpty());
+
+
+        Collection<SareeDTO> newSarees = new ArrayList<>();
+        newSarees.add(new SareeDTO("Chiffon", "FabIndia", 1800.0, "Plain", "Sky Blue", "Daily Wear"));
+        newSarees.add(new SareeDTO("Kanchipuram", "Silk House", 9500.0, "Temple Border", "Gold-Red", "Wedding"));
+
+
+        boolean containsAll = sareeDTOS.containsAll(anotherList);
+        System.out.println("Original collection contains all elements of anotherList? " + containsAll);
+
+
+        sareeDTOS.addAll(newSarees);
+        System.out.println("After addAll, total sarees: " + sareeDTOS.size());
+
+
+        sareeDTOS.remove(searchSaree);
+        System.out.println("After removing 'Tussar Silk', contains? " + sareeDTOS.contains(searchSaree));
+
+
+        sareeDTOS.removeAll(newSarees);
+        System.out.println("After removeAll(newSarees), total sarees: " + sareeDTOS.size());
+
     }
 }
