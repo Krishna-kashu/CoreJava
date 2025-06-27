@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a99a5f4f-4b56-4b12-b92f-2c6ee0ec9e92" name="Changes" comment="airline info" />
+    <list default="true" id="a99a5f4f-4b56-4b12-b92f-2c6ee0ec9e92" name="Changes" comment="airline info">
+      <change afterPath="$PROJECT_DIR$/../furniture/src/CheckException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../furniture/src/exceptionExample/Custom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../furniture/src/servlet/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Query Hub/src/com/myworkz/queryhub/repository/ApplianceRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Query Hub/src/com/myworkz/queryhub/repository/ApplianceRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Query Hub/src/com/myworkz/queryhub/runner/ApplianceRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Query Hub/src/com/myworkz/queryhub/runner/ApplianceRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Query Hub/src/com/myworkz/queryhub/runner/GadgetRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Query Hub/src/com/myworkz/queryhub/runner/GadgetRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Query Hub/src/com/myworkz/queryhub/runner/SareeRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Query Hub/src/com/myworkz/queryhub/runner/SareeRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../furniture/Static/furnitureInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../furniture/Static/furnitureInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../furniture/Static/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../furniture/Static/index.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,33 +31,33 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Krishna-kashu"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Krishna-kashu&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://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@github.com/Krishna-kashu/CoreJava",
-    "accountId": "ed308639-1785-4b86-9939-047999debbc1"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://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@github.com/Krishna-kashu/CoreJava&quot;,
+    &quot;accountId&quot;: &quot;ec742ab9-72b7-4cf2-8697-48589c1ba618&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2vDqDYW743OejF1WqS9GBgrzk5Y" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
