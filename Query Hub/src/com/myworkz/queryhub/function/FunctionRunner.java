@@ -164,6 +164,30 @@ public class FunctionRunner {
         };
         System.out.println("result: "+intUnaryOperator.applyAsInt(9));
 
+        LongBinaryOperator longBinaryOperator = (a, b) -> a + b;
+        LongConsumer longConsumer = value -> System.out.println("Consumed: " + value);
+        LongFunction<String> longFunction = value -> "Value: " + value;
+        LongPredicate longPredicate = value -> value > 0;
+        LongSupplier longSupplier = () -> 123L;
+        LongToDoubleFunction longToDoubleFunction = value -> value * 2.5;
+        LongToIntFunction longToIntFunction = value -> (int) value;
+        LongUnaryOperator longUnaryOperator = value -> value * value;
+
+        ObjDoubleConsumer<String> objDoubleConsumer = (str, dbl) -> System.out.println(str + ": " + dbl);
+        ObjIntConsumer<String> objIntConsumer = (str, i) -> System.out.println(str + ": " + i);
+        ObjLongConsumer<String> objLongConsumer = (str, l) -> System.out.println(str + ": " + l);
+
+        Predicate<String> predicate = s -> s.length() > 3;
+        Supplier<String> supplier = () -> "Hello";
+
+        ToDoubleBiFunction<String, Integer> toDoubleBiFunction = (s, i) -> s.length() + i;
+        ToDoubleBiFunction<String, String> toDoubleFunction = (a, b) -> (a + b).length();
+        ToIntBiFunction<String, String> toIntBiFunction = (a, b) -> a.length() - b.length();
+        ToIntFunction<String> toIntFunction = s -> s.length();
+        ToLongBiFunction<String, String> toLongBiFunction = (a, b) -> (long) (a.length() * b.length());
+        ToLongFunction<String> toLongFunction = s -> (long) s.length();
+
+        UnaryOperator<String> unaryOperator = s -> s.toUpperCase();
 
     }
 }
