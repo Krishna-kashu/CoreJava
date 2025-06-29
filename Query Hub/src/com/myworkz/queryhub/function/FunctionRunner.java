@@ -148,5 +148,47 @@ public class FunctionRunner {
         LongToDoubleFunction longToDoubleFunction = value -> value * 2.5;
         System.out.println("LongToDoubleFunction result: " + longToDoubleFunction.applyAsDouble(20L));
 
+        LongToIntFunction longToIntFunction = value -> (int) value;
+        System.out.println("LongToIntFunction result: " + longToIntFunction.applyAsInt(12345L));
+
+        LongUnaryOperator longUnaryOperator = value -> value * value;
+        System.out.println("LongUnaryOperator result: " + longUnaryOperator.applyAsLong(12L));
+
+        ObjDoubleConsumer<String> objDoubleConsumer = (str, dbl) -> System.out.println(str + ": " + dbl);
+        objDoubleConsumer.accept("Price", 499.99);
+
+        ObjIntConsumer<String> objIntConsumer = (str, i) -> System.out.println(str + ": " + i);
+        objIntConsumer.accept("Quantity", 5);
+
+        ObjLongConsumer<String> objLongConsumer = (str, l) -> System.out.println(str + ": " + l);
+        objLongConsumer.accept("Total Time", 123456789L);
+
+        Predicate<String> predicate = s -> s.length() > 3;
+        System.out.println("Predicate result: " + predicate.test("Java"));
+
+        Supplier<String> supplier = () -> "Hello";
+        System.out.println("Supplier result: " + supplier.get());
+
+        ToDoubleBiFunction<String, Integer> toDoubleBiFunction = (s, i) -> s.length() + i;
+        System.out.println("ToDoubleBiFunction result: " + toDoubleBiFunction.applyAsDouble("Code", 5));
+
+        ToDoubleBiFunction<String, String> toDoubleFunction = (a, b) -> (a + b).length();
+        System.out.println("ToDoubleBiFunction (String,String) result: " + toDoubleFunction.applyAsDouble("Hello", "World"));
+
+        ToIntBiFunction<String, String> toIntBiFunction = (a, b) -> a.length() - b.length();
+        System.out.println("ToIntBiFunction result: " + toIntBiFunction.applyAsInt("Hello", "Hi"));
+
+        ToIntFunction<String> toIntFunction = s -> s.length();
+        System.out.println("ToIntFunction result: " + toIntFunction.applyAsInt("OpenAI"));
+
+        ToLongBiFunction<String, String> toLongBiFunction = (a, b) -> (long) (a.length() * b.length());
+        System.out.println("ToLongBiFunction result: " + toLongBiFunction.applyAsLong("Hi", "There"));
+
+        ToLongFunction<String> toLongFunction = s -> (long) s.length();
+        System.out.println("ToLongFunction result: " + toLongFunction.applyAsLong("Programming"));
+
+        UnaryOperator<String> unaryOperator = s -> s.toUpperCase();
+        System.out.println("UnaryOperator result: " + unaryOperator.apply("functional"));
+
     }
 }
