@@ -128,7 +128,25 @@ public class FunctionRunner {
             System.out.println("running applyAsInt in IntUnaryOperator");
             return operand * operand;
         };
+        System.out.println("IntUnaryOperator result: " + intUnaryOperator.applyAsInt(9));
 
+        LongBinaryOperator longBinaryOperator = (a, b) -> a + b;
+        System.out.println("LongBinaryOperator result: " + longBinaryOperator.applyAsLong(50L, 100L));
+
+        LongConsumer longConsumer = value -> System.out.println("LongConsumer consumed: " + value);
+        longConsumer.accept(9999L);
+
+        LongFunction<String> longFunction = value -> "Value: " + value;
+        System.out.println("LongFunction result: " + longFunction.apply(150L));
+
+        LongPredicate longPredicate = value -> value > 0;
+        System.out.println("LongPredicate result: " + longPredicate.test(45L));
+
+        LongSupplier longSupplier = () -> 123L;
+        System.out.println("LongSupplier result: " + longSupplier.getAsLong());
+
+        LongToDoubleFunction longToDoubleFunction = value -> value * 2.5;
+        System.out.println("LongToDoubleFunction result: " + longToDoubleFunction.applyAsDouble(20L));
 
     }
 }
