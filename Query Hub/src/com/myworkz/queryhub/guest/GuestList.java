@@ -79,7 +79,7 @@ public class GuestList {
         System.out.println(event3);
         event3.remove("Gagan");
         System.out.println(event3);
-        event3.removeAll(event3);
+        event3.removeAll(event1);
         System.out.println("after removeAll: "+event3);
         boolean empty = event3.isEmpty();
         System.out.println("is empty: "+empty);
