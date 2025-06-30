@@ -29,8 +29,8 @@ public class GuestList {
         boolean rishi = event1.contains("Rishi");
         System.out.println("Rishi name is there "+rishi);
 
-        boolean b = event1.containsAll(event1);
-        System.out.println("contains all"+b);
+        //boolean b = event1.containsAll(event1);
+        //System.out.println("contains all"+b);
 
         System.out.println("size of even1: "+event1.size());
 
@@ -66,7 +66,7 @@ public class GuestList {
         event3.add("Karan");
         event3.add("Sarayu");
         event3.add("Gagan");
-        event3.add("Gagan");
+//        event3.add("Gagan");
         event3.add("Ranjith");
         event3.add("Vandana");
         event3.add("Dhanu");
