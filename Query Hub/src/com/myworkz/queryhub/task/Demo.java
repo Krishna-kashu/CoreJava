@@ -62,11 +62,8 @@ public class Demo {
         Arrays.fill(zeroes, 0);//10
 
        System.out.println("\n\nhashcode"+Arrays.hashCode(numArray));//11
-
         System.out.println(Arrays.stream(numbers));//12
-
         System.out.println(Arrays.toString(numArray));//13
-
         System.out.println(Arrays.spliterator(numbers));//14
     }
 }
