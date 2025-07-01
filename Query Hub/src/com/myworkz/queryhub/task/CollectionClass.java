@@ -59,22 +59,16 @@ public class CollectionClass {
         while(iterator.hasNext()){
             System.out.println(iterator.next());
         }
-
         System.out.println(array1.size()+" is the size");//10
-
         while(iterator.hasNext()){
             if(iterator.next().equals("die")){
                 iterator.remove();//11
             }
-
         }
 
         array1.remove("go to hell");//12
-
         array1.stream().iterator();//13
-
         System.out.println("hashcode for array1: "+ array1.hashCode());//14
-
         Object[] newCurses=array2.toArray();
         System.out.println(newCurses);//15
 
