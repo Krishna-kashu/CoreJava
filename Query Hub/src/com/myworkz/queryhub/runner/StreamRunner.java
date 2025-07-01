@@ -17,7 +17,7 @@ public class StreamRunner
         collection.add(93);
         collection.add(59);
 
-
+        System.out.println(collection);
         Collection<Integer> newList = new ArrayList<>();
         for(Integer i : collection){
             if(i>50){
