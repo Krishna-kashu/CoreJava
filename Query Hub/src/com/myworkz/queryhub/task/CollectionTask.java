@@ -4,6 +4,7 @@ import java.util.*;
 
 public class CollectionTask {
     public static void main(String[] args) {
+
         Collection<Integer> list = new ArrayList<>();
         for(int i =1; i<=10; i++)
             list.add(i);
@@ -23,7 +24,6 @@ public class CollectionTask {
 
         ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(10, 60, 30, 90, 25));
         Iterator<Integer> iterator = numbers.iterator();
-
         System.out.println("\n"+numbers);
         while (iterator.hasNext()) {
             if (iterator.next() > 50) iterator.remove();
