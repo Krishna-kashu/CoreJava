@@ -18,11 +18,13 @@ public class StreamRunner
         collection.add(59);
 
 
-
+        Collection<Integer> newList = new ArrayList<>();
         for(Integer i : collection){
             if(i>50){
                 System.out.println("Integer > 50: "+i);
+                newList.add(i);
             }
         }
+        System.out.println("List of Integers > 50 : "+newList);
     }
 }
