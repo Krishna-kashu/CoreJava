@@ -14,6 +14,7 @@ public class SareeStreamRunner {
 
         Collection<SareeDTO> collection = sareeRepo.findAll();
 
-        collection.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
+        //collection.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
+        collection.stream().sorted().forEach(System.out::println);
     }
 }
