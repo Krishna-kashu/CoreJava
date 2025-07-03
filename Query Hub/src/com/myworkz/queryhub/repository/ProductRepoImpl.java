@@ -32,12 +32,6 @@ public class ProductRepoImpl implements ProductRepo{
         list.add(new ProductDTO(18, "Camera", "Photography", LocalDate.of(2023, 11, 3), "Sony", 59999, 9, 2, 2));
         list.add(new ProductDTO(19, "Tripod", "Photography", LocalDate.of(2024, 1, 14), "Digitek", 1499, 5, 10, 1));
 
-        list.add(new ProductDTO(20, "Microwave Oven", "Appliance", LocalDate.of(2023, 8, 9), "Samsung", 7499, 14, 5, 4));
-        list.add(new ProductDTO(21, "Refrigerator", "Appliance", LocalDate.of(2024, 3, 10), "LG", 20499, 10, 2, 5));
-        list.add(new ProductDTO(22, "Washing Machine", "Appliance", LocalDate.of(2023, 6, 5), "Whirlpool", 18499, 12, 3, 4));
-        list.add(new ProductDTO(23, "Fan", "Home", LocalDate.of(2023, 7, 19), "Havells", 2699, 8, 6, 2));
-        list.add(new ProductDTO(24, "Inverter", "Electronics", LocalDate.of(2023, 5, 12), "Luminous", 8499, 9, 2, 3));
-
         list.add(new ProductDTO(25, "Water Purifier", "Appliance", LocalDate.of(2024, 2, 1), "Kent", 10499, 15, 4, 4));
         list.add(new ProductDTO(26, "Toaster", "Kitchen", LocalDate.of(2023, 10, 15), "Prestige", 1999, 5, 7, 2));
         list.add(new ProductDTO(27, "Mixer Grinder", "Kitchen", LocalDate.of(2023, 11, 20), "Bajaj", 3499, 6, 6, 3));
@@ -48,6 +42,12 @@ public class ProductRepoImpl implements ProductRepo{
         list.add(new ProductDTO(32, "Iron", "Home", LocalDate.of(2023, 5, 25), "Philips", 1499, 3, 12, 1));
         list.add(new ProductDTO(33, "Projector", "Electronics", LocalDate.of(2024, 3, 22), "Epson", 28999, 10, 2, 3));
         list.add(new ProductDTO(34, "Coffee Machine", "Kitchen", LocalDate.of(2023, 11, 11), "Nespresso", 8999, 13, 3, 2));
+
+        list.add(new ProductDTO(20, "Microwave Oven", "Appliance", LocalDate.of(2023, 8, 9), "Samsung", 7499, 14, 5, 4));
+        list.add(new ProductDTO(21, "Refrigerator", "Appliance", LocalDate.of(2024, 3, 10), "LG", 20499, 10, 2, 5));
+        list.add(new ProductDTO(22, "Washing Machine", "Appliance", LocalDate.of(2023, 6, 5), "Whirlpool", 18499, 12, 3, 4));
+        list.add(new ProductDTO(23, "Fan", "Home", LocalDate.of(2023, 7, 19), "Havells", 2699, 8, 6, 2));
+        list.add(new ProductDTO(24, "Inverter", "Electronics", LocalDate.of(2023, 5, 12), "Luminous", 8499, 9, 2, 3));
 
         return list;
     }
