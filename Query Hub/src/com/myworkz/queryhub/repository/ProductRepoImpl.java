@@ -49,6 +49,19 @@ public class ProductRepoImpl implements ProductRepo{
         list.add(new ProductDTO(23, "Fan", "Home", LocalDate.of(2023, 7, 19), "Havells", 2699, 8, 6, 2));
         list.add(new ProductDTO(24, "Inverter", "Electronics", LocalDate.of(2023, 5, 12), "Luminous", 8499, 9, 2, 3));
 
+        list.add(new ProductDTO(35, "VR Headset", "Gadget", LocalDate.of(2024, 2, 18), "Oculus", 29999, 10, 4, 2));
+        list.add(new ProductDTO(36, "3D Printer", "Office", LocalDate.of(2023, 10, 2), "Creality", 48999, 12, 1, 3));
+        list.add(new ProductDTO(37, "Drone", "Photography", LocalDate.of(2024, 1, 10), "DJI", 69999, 8, 2, 2));
+        list.add(new ProductDTO(38, "Smart TV", "Entertainment", LocalDate.of(2023, 11, 8), "Mi", 25999, 15, 3, 3));
+        list.add(new ProductDTO(39, "Digital Drawing Tablet", "Accessories", LocalDate.of(2023, 9, 27), "Wacom", 8999, 10, 2, 2));
+        list.add(new ProductDTO(40, "Portable Scanner", "Office", LocalDate.of(2023, 12, 14), "Epson", 5999, 6, 3, 2));
+        list.add(new ProductDTO(41, "Smart Lock", "Home", LocalDate.of(2024, 3, 3), "Yale", 11999, 7, 1, 5));
+        list.add(new ProductDTO(42, "Electric Screwdriver", "Tool", LocalDate.of(2023, 10, 5), "Bosch", 2499, 5, 10, 3));
+        list.add(new ProductDTO(43, "Fitness Band", "Wearable", LocalDate.of(2023, 12, 20), "Fitbit", 3999, 9, 6, 1));
+        list.add(new ProductDTO(44, "Robot Vacuum", "Appliance", LocalDate.of(2024, 1, 9), "iRobot", 22999, 10, 2, 3));
+        list.add(new ProductDTO(45, "Smart Glasses", "Gadget", LocalDate.of(2023, 8, 28), "Snap", 15999, 12, 1, 2));
+        list.add(new ProductDTO(46, "E-Book Reader", "Electronics", LocalDate.of(2023, 9, 15), "Amazon", 7999, 6, 4, 3));
+
         return list;
     }
 }
