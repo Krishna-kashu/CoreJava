@@ -30,7 +30,27 @@ public class ProductStreamRunner {
         System.out.println("\n\n all product by id asc");
         list.stream().sorted().forEach(System.out::println);
 
+        System.out.println("\n\n all product if quantity > 5 and sort by id");
+        List<ProductDTO> collect1 = list.stream().filter(e -> e.getQuantity() > 5).sorted().collect(Collectors.toList());
+        collect1.forEach(System.out::println);
 
+        System.out.println("\n\n only manufacturer of all product");
+        List<String> collect2 = list.stream().map(ProductDTO::getManufacturer).collect(Collectors.toList());
+        //List<String> collect2 = list.stream().map(ProductDTO::getManufacturer).distinct()collect(Collectors.toList());
+        collect2.forEach(System.out::println);
+
+        System.out.println("\n\n get the product with min discount");
+        Optional<ProductDTO> min = list.stream().min(Comparator.comparingDouble(ProductDTO::getDiscount));
+       // Optional<ProductDTO> min = list.stream().min(Comparator.comparing(ProductDTO::getDiscount));
+                min.ifPresent(System.out::println);
+
+        System.out.println("\n\n the product with latest manufacturedDate");
+        Optional<ProductDTO> latest = list.stream().max(Comparator.comparing(ProductDTO::getManufacturedDate));
+        latest.ifPresent(System.out::println);
+
+        System.out.println("\n\n the product with max costPerItem");
+        Optional<ProductDTO> max = list.stream().max(Comparator.comparing(ProductDTO::getCostPerItem));
+        max.ifPresent(System.out::println);
 
     }
 }
