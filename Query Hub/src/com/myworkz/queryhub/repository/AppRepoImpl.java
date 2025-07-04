@@ -15,6 +15,7 @@ public class AppRepoImpl implements AppRepo{
     @Override
     public List<AppDTO> findAll() {
 
+
         List<AppDTO> list = new ArrayList<>();
 
         list.add(new AppDTO("WhatsApp", AppType.MESSAGING, AppVersion.RELEASE, LocalDate.of(2023, 2, 10), 38.5, true, 0.0,
