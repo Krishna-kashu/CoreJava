@@ -48,6 +48,7 @@ public class ProductRepoImpl implements ProductRepo{
         list.add(new ProductDTO(22, "Washing Machine", "Appliance", LocalDate.of(2023, 6, 5), "Whirlpool", 18499, 12, 3, 4));
         list.add(new ProductDTO(23, "Fan", "Home", LocalDate.of(2023, 7, 19), "Havells", 2699, 8, 6, 2));
         list.add(new ProductDTO(24, "Inverter", "Electronics", LocalDate.of(2023, 5, 12), "Luminous", 8499, 9, 2, 3));
+        list.add(new ProductDTO(46, "E-Book Reader", "Electronics", LocalDate.of(2023, 9, 15), "Amazon", 7999, 6, 4, 3));
 
         list.add(new ProductDTO(35, "VR Headset", "Gadget", LocalDate.of(2024, 2, 18), "Oculus", 29999, 10, 4, 2));
         list.add(new ProductDTO(36, "3D Printer", "Office", LocalDate.of(2023, 10, 2), "Creality", 48999, 12, 1, 3));
@@ -60,7 +61,6 @@ public class ProductRepoImpl implements ProductRepo{
         list.add(new ProductDTO(43, "Fitness Band", "Wearable", LocalDate.of(2023, 12, 20), "Fitbit", 3999, 9, 6, 1));
         list.add(new ProductDTO(44, "Robot Vacuum", "Appliance", LocalDate.of(2024, 1, 9), "iRobot", 22999, 10, 2, 3));
         list.add(new ProductDTO(45, "Smart Glasses", "Gadget", LocalDate.of(2023, 8, 28), "Snap", 15999, 12, 1, 2));
-        list.add(new ProductDTO(46, "E-Book Reader", "Electronics", LocalDate.of(2023, 9, 15), "Amazon", 7999, 6, 4, 3));
 
         return list;
     }
