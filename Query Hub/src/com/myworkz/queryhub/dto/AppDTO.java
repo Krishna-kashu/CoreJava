@@ -12,7 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 public class AppDTO {
     private String name;
-    private String type;
+    private AppType type;
     private AppVersion version;
     private LocalDate releaseDate;
     private double size;
