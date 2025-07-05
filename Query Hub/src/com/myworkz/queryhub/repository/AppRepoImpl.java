@@ -132,6 +132,8 @@ public class AppRepoImpl implements AppRepo{
         list.add(new AppDTO("Hotstar", AppType.STREAMING, AppVersion.V4_0, LocalDate.of(2023, 12, 31), 110.2, true, 7.99,
                 Arrays.asList(new AppOwner("Disney+ Hotstar", "support@hotstar.com"))));
 
+
+
         return list;
     }
 }
