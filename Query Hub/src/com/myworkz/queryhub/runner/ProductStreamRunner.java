@@ -8,6 +8,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ProductStreamRunner {
     public static void main(String[] args) {
@@ -41,6 +42,7 @@ public class ProductStreamRunner {
 
         System.out.println("\n\n get the product with min discount");
         Optional<ProductDTO> min = list.stream().min(Comparator.comparingDouble(ProductDTO::getDiscount));
+
        // Optional<ProductDTO> min = list.stream().min(Comparator.comparing(ProductDTO::getDiscount));
                 min.ifPresent(System.out::println);
 
@@ -51,6 +53,8 @@ public class ProductStreamRunner {
         System.out.println("\n\n the product with max costPerItem");
         Optional<ProductDTO> max = list.stream().max(Comparator.comparing(ProductDTO::getCostPerItem));
         max.ifPresent(System.out::println);
+
+
 
     }
 }
