@@ -51,7 +51,12 @@ public class AppStreamRunner {
                 .map(AppDTO::getCostPerPerson)
                 .findFirst().orElse(0.0);
         System.out.println(charge);
+        System.out.println("\n\n 3. Find all by created date and order in desc order\n");
+        List<AppDTO> sortedByDate = appDTOs.stream()
+                .sorted(Comparator.comparing(AppDTO::getReleaseDate).reversed())
+                .collect(Collectors.toList());
 
+        
 
 
 
