@@ -1,9 +1,13 @@
 package com.myworkz.queryhub.runner;
 
 import com.myworkz.queryhub.dto.AppDTO;
+import com.myworkz.queryhub.dto.AppType;
 import com.myworkz.queryhub.repository.AppRepo;
 import com.myworkz.queryhub.repository.AppRepoImpl;
+
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class AppStreamRunner {
     public static void main(String[] args) {
@@ -34,6 +38,26 @@ public class AppStreamRunner {
                 .filter(app -> app.getName().equalsIgnoreCase("Instagram"))
                 .map(AppDTO::getOwner)
                 .forEach(System.out::println);
+
+        System.out.println("\n\n================= Application of type STREAMING ==============");
+        List<AppDTO> games = appDTOs.stream()
+                .filter(app -> app.getType() == AppType.STREAMING)
+                .collect(Collectors.toList());
+        games.forEach(System.out::println);
+
+        System.out.println("\n\n chargePerUSer by application name\n");
+        double charge = appDTOs.stream()
+                .filter(app -> app.getName().equals("App10"))
+                .map(AppDTO::getCostPerPerson)
+                .findFirst().orElse(0.0);
+        System.out.println(charge);
+
+
+
+
+
+
+
 
     }
 }
