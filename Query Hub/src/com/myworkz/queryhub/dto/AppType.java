@@ -25,4 +25,5 @@ public enum AppType {
     HEALTH,
     UTILITY,
     VOICE_CHAT,
+    GAMING
 }
