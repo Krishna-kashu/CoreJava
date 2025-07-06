@@ -11,8 +11,6 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static sun.rmi.transport.TransportConstants.Version;
-
 public class AppStreamRunner {
     public static void main(String[] args) {
         AppRepo appRepo = new AppRepoImpl();
