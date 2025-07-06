@@ -132,7 +132,56 @@ public class AppRepoImpl implements AppRepo{
         list.add(new AppDTO("Hotstar", AppType.STREAMING, AppVersion.V4_0, LocalDate.of(2023, 12, 31), 110.2, true, 7.99,
                 Arrays.asList(new AppOwner("Disney+ Hotstar", "support@hotstar.com"))));
 
+        list.add(new AppDTO("Reddit", AppType.SOCIAL_MEDIA, AppVersion.V3_0, LocalDate.of(2023, 5, 19), 80.3, true, 0.0,
+                Arrays.asList(new AppOwner("Reddit Inc.", "admin@reddit.com"))));
 
+        list.add(new AppDTO("Threads", AppType.SOCIAL_MEDIA, AppVersion.V2_0, LocalDate.of(2023, 7, 7), 88.0, true, 0.0,
+                Arrays.asList(new AppOwner("Meta Inc.", "support@threads.net"))));
+
+        list.add(new AppDTO("Steam", AppType.GAMING, AppVersion.V4_0, LocalDate.of(2024, 1, 15), 210.0, true, 0.0,
+                Arrays.asList(new AppOwner("Valve Corp.", "support@steampowered.com"))));
+
+        list.add(new AppDTO("Twitch", AppType.STREAMING, AppVersion.V3_0, LocalDate.of(2023, 9, 22), 95.5, true, 0.0,
+                Arrays.asList(new AppOwner("Amazon Inc.", "support@twitch.tv"))));
+
+        list.add(new AppDTO("Adobe Photoshop Express", AppType.DESIGN, AppVersion.V4_0, LocalDate.of(2023, 6, 30), 105.3, true, 0.0,
+                Arrays.asList(new AppOwner("Adobe Inc.", "support@adobe.com"))));
+
+        list.add(new AppDTO("Khan Academy", AppType.EDUCATION, AppVersion.RELEASE, LocalDate.of(2023, 4, 17), 58.6, true, 0.0,
+                Arrays.asList(new AppOwner("Khan Academy", "help@khanacademy.org"))));
+
+        list.add(new AppDTO("Myntra", AppType.SHOPPING, AppVersion.V3_0, LocalDate.of(2023, 10, 1), 78.4, true, 0.0,
+                Arrays.asList(new AppOwner("Myntra Designs Pvt. Ltd.", "support@myntra.com"))));
+
+        list.add(new AppDTO("Google Pay", AppType.FINANCE, AppVersion.V3_0, LocalDate.of(2023, 12, 11), 70.2, true, 0.0,
+                Arrays.asList(new AppOwner("Google LLC", "gpay-support@google.com"))));
+
+        list.add(new AppDTO("Ola", AppType.TRANSPORT, AppVersion.V2_0, LocalDate.of(2023, 9, 29), 73.5, true, 0.0,
+                Arrays.asList(new AppOwner("ANI Technologies", "support@olacabs.com"))));
+
+        list.add(new AppDTO("Roblox", AppType.GAMING, AppVersion.V3_0, LocalDate.of(2023, 6, 18), 150.0, true, 0.0,
+                Arrays.asList(new AppOwner("Roblox Corporation", "support@roblox.com"))));
+
+        list.add(new AppDTO("PUBG Mobile", AppType.GAMING, AppVersion.V4_0, LocalDate.of(2023, 7, 9), 190.3, true, 0.0,
+                Arrays.asList(new AppOwner("Tencent Games", "support@pubgmobile.com"))));
+
+        list.add(new AppDTO("Notion", AppType.PRODUCTIVITY, AppVersion.V3_0, LocalDate.of(2023, 10, 22), 88.0, true, 0.0,
+                Arrays.asList(new AppOwner("Notion Labs", "support@makenotion.com"))));
+
+        list.add(new AppDTO("Udemy", AppType.EDUCATION, AppVersion.V3_0, LocalDate.of(2023, 12, 5), 110.6, true, 11.99,
+                Arrays.asList(new AppOwner("Udemy Inc.", "instructorsupport@udemy.com"))));
+
+        list.add(new AppDTO("Nykaa", AppType.SHOPPING, AppVersion.V2_0, LocalDate.of(2023, 8, 11), 63.0, true, 0.0,
+                Arrays.asList(new AppOwner("FSN E-Commerce", "support@nykaa.com"))));
+
+        list.add(new AppDTO("Meesho", AppType.SHOPPING, AppVersion.V2_0, LocalDate.of(2023, 5, 17), 60.5, true, 0.0,
+                Arrays.asList(new AppOwner("Meesho", "help@meesho.com"))));
+
+        list.add(new AppDTO("Cred", AppType.FINANCE, AppVersion.V3_0, LocalDate.of(2023, 9, 27), 58.8, true, 0.0,
+                Arrays.asList(new AppOwner("Dreamplug Technologies", "support@cred.club"))));
+
+        list.add(new AppDTO("Rapido", AppType.TRANSPORT, AppVersion.V2_0, LocalDate.of(2023, 10, 14), 52.4, true, 0.0,
+                Arrays.asList(new AppOwner("Rapido Bike Taxi", "support@rapido.bike"))));
 
         return list;
     }
