@@ -11,6 +11,8 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static com.myworkz.queryhub.dto.AppType.VOICE_CHAT;
+
 public class AppStreamRunner {
     public static void main(String[] args) {
         AppRepo appRepo = new AppRepoImpl();
@@ -35,7 +37,6 @@ public class AppStreamRunner {
                   .map(AppOwner::getName)
                   .forEach(System.out::println);
         */
-
         appDTOs.stream()
                 .filter(app -> app.getName().equalsIgnoreCase("Instagram"))
                 .map(AppDTO::getOwner)
@@ -49,28 +50,29 @@ public class AppStreamRunner {
 
         System.out.println("\n\n chargePerUSer by application name\n");
         double charge = appDTOs.stream()
-                .filter(app -> app.getName().equals("App10"))
+                .filter(app -> app.getName().equals("Google Photos"))
                 .map(AppDTO::getCostPerPerson)
                 .findFirst().orElse(0.0);
         System.out.println(charge);
+
         System.out.println("\n\n 3. Find all by created date and order in desc order\n");
         List<AppDTO> sortedByDate = appDTOs.stream()
                 .sorted(Comparator.comparing(AppDTO::getReleaseDate).reversed())
                 .collect(Collectors.toList());
-        System.out.println(sortedByDate);
+        sortedByDate.forEach(System.out::println);
 
         System.out.println("\n\n 4. Sort all applications by Size in Desc order\n");
-        appDTOs.sort(Comparator.comparing(AppDTO::getSize).reversed());
+       appDTOs.sort(Comparator.comparing(AppDTO::getSize).reversed());
 
-        System.out.println("\n\n 5. Find the version by name,type\n\n");
-        List<AppDTO> sorted = appDTOs.stream()
-                .sorted(Comparator.comparing(AppDTO::getSize).reversed())
-                .collect(Collectors.toList());
-        System.out.println(sorted);
+        System.out.println("\n\n 5. Find the version by name,type\n");
+        appDTOs.stream().filter(applicationDto -> applicationDto.getName().
+                equalsIgnoreCase("Discord") && applicationDto.
+                getType().equals(VOICE_CHAT)).map(AppDTO::getVersion).
+                forEach(System.out::println);
 
         System.out.println("\n\n 6. Find all applications by ownerName\n");
         List<AppDTO> result = appDTOs.stream()
-                .filter(app -> app.getOwner().equals("John"))
+                .filter(app -> app.getOwner().equals("Andrew Ng"))
                 .collect(Collectors.toList());
         System.out.println(result);
 
@@ -86,27 +88,27 @@ public class AppStreamRunner {
                 .map(app -> app.getOwner().get(0).getEmail())
                 .distinct()
                 .collect(Collectors.toList());
-        System.out.println(emails);
+        emails.forEach(System.out::println);
 
         System.out.println("\n\n 9. Find all owner name and email by type and version\n");
         List<String> info = appDTOs.stream()
-                .filter(app -> app.getType() == AppType.STREAMING && app.getVersion() == AppVersion.V2_0)
+                .filter(app -> app.getType() == AppType.STREAMING && app.getVersion() == AppVersion.V4_0)
                 .map(app -> app.getOwner().get(0).getName() + " - " + app.getOwner().get(0).getEmail())
                 .collect(Collectors.toList());
         System.out.println(info);
 
         System.out.println("\n\n 10. Find all application by Created Date\n");
-        LocalDate date = LocalDate.of(2023, 1, 1);
+        LocalDate date = LocalDate.of(2023, 12, 11);
         List<AppDTO> result1 = appDTOs.stream()
                 .filter(app -> app.getReleaseDate().equals(date))
                 .collect(Collectors.toList());
         System.out.println(result1);
 
-        System.out.println("\n\n 11. Add a application by index\n");
+        System.out.println("\n\n 11. Added a application by index\n");
         appDTOs.add(3, new AppDTO("Aarogya Setu", AppType.HEALTH, AppVersion.V2_0, LocalDate.of(2023, 7, 28), 52.1, true, 0.0,
                 Arrays.asList(new AppOwner("Government of India", "support@aarogyasetu.gov.in"))));
 
-        System.out.println("\n\n 12. Remove an application by index\n");
+        System.out.println("\n\n 12. Removed an application by index\n");
         appDTOs.remove(3);
 
         System.out.println("\n\n 13. Get owner by Index\n");
