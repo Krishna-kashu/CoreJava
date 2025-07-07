@@ -85,7 +85,7 @@ public class AppRepoImpl implements AppRepo{
                 Arrays.asList(new AppOwner("MX Media", "support@mxplayer.in"))));
 
         list.add(new AppDTO("Koo", AppType.SOCIAL_MEDIA, AppVersion.BETA, LocalDate.of(2023, 7, 30), 42.6, true, 0.0,
-                Arrays.asList(new AppOwner("Koo App", "support@kooapp.com"))));
+                Arrays.asList(new AppOwner("Koo DiffAppRunner", "support@kooapp.com"))));
 
         list.add(new AppDTO("Zomato", AppType.FOOD_DELIVERY, AppVersion.V2_0, LocalDate.of(2023, 7, 4), 65.7, true, 0.0,
                 Arrays.asList(new AppOwner("Deepinder Goyal", "deepinder@zomato.com"))));
