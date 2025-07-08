@@ -1,17 +1,17 @@
-package com.myworkz.queryhub.runner;
+package com.myworkz.myapp.runner;
 
-import com.myworkz.queryhub.dto.AppDTO;
-import com.myworkz.queryhub.dto.AppOwner;
-import com.myworkz.queryhub.dto.AppType;
-import com.myworkz.queryhub.dto.AppVersion;
-import com.myworkz.queryhub.repository.AppRepo;
-import com.myworkz.queryhub.repository.AppRepoImpl;
+import com.myworkz.myapp.dto.AppDTO;
+import com.myworkz.myapp.dto.AppOwner;
+import com.myworkz.myapp.dto.AppType;
+import com.myworkz.myapp.dto.AppVersion;
+import com.myworkz.myapp.repo.AppRepo;
+import com.myworkz.myapp.repo.AppRepoImpl;
 
 import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static com.myworkz.queryhub.dto.AppType.VOICE_CHAT;
+import static com.myworkz.myapp.dto.AppType.VOICE_CHAT;
 
 public class AppStreamRunner {
     public static void main(String[] args) {
