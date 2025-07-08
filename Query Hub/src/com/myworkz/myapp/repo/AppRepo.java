@@ -1,6 +1,6 @@
-package com.myworkz.queryhub.repository;
+package com.myworkz.myapp.repo;
 
-import com.myworkz.queryhub.dto.AppDTO;
+import com.myworkz.myapp.dto.AppDTO;
 
 import java.util.List;
 
