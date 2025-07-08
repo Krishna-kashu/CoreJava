@@ -18,8 +18,6 @@ public class DiffAppRunner {
 
        ListIterator<String> listIterator=list.listIterator();
 
-
-
        while(listIterator.hasNext()){
            System.out.println(listIterator.next());
        }
