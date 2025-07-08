@@ -1,4 +1,4 @@
-package com.myworkz.queryhub.dto;
+package com.myworkz.myapp.dto;
 
 public enum AppType {
     MESSAGING,
