@@ -1,9 +1,9 @@
-package com.myworkz.queryhub.repository;
+package com.myworkz.myapp.repo;
 
-import com.myworkz.queryhub.dto.AppDTO;
-import com.myworkz.queryhub.dto.AppOwner;
-import com.myworkz.queryhub.dto.AppType;
-import com.myworkz.queryhub.dto.AppVersion;
+import com.myworkz.myapp.dto.AppDTO;
+import com.myworkz.myapp.dto.AppOwner;
+import com.myworkz.myapp.dto.AppType;
+import com.myworkz.myapp.dto.AppVersion;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
