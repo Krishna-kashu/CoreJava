@@ -1,6 +1,7 @@
 package com.myworkz.queryhub.map;
 
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,7 +24,6 @@ public class MapExample {
         }
         map.put(2, "Alan");
         System.out.println("\nafter Updating id 2 as Alan: "+map);
-
 
         map.remove(3);
         System.out.println("\nafter removing id 3: "+map);
