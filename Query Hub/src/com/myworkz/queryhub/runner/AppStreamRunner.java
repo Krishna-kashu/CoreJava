@@ -48,12 +48,18 @@ public class AppStreamRunner {
                 .collect(Collectors.toList());
         games.forEach(System.out::println);
 
+        //appDTOs.stream().filter(applicationDTO->applicationDTO.getType().equals("SOCIAL_MEDIA")).forEach(System.out::println);
+
         System.out.println("\n\n chargePerUSer by application name\n");
         double charge = appDTOs.stream()
                 .filter(app -> app.getName().equals("Google Photos"))
                 .map(AppDTO::getCostPerPerson)
                 .findFirst().orElse(0.0);
         System.out.println(charge);
+
+        appDTOs.stream().filter(applicationDto -> applicationDto.getName().
+                equalsIgnoreCase("Telegram")).map(AppDTO::getCostPerPerson).forEach(System.out::println);
+
 
         System.out.println("\n\n 3. Find all by created date and order in desc order\n");
         List<AppDTO> sortedByDate = appDTOs.stream()
