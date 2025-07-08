@@ -1,4 +1,4 @@
-package com.myworkz.queryhub.dto;
+package com.myworkz.myapp.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
