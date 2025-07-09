@@ -1,0 +1,99 @@
+package com.my_work.mapps.runner;
+
+import com.my_work.mapps.dto.AddressDTO;
+import com.my_work.mapps.dto.PersonDTO;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class PersonRunner {
+    public static void main(String[] args) {
+
+        PersonDTO person1 = new PersonDTO("Krishnaveni", "krishna24@gmail.com","819286682153");
+        PersonDTO person2 = new PersonDTO("Archana", "archana29@gmail.com","819281282153");
+        PersonDTO person3 = new PersonDTO("Ashwini", "ashwini21@gmail.com","666677776153");
+        PersonDTO person4 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","81978925353");
+        PersonDTO person5 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","780086682153");
+        PersonDTO person6 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","496454231331");
+        PersonDTO person7 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","899802534153");
+        PersonDTO person8 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","456789082153");
+        PersonDTO person9 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","362780929244");
+        PersonDTO person10 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","535356276943");
+        PersonDTO person11 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","500223396460");
+        PersonDTO person12 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","285078074974");
+        PersonDTO person13 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","380462425645");
+        PersonDTO person14 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","403853383411");
+        PersonDTO person15 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","206635790191");
+        PersonDTO person16 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","459198780169");
+        PersonDTO person17 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","689842418699");
+        PersonDTO person18 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","978335432544");
+        PersonDTO person19 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","427244966553");
+        PersonDTO person20 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","597881285432");
+        PersonDTO person21 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","624433555497");
+        PersonDTO person22 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","830039805476");
+        PersonDTO person24 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","204731862086");
+        PersonDTO person23 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","689842418699");
+        PersonDTO person25 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","225390278200");
+
+        AddressDTO address1 = new AddressDTO(1, "MG Road", "Bangalore", 560001);
+        AddressDTO address2 = new AddressDTO(2, "Brigade Road", "Bangalore", 560025);
+        AddressDTO address3 = new AddressDTO(3, "Residency Road", "Bangalore", 560025);
+        AddressDTO address4 = new AddressDTO(4, "Commercial Street", "Bangalore", 560001);
+        AddressDTO address5 = new AddressDTO(5, "Church Street", "Bangalore", 560001);
+
+        AddressDTO address6 = new AddressDTO(6, "100ft Road", "Indiranagar", 560038);
+        AddressDTO address7 = new AddressDTO(7, "5th Block", "Koramangala", 560095);
+        AddressDTO address8 = new AddressDTO(8, "BTM Layout Main Road", "BTM Layout", 560076);
+        AddressDTO address9 = new AddressDTO(9, "Bannerghatta Road", "JP Nagar", 560078);
+        AddressDTO address10 = new AddressDTO(10, "Outer Ring Road", "Marathahalli", 560037);
+
+        AddressDTO address6d = new AddressDTO(6, "100ft Road", "Indiranagar", 560038);
+        AddressDTO address7d = new AddressDTO(7, "5th Block", "Koramangala", 560095);
+        AddressDTO address8d = new AddressDTO(8, "BTM Layout Main Road", "BTM Layout", 560076);
+        AddressDTO address9d = new AddressDTO(9, "Bannerghatta Road", "JP Nagar", 560078);
+        AddressDTO address10d = new AddressDTO(10, "Outer Ring Road", "Marathahalli", 560037);
+
+        AddressDTO address11 = new AddressDTO(11, "Sarjapur Road", "Bellandur", 560103);
+        AddressDTO address12 = new AddressDTO(12, "Whitefield Main Road", "Whitefield", 560066);
+        AddressDTO address13 = new AddressDTO(13, "Hennur Main Road", "Kalyan Nagar", 560043);
+        AddressDTO address14 = new AddressDTO(14, "New Town", "Yelahanka", 560064);
+        AddressDTO address15 = new AddressDTO(15, "Hebbal Flyover", "Hebbal", 560024);
+
+        AddressDTO address16 = new AddressDTO(16, "8th Cross", "Malleshwaram", 560003);
+        AddressDTO address17 = new AddressDTO(17, "1st Block", "Rajajinagar", 560010);
+        AddressDTO address18 = new AddressDTO(18, "Main Road", "Basavanagudi", 560004);
+        AddressDTO address19 = new AddressDTO(19, "4th Block", "Jayanagar", 560041);
+        AddressDTO address20 = new AddressDTO(20, "Hosur Road", "Electronic City", 560100);
+
+        Map<PersonDTO, AddressDTO> personDTOAddressDTOMap = new HashMap<>();
+
+        personDTOAddressDTOMap.put(person1, address1);
+        personDTOAddressDTOMap.put(person2, address2);
+        personDTOAddressDTOMap.put(person3, address3);
+        personDTOAddressDTOMap.put(person4, address4);
+        personDTOAddressDTOMap.put(person5, address5);
+        personDTOAddressDTOMap.put(person6, address6);
+        personDTOAddressDTOMap.put(person7, address7);
+        personDTOAddressDTOMap.put(person8, address8);
+        personDTOAddressDTOMap.put(person9, address9);
+        personDTOAddressDTOMap.put(person10, address10);
+        personDTOAddressDTOMap.put(person11, address11);
+        personDTOAddressDTOMap.put(person12, address12);
+        personDTOAddressDTOMap.put(person13, address13);
+        personDTOAddressDTOMap.put(person14, address14);
+        personDTOAddressDTOMap.put(person15, address15);
+        personDTOAddressDTOMap.put(person16, address6d);
+        personDTOAddressDTOMap.put(person17, address7d);
+        personDTOAddressDTOMap.put(person18, address8d);
+        personDTOAddressDTOMap.put(person19, address9d);
+        personDTOAddressDTOMap.put(person20, address10d);
+        personDTOAddressDTOMap.put(person21, address16);
+        personDTOAddressDTOMap.put(person22, address17);
+        personDTOAddressDTOMap.put(person23, address18);
+        personDTOAddressDTOMap.put(person24, address19);
+        personDTOAddressDTOMap.put(person25, address20);
+
+        System.out.println("keys");
+
+    }
+}
