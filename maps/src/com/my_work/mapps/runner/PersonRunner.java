@@ -12,28 +12,28 @@ public class PersonRunner {
         PersonDTO person1 = new PersonDTO("Krishnaveni", "krishna24@gmail.com","819286682153");
         PersonDTO person2 = new PersonDTO("Archana", "archana29@gmail.com","819281282153");
         PersonDTO person3 = new PersonDTO("Ashwini", "ashwini21@gmail.com","666677776153");
-        PersonDTO person4 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","81978925353");
-        PersonDTO person5 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","780086682153");
-        PersonDTO person6 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","496454231331");
-        PersonDTO person7 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","899802534153");
-        PersonDTO person8 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","456789082153");
-        PersonDTO person9 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","362780929244");
-        PersonDTO person10 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","535356276943");
-        PersonDTO person11 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","500223396460");
-        PersonDTO person12 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","285078074974");
-        PersonDTO person13 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","380462425645");
-        PersonDTO person14 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","403853383411");
-        PersonDTO person15 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","206635790191");
-        PersonDTO person16 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","459198780169");
-        PersonDTO person17 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","689842418699");
-        PersonDTO person18 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","978335432544");
-        PersonDTO person19 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","427244966553");
-        PersonDTO person20 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","597881285432");
-        PersonDTO person21 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","624433555497");
-        PersonDTO person22 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","830039805476");
-        PersonDTO person24 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","204731862086");
-        PersonDTO person23 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","689842418699");
-        PersonDTO person25 = new PersonDTO("Krishnaveni", "krishna20@gmail.com","225390278200");
+        PersonDTO person4 = new PersonDTO("Raga", "Raga920@gmail.com","81978925353");
+        PersonDTO person5 = new PersonDTO("Kiran", "Kiran@gmail.com","780086682153");
+        PersonDTO person6 = new PersonDTO("Nityank", "Nityank@gmail.com","496454231331");
+        PersonDTO person7 = new PersonDTO("Ramesh", "Ramesh@gmail.com","899802534153");
+        PersonDTO person8 = new PersonDTO("Ramya", "Ramya@gmail.com","456789082153");
+        PersonDTO person9 = new PersonDTO("Bhavani", "Bhavani@gmail.com","362780929244");
+        PersonDTO person10 = new PersonDTO("Karan", "Karan@gmail.com","535356276943");
+        PersonDTO person11 = new PersonDTO("Joshi", "Joshi@gmail.com","500223396460");
+        PersonDTO person12 = new PersonDTO("Naveen", "Naveen@gmail.com","285078074974");
+        PersonDTO person13 = new PersonDTO("Aaradya", "Aaradya@gmail.com","380462425645");
+        PersonDTO person14 = new PersonDTO("Bhavya", "Bhavya@gmail.com","403853383411");
+        PersonDTO person15 = new PersonDTO("Chethan", "Chethan@gmail.com","206635790191");
+        PersonDTO person16 = new PersonDTO("Harish", "Harish@gmail.com","459198780169");
+        PersonDTO person17 = new PersonDTO("Durga", "Durga@gmail.com","689842418699");
+        PersonDTO person18 = new PersonDTO("Tarun", "Tarun@gmail.com","978335432544");
+        PersonDTO person19 = new PersonDTO("Syresh", "Syresh@gmail.com","427244966553");
+        PersonDTO person20 = new PersonDTO("Sarayu", "Sarayu@gmail.com","597881285432");
+        PersonDTO person21 = new PersonDTO("Isha", "Isha@gmail.com","624433555497");
+        PersonDTO person22 = new PersonDTO("Pari", "Pari@gmail.com","830039805476");
+        PersonDTO person24 = new PersonDTO("Eshwar", "Eshwar@gmail.com","204731862086");
+        PersonDTO person23 = new PersonDTO("Pooja", "Pooja@gmail.com","689842418699");
+        PersonDTO person25 = new PersonDTO("Ganesh", "Ganesh@gmail.com","225390278200");
 
         AddressDTO address1 = new AddressDTO(1, "MG Road", "Bangalore", 560001);
         AddressDTO address2 = new AddressDTO(2, "Brigade Road", "Bangalore", 560025);
@@ -94,6 +94,19 @@ public class PersonRunner {
         personDTOAddressDTOMap.put(person25, address20);
 
         System.out.println("keys");
+        personDTOAddressDTOMap.keySet().forEach(System.out::println);
 
+        System.out.println("values");
+        personDTOAddressDTOMap.values().forEach(System.out::println);
+
+        System.out.println("\n\n");
+        personDTOAddressDTOMap.entrySet().stream().forEach(
+                personDTOAddressDTOEntry -> System.out.println(
+                        personDTOAddressDTOEntry.getKey().getName()+",  "+
+                        personDTOAddressDTOEntry.getKey().getAadhaar()+" - "+
+                        personDTOAddressDTOEntry.getValue().getStreet()+" - "+
+                        personDTOAddressDTOEntry.getValue().getCity()
+                )
+        );
     }
 }
