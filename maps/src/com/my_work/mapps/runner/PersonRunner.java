@@ -35,6 +35,13 @@ public class PersonRunner {
         PersonDTO person23 = new PersonDTO("Pooja", "Pooja@gmail.com","689842418699");
         PersonDTO person25 = new PersonDTO("Ganesh", "Ganesh@gmail.com","225390278200");
 
+        PersonDTO person22d = new PersonDTO("Pari", "Pari@gmail.com","830079805476");
+        PersonDTO person24d = new PersonDTO("Eshwar", "Eshwar@gmail.com","804731862086");
+        PersonDTO person23d = new PersonDTO("Pooja", "Pooja@gmail.com","689842418699");
+        PersonDTO person25d = new PersonDTO("Ganesh", "Ganesh@gmail.com","225390278200");
+
+
+
         AddressDTO address1 = new AddressDTO(1, "MG Road", "Bangalore", 560001);
         AddressDTO address2 = new AddressDTO(2, "Brigade Road", "Bangalore", 560025);
         AddressDTO address3 = new AddressDTO(3, "Residency Road", "Bangalore", 560025);
@@ -92,6 +99,10 @@ public class PersonRunner {
         personDTOAddressDTOMap.put(person23, address18);
         personDTOAddressDTOMap.put(person24, address19);
         personDTOAddressDTOMap.put(person25, address20);
+        personDTOAddressDTOMap.put(person25d, address20);
+        personDTOAddressDTOMap.put(person22d, address17);
+        personDTOAddressDTOMap.put(person23d, address18);
+        personDTOAddressDTOMap.put(person24d, address19);
 
         System.out.println("keys");
         personDTOAddressDTOMap.keySet().forEach(System.out::println);
@@ -108,5 +119,14 @@ public class PersonRunner {
                         personDTOAddressDTOEntry.getValue().getCity()
                 )
         );
+
+        System.out.println("Loop using entrySet()");
+        for (Map.Entry<PersonDTO, AddressDTO> entry : personDTOAddressDTOMap.entrySet()) {
+            PersonDTO person = entry.getKey();
+            AddressDTO address = entry.getValue();
+
+            System.out.println(person.getName() + " (" + person.getAadhaar() + ") lives at " +
+                    address.getStreet() + ", " + address.getCity() + " - " + address.getPinCode());
+        }
     }
 }
