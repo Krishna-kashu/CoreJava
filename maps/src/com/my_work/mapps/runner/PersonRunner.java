@@ -128,5 +128,155 @@ public class PersonRunner {
             System.out.println(person.getName() + " (" + person.getAadhaar() + ") lives at " +
                     address.getStreet() + ", " + address.getCity() + " - " + address.getPinCode());
         }
+        System.out.println("\n\n All Map methods");
+        //size()
+        System.out.println("Map size: "+ personDTOAddressDTOMap.size());
+
+        //isEmpty()
+        System.out.println("is map empty? "+ personDTOAddressDTOMap.isEmpty());
+
+        //containsKey()
+        System.out.println("Map contains key person1?"+personDTOAddressDTOMap.containsKey(person1));
+
+        //containsValue()
+        System.out.println("Map contains address1? "+personDTOAddressDTOMap.containsValue(address1));
+
+        //get()
+        System.out.println("Address of person1?"+personDTOAddressDTOMap.get(person2));
+
+        //put()
+        PersonDTO newPerson = new PersonDTO("Tarun", "tarun@gmail.com", "123456789267");
+        AddressDTO newAddress = new AddressDTO(26, "HSR", "HSR layout", 560102);
+        personDTOAddressDTOMap.put(newPerson, newAddress);
+        System.out.println("Added new person using put()");
+
+        //putIfAbsent()
+        personDTOAddressDTOMap.putIfAbsent(person1, address1);
+        System.out.println("putIfAbsent");
+
+        //remove()
+        personDTOAddressDTOMap.remove(newPerson);
+        System.out.println("Removed newPerson(Tarun)");
+
+        //replace()
+        personDTOAddressDTOMap.replace(person2, address1);
+        System.out.println("Replaced address of person2 with address1");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //keySet()
+        System.out.println("All keys");
+        personDTOAddressDTOMap.values().forEach(System.out::println);
+
+        //values()
+        System.out.println("All values");
+        personDTOAddressDTOMap.values().forEach(System.out::println);
+
+        System.out.println("All entries: ");
+        for (Map.Entry<PersonDTO, AddressDTO> entry : personDTOAddressDTOMap.entrySet()){
+            System.out.println(entry);
+        }
+
+        AddressDTO address = new AddressDTO(27, "Mico layout", "BTM Bangalore", 560760);
+        System.out.println("Get non-existing key with default: "+personDTOAddressDTOMap.getOrDefault(new PersonDTO("Karan", "karan@gmail.com", "234556779980"), address));
+
+        // clear()
+        personDTOAddressDTOMap.clear();
+        System.out.println("After clearing map size: "+ personDTOAddressDTOMap.size());
     }
 }
