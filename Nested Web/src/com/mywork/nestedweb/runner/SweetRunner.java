@@ -12,9 +12,11 @@ public class SweetRunner {
         String[] ingredient1  = new String[]{"Sugar", "Milk", "Cardamom", "Ghee", "flour"};
         sweet.add(new SweetDTO("Mysore Pak", ingredient1, 40, 1300, 4));
 
-        sweet.add(new SweetDTO("Mysore Pak", new String[]{"Besan", "Sugar", "Ghee", "Almonds", "Rose water"}, 50, 1250, 5));
+        sweet.add(new SweetDTO("Mysore Pak", new String[]
+                {"Besan", "Sugar", "Ghee", "Almonds", "Rose water"}, 50, 1250, 5));
 
-        sweet.add(new SweetDTO("Rava Kesari", new String[]{"Rava", "Sugar", "Ghee", "Cashews", "Saffron"}, 30, 800, 4));
+        sweet.add(new SweetDTO("Rava Kesari", new String[]
+                {"Rava", "Sugar", "Ghee", "Cashews", "Saffron"}, 30, 800, 4));
 
         String[] ingredient4  = new String[]{"Rava", "Jaggery", "Coconut", "Cardamom", "Ghee"};
         sweet.add(new SweetDTO("Rava Kesari", ingredient4, 35, 850, 4));
