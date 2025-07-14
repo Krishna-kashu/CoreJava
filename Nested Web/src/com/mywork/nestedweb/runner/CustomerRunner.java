@@ -186,34 +186,33 @@ public class CustomerRunner {
         customers.add(new CustomerDTO("Sneha Kapoor", "sneha.kapoor@bio.com", 31, passport7));
 
 
-        EducationDTO education8 = new EducationDTO("B.Com", "St. Joseph's College", 2015, 77.2);
-        DetailsDTO details8 = new DetailsDTO("EMP005", "Accounts, Taxation", education8, "Finance");
-        JobDTO job8 = new JobDTO("Chartered Accountant", "8 years", 1200000.0, details8);
-        SecurityDTO security8 = new SecurityDTO("Sharath", "Day", false, job8);
-        HouseDTO house8 = new HouseDTO("Flat", 4, "Basavanagudi, Bangalore", security8);
-        CeoDTO ceo8 = new CeoDTO("Sundar Pichai", 51, "sundar@google.com", house8);
-        CompanyDTO company8 = new CompanyDTO("Google India", "Internet", 2004, ceo8);
-        VehicleDTO vehicle8 = new VehicleDTO("KA06WX4321", "Crossover", 2020, company8);
-        DriverDTO driver8 = new DriverDTO("Ramesh", 45, "DL556677", vehicle8);
-        PresidentDTO president8 = new PresidentDTO("Droupadi Murmu", 66, "Female", driver8);
-        CountryDTO country8 = new CountryDTO("India", "Asia", 1400000000L, president8);
-        PassportDTO passport8 = new PassportDTO("P5678901", "Indian", 2030, country8);
-        customers.add(new CustomerDTO("Vinay Bhat", "vinay.bhat@gmail.com", 35, passport8));
+        EducationDTO education8 = new EducationDTO("M.Tech", "Anna University", 2016, 82.3);
+        DetailsDTO details8 = new DetailsDTO("EMP008", "Embedded Systems", education8, "Engineering");
+        JobDTO job8 = new JobDTO("Hardware Engineer", "8 years", 1250000.0, details8);
+        SecurityDTO security8 = new SecurityDTO("Shyam Sundar", "Night", false, job8);
+        HouseDTO house8 = new HouseDTO("Row House", 3, "Velachery, Chennai", security8);
+        CeoDTO ceo8 = new CeoDTO("Gopal Vittal", 57, "gopal@airtel.com", house8);
+        CompanyDTO company8 = new CompanyDTO("Airtel", "Telecom", 1995, ceo8);
+        VehicleDTO vehicle8 = new VehicleDTO("TN10CD4455", "Diesel", 2018, company8);
+        DriverDTO driver8 = new DriverDTO("Mohan Raj", 48, "DL667788", vehicle8);
+        PresidentDTO president8 = new PresidentDTO("Volodymyr Zelenskyy", 46, "Male", driver8);
+        CountryDTO country8 = new CountryDTO("Ukraine", "Europe", 41000000L, president8);
+        PassportDTO passport8 = new PassportDTO("U1237890", "Ukrainian", 2029, country8);
+        customers.add(new CustomerDTO("Arvind R", "arvind.r@airtelmail.com", 30, passport8));
 
-
-        EducationDTO education9= new EducationDTO("B.Com", "St. Joseph's College", 2015, 77.2);
-        DetailsDTO details9= new DetailsDTO("EMP005", "Accounts, Taxation", education9, "Finance");
-        JobDTO job9= new JobDTO("Chartered Accountant", "8 years", 1200000.0, details9);
-        SecurityDTO security9= new SecurityDTO("Sharath", "Day", false, job9);
-        HouseDTO house9= new HouseDTO("Flat", 4, "Basavanagudi, Bangalore", security9);
-        CeoDTO ceo9= new CeoDTO("Sundar Pichai", 51, "sundar@google.com", house9);
-        CompanyDTO company9= new CompanyDTO("Google India", "Internet", 2004, ceo9);
-        VehicleDTO vehicle9= new VehicleDTO("KA06WX4321", "Crossover", 2020, company9);
-        DriverDTO driver9= new DriverDTO("Ramesh", 45, "DL556677", vehicle9);
-        PresidentDTO president9= new PresidentDTO("Droupadi Murmu", 66, "Female", driver9);
-        CountryDTO country9= new CountryDTO("India", "Asia", 1400000000L, president9);
-        PassportDTO passport9= new PassportDTO("P5678901", "Indian", 2030, country9);
-        customers.add(new CustomerDTO("Vinay Bhat", "vinay.bhat@gmail.com", 35, passport9));
+        EducationDTO education9 = new EducationDTO("M.Arch", "School of Planning and Architecture", 2013, 77.5);
+        DetailsDTO details9 = new DetailsDTO("EMP009", "Urban Design", education9, "Architecture");
+        JobDTO job9 = new JobDTO("Architect", "12 years", 1450000.0, details9);
+        SecurityDTO security9 = new SecurityDTO("Neeraj Sharma", "Day", true, job9);
+        HouseDTO house9 = new HouseDTO("Independent", 2, "Sector 21, Noida", security9);
+        CeoDTO ceo9 = new CeoDTO("Peter Boone", 50, "peter@bosch.com", house9);
+        CompanyDTO company9 = new CompanyDTO("Bosch", "Engineering", 1886, ceo9);
+        VehicleDTO vehicle9 = new VehicleDTO("DL3CAX1234", "CNG", 2020, company9);
+        DriverDTO driver9 = new DriverDTO("Rakesh Yadav", 40, "DL223344", vehicle9);
+        PresidentDTO president9 = new PresidentDTO("Fumio Kishida", 66, "Male", driver9);
+        CountryDTO country9 = new CountryDTO("Japan", "Asia", 125000000L, president9);
+        PassportDTO passport9 = new PassportDTO("J9876543", "Japanese", 2034, country9);
+        customers.add(new CustomerDTO("Neha Agarwal", "neha.a@gmail.com", 35, passport9));
 
 
         EducationDTO education10= new EducationDTO("B.Com", "St. Joseph's College", 2015, 77.2);
