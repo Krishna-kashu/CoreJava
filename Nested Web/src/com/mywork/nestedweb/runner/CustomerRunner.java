@@ -229,19 +229,19 @@ public class CustomerRunner {
         customers.add(new CustomerDTO("Kavya Iyer", "kavya.iyer@legalfirm.com", 38, passport10));
 
 
-        EducationDTO education11= new EducationDTO("B.Com", "St. Joseph's College", 2015, 77.2);
-        DetailsDTO details11= new DetailsDTO("EMP005", "Accounts, Taxation", education11, "Finance");
-        JobDTO job11= new JobDTO("Chartered Accountant", "8 years", 1200000.0, details11);
-        SecurityDTO security11= new SecurityDTO("Sharath", "Day", false, job11);
-        HouseDTO house11= new HouseDTO("Flat", 4, "Basavanagudi, Bangalore", security11);
-        CeoDTO ceo11= new CeoDTO("Sundar Pichai", 51, "sundar@google.com", house11);
-        CompanyDTO company11= new CompanyDTO("Google India", "Internet", 2004, ceo11);
-        VehicleDTO vehicle11= new VehicleDTO("KA06WX4321", "Crossover", 2020, company11);
-        DriverDTO driver11= new DriverDTO("Ramesh", 45, "DL556677", vehicle11);
-        PresidentDTO president11= new PresidentDTO("Droupadi Murmu", 66, "Female", driver11);
-        CountryDTO country11= new CountryDTO("India", "Asia", 1400000000L, president11);
-        PassportDTO passport11= new PassportDTO("P5678901", "Indian", 2030, country11);
-        customers.add(new CustomerDTO("Vinay Bhat", "vinay.bhat@gmail.com", 35, passport11));
+        EducationDTO education11 = new EducationDTO("B.Com", "Delhi University", 2017, 78.2);
+        DetailsDTO details11 = new DetailsDTO("EMP011", "Accounting, Taxation", education11, "Finance");
+        JobDTO job11 = new JobDTO("Accountant", "7 years", 950000.0, details11);
+        SecurityDTO security11 = new SecurityDTO("Sanjay K", "Day", false, job11);
+        HouseDTO house11 = new HouseDTO("Flat", 2, "Rohini, Delhi", security11);
+        CeoDTO ceo11 = new CeoDTO("Nirmala Sitharaman", 64, "nirmala@finmin.in", house11);
+        CompanyDTO company11 = new CompanyDTO("Income Tax Dept", "Government", 1944, ceo11);
+        VehicleDTO vehicle11 = new VehicleDTO("DL4CAF9876", "Petrol", 2016, company11);
+        DriverDTO driver11 = new DriverDTO("Amit Tiwari", 39, "DL111222", vehicle11);
+        PresidentDTO president11 = new PresidentDTO("Olaf Scholz", 66, "Male", driver11);
+        CountryDTO country11 = new CountryDTO("Germany", "Europe", 83000000L, president11);
+        PassportDTO passport11 = new PassportDTO("G3456789", "German", 2031, country11);
+        customers.add(new CustomerDTO("Ritu Sharma", "ritu.sharma@accounting.com", 29, passport11));
 
 
         EducationDTO education12= new EducationDTO("B.Com", "St. Joseph's College", 2015, 77.2);
