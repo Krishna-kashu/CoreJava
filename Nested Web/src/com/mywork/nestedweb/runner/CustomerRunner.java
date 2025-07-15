@@ -442,19 +442,19 @@ public class CustomerRunner {
         customers.add(new CustomerDTO("Sana Ali", "sana.ali@meta.com", 33, passport25));
 
 
-        EducationDTO education26=new EducationDTO("B.Com", "St. Joseph's College", 2015, 77.2);
-        DetailsDTO details26=new DetailsDTO("EMP005", "Accounts, Taxation", education26, "Finance");
-        JobDTO job26=new JobDTO("Chartered Accountant", "8 years", 1200000.0, details26);
-        SecurityDTO security26=new SecurityDTO("Sharath", "Day", false, job26);
-        HouseDTO house26=new HouseDTO("Flat", 4, "Basavanagudi, Bangalore", security26);
-        CeoDTO ceo26=new CeoDTO("Sundar Pichai", 51, "sundar@google.com", house26);
-        CompanyDTO company26=new CompanyDTO("Google India", "Internet", 2004, ceo26);
-        VehicleDTO vehicle26=new VehicleDTO("KA06WX4321", "Crossover", 2020, company26);
-        DriverDTO driver26=new DriverDTO("Ramesh", 45, "DL556677", vehicle26);
-        PresidentDTO president26=new PresidentDTO("Droupadi Murmu", 66, "Female", driver26);
-        CountryDTO country26=new CountryDTO("India", "Asia", 1400000000L, president26);
-        PassportDTO passport26=new PassportDTO("P5678901", "Indian", 2030, country26);
-        customers.add(new CustomerDTO("Vinay Bhat", "vinay.bhat@gmail.com", 35, passport26));
+        EducationDTO education26 = new EducationDTO("Ph.D", "Stanford University", 2011, 93.5);
+        DetailsDTO details26 = new DetailsDTO("EMP010", "AI Research", education26, "Research");
+        JobDTO job26 = new JobDTO("Research Scientist", "12 years", 3000000.0, details26);
+        SecurityDTO security26 = new SecurityDTO("Robert", "Night", true, job26);
+        HouseDTO house26 = new HouseDTO("Smart Home", 5, "Palo Alto, California", security26);
+        CeoDTO ceo26 = new CeoDTO("Sam Altman", 39, "sam@openai.com", house26);
+        CompanyDTO company26 = new CompanyDTO("OpenAI", "Artificial Intelligence", 2015, ceo26);
+        VehicleDTO vehicle26 = new VehicleDTO("CA88ZZ5678", "Electric", 2023, company26);
+        DriverDTO driver26 = new DriverDTO("Steve", 60, "DL121212", vehicle26);
+        PresidentDTO president26 = new PresidentDTO("Kamala Harris", 60, "Female", driver26);
+        CountryDTO country26 = new CountryDTO("USA", "North America", 331000000L, president26);
+        PassportDTO passport26 = new PassportDTO("Z1122334", "American", 2035, country26);
+        customers.add(new CustomerDTO("Neha Sharma", "neha.sharma@openai.com", 36, passport26));
 
         EducationDTO education27=new EducationDTO("B.Com", "St. Joseph's College", 2015, 77.2);
         DetailsDTO details27=new DetailsDTO("EMP005", "Accounts, Taxation", education27, "Finance");
