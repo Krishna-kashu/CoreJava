@@ -99,6 +99,13 @@ public class SweetRunner {
         String[] ingredient30 = new String[]{"Sabudana", "Milk", "Sugar", "Saffron", "Dry fruits"};
         sweet.add(new SweetDTO("Sabakki Payasa", ingredient30, 37, 620, 5));
 
+        String[] ingredient31 = new String[]{"Gram flour", "Ghee", "Sugar", "Cardamom", "Almonds"};
+        sweet.add(new SweetDTO("Mysore Pak", ingredient31, 35, 780, 3));
+
+        String[] ingredient32 = new String[]{"Cottage cheese", "Sugar syrup", "Rose water", "Cardamom", "Saffron"};
+        sweet.add(new SweetDTO("Rasgulla", ingredient32, 30, 720, 4));
+
+
         System.out.println("\n4. Sort all elements by price in desc using TreeSet\n");
         Set<SweetDTO> sweetDTOS = new TreeSet<>(Comparator.comparingDouble(SweetDTO::getPrice).reversed());
         sweetDTOS.addAll(sweet);
