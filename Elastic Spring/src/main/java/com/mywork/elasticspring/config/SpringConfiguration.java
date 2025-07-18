@@ -13,13 +13,13 @@ public class SpringConfiguration {
         System.out.println("created SpringConfiguration...");
     }
 
-    //@Bean
+    @Bean
     public String stringRegister(){
         System.out.println("StringRegister");
     return "Hey";
     }
 
-    //@Bean
+    @Bean
     public String string1() {
         System.out.println("String 1");
         return "Spring Boot";
@@ -496,75 +496,76 @@ public class SpringConfiguration {
     @Bean
     public Properties properties1() {
         System.out.println("Properties  2");
-        Properties p = new Properties();
-        p.setProperty("env", "dev");
-        return p;
+        Properties properties = new Properties();
+        properties.setProperty("username", "loot");
+        return properties;
     }
 
     @Bean
     public Properties properties2() {
         System.out.println("Properties  3");
-        Properties p = new Properties();
-        p.setProperty("env", "test");
-        return p;
+        Properties properties = new Properties();
+        properties.setProperty("password", "GHF@234");
+        return properties;
     }
 
     @Bean
     public Properties properties3() {
         System.out.println("Properties  4");
-        Properties p = new Properties();
-        p.setProperty("env", "stage");
-        return p;
+        Properties properties = new Properties();
+        properties.setProperty("env", "stage");
+        return properties;
     }
 
     @Bean
     public Properties properties4() {
         System.out.println("Properties  5");
-        Properties p = new Properties();
-        p.setProperty("env", "prod");
-        return p;
+        Properties properties = new Properties();
+        properties.setProperty("env", "production");
+        return properties;
     }
 
     @Bean
     public Properties properties5() {
         System.out.println("Properties  6");
-        Properties p = new Properties();
-        p.setProperty("env", "local");
-        return p;
+
+        Properties properties = new Properties();
+        properties.setProperty("env", "local");
+        return properties;
     }
 
 
     @Bean
     public Hashtable<Integer, String> hashtableBean() {
         System.out.println("Hashtable<Integer, String>  1");
-        Hashtable<Integer, String> ht = new Hashtable<>();
-        ht.put(1, "Admin");
-        ht.put(2, "User");
-        return ht;
+        Hashtable<Integer, String> hashtable = new Hashtable<>();
+        hashtable.put(1, "Admin");
+        hashtable.put(2, "User");
+        return hashtable;
     }
 
     @Bean
     public Hashtable<Integer, String> hashtable1() {
         System.out.println("Hashtable<Integer, String>  2");
-        Hashtable<Integer, String> ht = new Hashtable<>();
-        ht.put(1, "A");
-        return ht;
+        Hashtable<Integer, String> hashtable = new Hashtable<>();
+        hashtable.put(1, "A");
+        return hashtable;
     }
 
     @Bean
     public Hashtable<Integer, String> hashtable2() {
         System.out.println("Hashtable<Integer, String>  3");
-        Hashtable<Integer, String> ht = new Hashtable<>();
-        ht.put(2, "B");
-        return ht;
+        Hashtable<Integer, String> hashtable = new Hashtable<>();
+        hashtable.put(2, "B");
+        return hashtable;
     }
 
     @Bean
     public Hashtable<Integer, String> hashtable3() {
         System.out.println("Hashtable<Integer, String>  4");
-        Hashtable<Integer, String> ht = new Hashtable<>();
-        ht.put(3, "C");
-        return ht;
+        Hashtable<Integer, String> hashtable = new Hashtable<>();
+        hashtable.put(3, "C");
+        return hashtable;
     }
 
     @Bean
@@ -578,9 +579,9 @@ public class SpringConfiguration {
     @Bean
     public Hashtable<Integer, String> hashtable5() {
         System.out.println("Hashtable<Integer, String>  6");
-        Hashtable<Integer, String> ht = new Hashtable<>();
-        ht.put(5, "E");
-        return ht;
+        Hashtable<Integer, String> hashtable = new Hashtable<>();
+        hashtable.put(5, "E");
+        return hashtable;
     }
 
 
@@ -594,5 +595,10 @@ public class SpringConfiguration {
     public  String[] newNames(){
         System.out.println("String[]  2");
         return new String[]{"Shama", "Swathi", "Farina", "Tarak"};
+    }
+
+    @Bean
+    public Integer[] array(int day){
+        return new Integer[]{3, 4, 6};
     }
 }
