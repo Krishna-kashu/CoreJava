@@ -474,8 +474,6 @@ public class SpringConfiguration {
         return map;
     }
 
-
-
     @Bean
     public LinkedHashMap<String, String> linkedHashMapBean() {
         System.out.println("LinkedHashMap<String, Integer>  5");
@@ -513,7 +511,7 @@ public class SpringConfiguration {
     public Properties properties3() {
         System.out.println("Properties  4");
         Properties properties = new Properties();
-        properties.setProperty("env", "stage");
+        properties.setProperty("environment", "stage");
         return properties;
     }
 
@@ -521,7 +519,7 @@ public class SpringConfiguration {
     public Properties properties4() {
         System.out.println("Properties  5");
         Properties properties = new Properties();
-        properties.setProperty("env", "production");
+        properties.setProperty("environment", "production");
         return properties;
     }
 
@@ -530,10 +528,9 @@ public class SpringConfiguration {
         System.out.println("Properties  6");
 
         Properties properties = new Properties();
-        properties.setProperty("env", "local");
+        properties.setProperty("environment", "local");
         return properties;
     }
-
 
     @Bean
     public Hashtable<Integer, String> hashtableBean() {
@@ -583,7 +580,6 @@ public class SpringConfiguration {
         hashtable.put(5, "E");
         return hashtable;
     }
-
 
     @Bean
     public String[] nameArrayBean() {
