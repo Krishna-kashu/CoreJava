@@ -184,8 +184,4 @@ public class SpringConfiguration {
         return new String[]{"Shama", "Swathi", "Farina", "Tarak"};
     }
 
-    @Bean
-    public Integer[] array(int day){
-        return new Integer[]{3, 4, 6};
-    }
 }
