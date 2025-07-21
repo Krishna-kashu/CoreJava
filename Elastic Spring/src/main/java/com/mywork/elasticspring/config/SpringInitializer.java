@@ -24,5 +24,4 @@ public class SpringInitializer extends AbstractAnnotationConfigDispatcherServlet
         System.out.println("running getServletMappings...");
         return new String[0];
     }
-
 }
