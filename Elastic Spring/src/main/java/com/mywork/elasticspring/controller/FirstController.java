@@ -10,7 +10,7 @@ public class FirstController {
         System.out.println("Calling first controller by spring container(ApplicationContext)");
     }
 
-    @RequestMapping
+    @RequestMapping(value = "/send")
     public String onSend(){
         System.out.println("running onSend after clicking send");
         return "/index.jsp";
