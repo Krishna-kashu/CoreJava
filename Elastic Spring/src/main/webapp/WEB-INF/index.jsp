@@ -15,6 +15,8 @@
         alert("I guess everything is fine");
     }
 </script>
+<br>
+<br>
 <form action="send" method="post">
     <input type="submit" value="Send">
 </form>
