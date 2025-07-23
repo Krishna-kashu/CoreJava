@@ -15,6 +15,6 @@ public class GreenDressInitializer extends AbstractAnnotationConfigDispatcherSer
 
     @Override
     protected String[] getServletMappings() {
-        return new String[] {"/send", "/submit"};
+        return new String[] {"/send", "/submit", "/submitHospital", "/submitRTO", "/submitPolice", "/submitFruit"};
     }
 }
