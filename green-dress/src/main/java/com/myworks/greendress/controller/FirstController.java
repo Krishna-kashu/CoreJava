@@ -13,7 +13,7 @@ public class FirstController {
     @RequestMapping("/send")
     public String onSend() {
         System.out.println("Send button clicked");
-        return "index";
+        return "index.jsp";
     }
 
 }
