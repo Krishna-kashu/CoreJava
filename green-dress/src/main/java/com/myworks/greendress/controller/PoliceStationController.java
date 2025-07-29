@@ -11,6 +11,7 @@ public class PoliceStationController {
     public PoliceStationController(){
         System.out.println("Police station controller");
     }
+
     @RequestMapping("/submitPolice")
     public String onSubmit(@RequestParam String stationName,
                            @RequestParam String location,
