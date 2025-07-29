@@ -11,6 +11,7 @@ public class NameController {
     public NameController(){
         System.out.println("no arg constructor of NameController");
     }
+
     @RequestMapping("/submit")
     public String onSubmit(@RequestParam String firstname, @RequestParam String lastname, @RequestParam String middlename, @RequestParam String displayname, Model model) {
         System.out.println("Name added");
