@@ -4,7 +4,7 @@ import com.myworks.greendress.dto.FruitDTO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 @RequestMapping("/")
@@ -12,6 +12,16 @@ public class FruitController {
     public FruitController(){
         System.out.println("Fruit Controller");
     }
+
+    @RequestMapping("/submitFruit")
+    public String send(FruitDTO fruitDTO, Model model){
+        System.out.println("onSubmit FruitController");
+        model.addAttribute("fruitDTO", fruitDTO);
+
+        System.out.println("FruitName: " + fruitDTO);
+        return "result.jsp";
+    }
+}
 
 //    public String onSubmit(@RequestParam String fruitName,
 //                           @RequestParam String color,
@@ -47,12 +57,3 @@ public class FruitController {
 //
 //        return "result.jsp";
 //    }
-    @RequestMapping("/submitFruit")
-    public String send(FruitDTO fruitDTO, Model model){
-        System.out.println("onSubmit FruitController");
-        model.addAttribute("fruitDTO", fruitDTO);
-
-        System.out.println("FruitName: " + fruitDTO);
-        return "result.jsp";
-    }
-}
