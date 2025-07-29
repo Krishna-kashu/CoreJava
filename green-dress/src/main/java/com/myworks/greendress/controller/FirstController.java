@@ -10,10 +10,10 @@ public class FirstController {
     public FirstController(){
         System.out.println("no arg constructor of FirstController");
     }
+
     @RequestMapping("/send")
     public String onSend() {
         System.out.println("Send button clicked");
         return "index.jsp";
     }
-
 }
