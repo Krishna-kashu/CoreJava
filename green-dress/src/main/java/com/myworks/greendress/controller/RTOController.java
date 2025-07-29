@@ -11,6 +11,7 @@ public class RTOController {
     public RTOController(){
         System.out.println("RTO controller");
     }
+
     @RequestMapping("/submitRTO")
     public String onSubmit(@RequestParam String vehicleNumber, @RequestParam String ownerName, @RequestParam String vehicleType, @RequestParam String registrationDate, @RequestParam String state, @RequestParam String contact, Model model){
         System.out.println("onSubmit RTOController");
